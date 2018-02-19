@@ -104,3 +104,5 @@ ENV/
 .sass-cache/
 *.css.map
 
+# DB files
+db.sqlite3

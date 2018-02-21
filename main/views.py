@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.utils import timezone
 
 from .models import Smartphone
-from .util import paginate
+from .utils import paginate
 
 
 def smartphones_list(request):

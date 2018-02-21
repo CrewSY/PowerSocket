@@ -178,11 +178,6 @@ body {
   text-align: center;
 }
 
-.photo-phone {
-  padding-bottom: 20px;
-}
-
-
 input.button-buy {
   position: relative;
   display: inline-block;
@@ -219,3 +214,39 @@ input.button-buy:active {
 @keyframes pulsate {
   50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
 }
+
+/* Footer */
+
+footer {
+  background-color: black;
+  width: 100%;
+  height: auto;
+}
+
+.social {
+  list-style: none;
+}
+
+.logo {
+  padding-top: 100px;
+}
+
+.footer-menu {
+  list-style: none;
+  text-transform: uppercase;
+  color: gray;
+  display: inline-block;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.footer-item {
+  padding-right: 50px;
+}
+
+.footer-item {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+

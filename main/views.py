@@ -9,4 +9,12 @@ from .models import Smartphone
 def smartphones_list(request):
     """Render page with goods list."""
     smartphones = Smartphone.objects.filter(publish_date__lte=timezone.now()).order_by('publish_date')
+    order_by = request.GET.get('order_by', '')
+    request.GET.order_by = 'publish_date'
+
+    if order_by in ('title', 'price', 'publish_date'):
+        smartphones = smartphones.order_by(order_by)
+        if request.GET.get('reverse', '') == '1':
+            smartphones = smartphones.reverse()
+
     return render(request, 'main/smartphones_list.html', {'smartphones': smartphones})

@@ -9,12 +9,13 @@
    <link rel="stylesheet" href="{% static "css/style.css" %}">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-   <script src="{% static "js/main.js" %}"></script>
+   <script src="{% static "js/jquerymenu.js" %}"></script>
+   <script src="{% static "js/slider.js" %}"></script>
 </head>
 <body>
 	<header id="header">
 		<nav>
-  		<a href="#" class="menu-trigger"><img src="img/CLXbY05.jpg"></a>
+  		<a href="#" class="menu-trigger"><img src="../../static/img/CLXbY05.jpg"></a>
  			<ul class="text-center">
  				<li><a class="navbar-brand" href="#">Navbar</a></li>
     		<li><a href="#">Home</a></li>
@@ -27,6 +28,24 @@
 		</nav>
 	</header><hr>
 
+	<section id="section1 black">
+
+    <div id="block-for-slider">
+        <div id="viewport">
+            <ul id="slidewrapper">
+                <li class="slide img-slider"><h1 class="header-slider">Iphone 7 32 GB</h1><p class="text-slider">Phone 7 and iPhone 7 Plus are smartphones designed, developed, and marketed by Apple Inc. They were announced on September 7, 2016, at the Bill Graham Civic Auditorium in San Francisco</p> <img src="../../static/img/iphone7.png" class="slide-img"></li>
+                <li class="slide img-slider"><h1 class="header-slider">Samsung Galaxy S8+ 256 GB</h1><p class="text-slider">The Samsung Galaxy S8, Samsung Galaxy S8+ (shortened to S8 and S8+, respectively) and Samsung Galaxy S8 Active are Android smartphones produced by Samsung Electronics as part of the Samsung Galaxy S series. </p><img src="../../static/img/samsungs8.png" class="slide-img"></li>
+                <li class="slide img-slider"><h1 class="header-slider">Samsung Galaxy S8 128 GB</h1><p class="text-slider">The Samsung Galaxy S8, Samsung Galaxy S8+ (shortened to S8 and S8+, respectively) and Samsung Galaxy S8 Active are Android smartphones produced by Samsung Electronics as part of the Samsung Galaxy S series. </p><img src="../../static/img/sgs8.png" class="slide-img"></li>
+            </ul>
+
+            <ul id="nav-btns">
+                <li class="slide-nav-btn"></li>
+                <li class="slide-nav-btn"></li>
+                <li class="slide-nav-btn"></li>
+            </ul>
+        </div>
+    </div>
+	</section><hr>
 
 </body>
 </html>

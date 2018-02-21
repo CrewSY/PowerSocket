@@ -1,0 +1,64 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+
+nav {
+  width: 100%;
+  background-color:white;
+}
+
+nav ul li {
+  display:inline-block;  
+}
+
+.navbar-brand  {
+  padding-right: 150px;
+}
+
+nav a {
+  color:black;
+  display:block;
+  text-decoration: none;
+  padding:20px 30px;
+  font-weight: bold;
+  font-size: 14px;
+ }
+
+nav a img {
+  width: 40px;
+  height: 40px;
+}
+
+nav li a:hover {
+  background: black;
+  color: white;
+}
+
+.menu-trigger {
+  display:none;
+}
+
+
+
+@media screen and (max-width:500px) {
+  .menu-trigger {
+    display:block;
+  }
+ 
+  nav ul li {
+    display:block;
+    border-top:1px #79896D solid;    
+  }
+  nav ul {
+    display:none;
+  }
+}
+
+@media (min-width: 501px) and (max-width:768px) {
+  nav a {
+    padding-right: 0;
+ }
+}

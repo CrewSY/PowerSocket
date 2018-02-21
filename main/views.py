@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.utils import timezone
 
 from .models import Smartphone
+from .util import paginate
 
 
 def smartphones_list(request):
@@ -17,4 +18,5 @@ def smartphones_list(request):
         if request.GET.get('reverse', '') == '1':
             smartphones = smartphones.reverse()
 
-    return render(request, 'main/smartphones_list.html', {'smartphones': smartphones})
+    context = paginate(smartphones, 6, request, {}, var_name='smartphones')
+    return render(request, 'main/smartphones_list.html', context)

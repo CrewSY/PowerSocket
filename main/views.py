@@ -1,24 +1,30 @@
 """Views for main app of PowerSocket project."""
 
 from django.shortcuts import render
-from django.utils import timezone
 
-from .models import Smartphone
-from .utils import paginate
+from .models import Smartphone, SmartphonesBrands
+from .utils import paginate, get_current_brand
 
 
 def smartphones_list(request):
     """Render page with smartphones list."""
-    smartphones = Smartphone.objects.filter(publish_date__lte=timezone.now()).order_by('publish_date')
-    order_by = request.GET.get('order_by', '')
-    request.GET.order_by = 'publish_date'
+    current_brand = get_current_brand(request)
+    if current_brand:
+        smartphones = Smartphone.objects.filter(brand=current_brand)
+    else:
+        smartphones = Smartphone.objects.all()
 
+    order_by = request.GET.get('order_by', '')
     if order_by in ('title', 'price', 'publish_date'):
         smartphones = smartphones.order_by(order_by)
         if request.GET.get('reverse', '') == '1':
             smartphones = smartphones.reverse()
+    else:
+        request.GET.order_by = 'publish_date'
+        smartphones = smartphones.order_by('publish_date')
 
-    context = paginate(smartphones, 6, request, {}, var_name='smartphones')
+    brands = SmartphonesBrands.objects.all().order_by('brand_name')
+    context = paginate(smartphones, 6, request, {'brands': brands}, var_name='smartphones')
     return render(request, 'main/smartphones_list.html', context)
 
 

@@ -1,7 +1,9 @@
 """
 Global functions for main app of PowerSocket project.
 
-  - def paginate(objects, size, request, context, var_name) - > context
+  - def paginate(objects, size, request, context, var_name) -> context
+  - def get_brand(request) -> objects:brands
+  - def get_current_brand(request) -> object:current brand
 
 """
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -30,13 +32,29 @@ def get_brands(request):
     """Return all brands."""
     from .models import SmartphonesBrands
 
-    # cur_brand = get_current_brand(request)
+    cur_brand = get_current_brand(request)
 
     brands = []
     for brand in SmartphonesBrands.objects.all().order_by('brand_name'):
         brands.append({
             'id': brand.id,
             'brand_name': brand.brand_name,
-            # 'selected': cur_group and cur_group.id == group.id and True or False
+            'selected': cur_brand and cur_brand.id == brand.id and True or False
         })
     return brands
+
+
+def get_current_brand(request):
+    """Return current brand."""
+    pk = request.COOKIES.get('current_brand')
+
+    if pk:
+        from .models import SmartphonesBrands
+        try:
+            brand = SmartphonesBrands.objects.get(pk=int(pk))
+        except SmartphonesBrands.DoesNotExist:
+            return None
+        else:
+            return brand
+    else:
+        return None

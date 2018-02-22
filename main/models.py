@@ -36,4 +36,4 @@ class SmartphonesBrands(models.Model):
 
     def __str__(self):
         """Render the brand instance as a string."""
-        return self.brand
+        return self.brand_name

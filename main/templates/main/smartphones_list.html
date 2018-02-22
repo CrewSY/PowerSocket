@@ -27,23 +27,24 @@
 	<section id="section-content">
     <div class="container content">
 
-  {% for sm in smartphones %}
+
 	<div class="row content-mt">
         <div class="col-md-3" id="brand-selector">
           <strong>{% trans "Brand" %}:</strong>
           <select>
             <option value="">{% trans "All brand" %}</option>
             {% for brand in brands %}
-            <option value="{{ brand.id }}"{% if brand.selected%}selected="1"{% endif %}>{{ brand.brandname }}
+            <option value="{{ brand.id }}"{% if brand.selected%}selected="1"{% endif %}>{{ brand.brand_name }}
             </option>
             {% endfor %}
           </select>
         </div>
+ {% for sm in smartphones %}
         <div class="col-md-2 col-sm-2 col-sm-offcet-1">
           <img class="photo-phone" src="../../static/img/lenovo small.jpg">
         </div>
         <div class="col-md-5 col-sm-4">
-           <h3 class="header-phone">{{ sm.title }}</h3>
+           <h3 class="header-phone">{{ sm.brand }} {{ sm.model }}</h3>
            <p descr-phone>{{ sm.description }}</p>
         </div>
         <div class="col-md-2 col-sm-3">

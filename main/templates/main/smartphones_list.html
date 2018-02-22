@@ -1,1 +1,33 @@
-test
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+	<section id="section-content">
+    <div class="container">
+
+  {% for sm in smartphones %}
+	<div class="row">
+        <div class="col-md-2 "></div>
+        <div class="col-md-2 col-sm-2 col-sm-offcet-1">
+          <img class="photo-phone" src="{{ sm.photo.url }}">
+        </div>
+        <div class="col-md-7 col-sm-4">
+           <h3 class="header-phone">{{ sm.title }}</h3>
+           <p descr-phone>{{ sm.description }}</p>
+        </div>
+        <div class="col-md-1 col-sm-3">
+           <h4 class="price">{{ sm.price }}$</h4>
+           <input type="button" class="button-buy" value="Buy">
+        </div>
+        <div></div>
+    </div><hr>
+  {% endfor %}
+  	</div>
+  </section>
+
+{% with object_list=smartphones %}
+{% include "main/pagination.html" %}
+{% endwith %}
+
+{% endblock %}
+

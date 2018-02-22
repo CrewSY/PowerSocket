@@ -71,16 +71,16 @@ nav li a:hover {
   float:left;
   font:14px Arial, Helvetica, sans-serif;
   height:40px;
-  
+
 }
 .pagination ul li {
-  
+
   position:relative;
   left:-50%;
   float:left;
   margin:0 10px;
   height:40px
-  
+
 }
 .pagination ul li a {
   color: black;
@@ -93,7 +93,7 @@ nav li a:hover {
 }
 .pagination ul li a:hover {
   background-color: black;
-  color: white; 
+  color: white;
 }
 
 @media screen and (max-width:500px) {

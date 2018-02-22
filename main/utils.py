@@ -24,3 +24,19 @@ def paginate(objects, size, request, context, var_name='object_list'):
     context['paginator'] = paginator
 
     return context
+
+
+def get_brands(request):
+    """Return all brands."""
+    from .models import SmartphonesBrands
+
+    # cur_brand = get_current_brand(request)
+
+    brands = []
+    for brand in SmartphonesBrands.objects.all().order_by('brand_name'):
+        brands.append({
+            'id': brand.id,
+            'brand_name': brand.brand_name,
+            # 'selected': cur_group and cur_group.id == group.id and True or False
+        })
+    return brands

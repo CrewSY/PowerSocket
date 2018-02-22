@@ -1,21 +1,52 @@
-{% extends 'main/base.html' %}
 
+
+{% extends 'main/base.html' %}
+{% load i18n %}
+{% load staticfiles %}
 {% block content %}
 
+	<section id="section1 black">
+
+    <div id="block-for-slider">
+        <div id="viewport">
+            <ul id="slidewrapper">
+                <li class="slide img-slider"><h1 class="header-slider">Iphone 7+ 32 GB Black</h1><p class="text-slider">Phone 7 and iPhone 7 Plus are smartphones designed, developed, and marketed by Apple Inc. They were announced on September 7, 2016, at the Bill Graham Civic Auditorium in San Francisco</p> <img src="../../static/img/iphone7.png" class="slide-img"></li>
+                <li class="slide img-slider"><h1 class="header-slider">Samsung Galaxy S8+ 256 GB</h1><p class="text-slider">The Samsung Galaxy S8, Samsung Galaxy S8+ (shortened to S8 and S8+, respectively) and Samsung Galaxy S8 Active are Android smartphones produced by Samsung Electronics as part of the Samsung Galaxy S series. </p><img src="../../static/img/samsungs8.png" class="slide-img"></li>
+                <li class="slide img-slider"><h1 class="header-slider">Samsung Galaxy S8 128 GB</h1><p class="text-slider">The Samsung Galaxy S8, Samsung Galaxy S8+ (shortened to S8 and S8+, respectively) and Samsung Galaxy S8 Active are Android smartphones produced by Samsung Electronics as part of the Samsung Galaxy S series. </p><img src="../../static/img/sgs8.png" class="slide-img"></li>
+            </ul>
+
+            <ul id="nav-btns">
+                <li class="slide-nav-btn"></li>
+                <li class="slide-nav-btn"></li>
+                <li class="slide-nav-btn"></li>
+            </ul>
+        </div>
+    </div>
+	</section>
+
 	<section id="section-content">
-    <div class="container">
+    <div class="container content">
 
   {% for sm in smartphones %}
-	<div class="row">
-        <div class="col-md-2 "></div>
-        <div class="col-md-2 col-sm-2 col-sm-offcet-1">
-          <img class="photo-phone" src="{{ sm.photo.url }}">
+	<div class="row content-mt">
+        <div class="col-md-3" id="brand-selector">
+          <strong>{% trans "Brand" %}:</strong>
+          <select>
+            <option value="">{% trans "All brand" %}</option>
+            {% for brand in brands %}
+            <option value="{{ brand.id }}"{% if brand.selected%}selected="1"{% endif %}>{{ brand.brandname }}
+            </option>
+            {% endfor %}
+          </select>	 
         </div>
-        <div class="col-md-7 col-sm-4">
+        <div class="col-md-2 col-sm-2 col-sm-offcet-1">
+          <img class="photo-phone" src="../../static/img/lenovo small.jpg">
+        </div>
+        <div class="col-md-5 col-sm-4">
            <h3 class="header-phone">{{ sm.title }}</h3>
            <p descr-phone>{{ sm.description }}</p>
         </div>
-        <div class="col-md-1 col-sm-3">
+        <div class="col-md-2 col-sm-3">
            <h4 class="price">{{ sm.price }}$</h4>
            <input type="button" class="button-buy" value="Buy">
         </div>

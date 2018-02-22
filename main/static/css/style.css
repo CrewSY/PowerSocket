@@ -42,6 +42,10 @@ nav li a:hover {
   display:none;
 }
 
+.head-mb{
+  margin-bottom: 0;
+}
+
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -92,8 +96,6 @@ nav li a:hover {
   color: white; 
 }
 
-
-
 @media screen and (max-width:500px) {
   .menu-trigger {
     display:block;
@@ -114,20 +116,20 @@ nav li a:hover {
  }
 }
 
-/* Section 1 */
-body {
+/* Section 1 + slider */
+body, html {
     margin: 0;
     padding: 0;
 }
 
-.black  {
+.section1  {
   background-color: black;
 }
 
 #block-for-slider {
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
     margin-top: 0;
+    background-color: black;
 }
 
 #viewport {
@@ -166,17 +168,10 @@ body {
 }
 
 .slide-img {
-    width: 100%;
-    height: 600px;
-}
-
-#prev-btn, #next-btn {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: gray;
-    border-radius: 50%;
-    top: calc(50% - 25px);
+    width: 55%;
+    height: 450px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 #nav-btns {
@@ -208,7 +203,9 @@ body {
   font-size: 32px;
   font-weight: bold;
   float: left;
-  width: 300px;
+  width: 550px;
+  color: white;
+  margin-top: 50px;
 }
 
 .text-slider {
@@ -216,10 +213,19 @@ body {
   font-size: 18px;
   text-align: left;
   width: 300px;
-  margin-top: 80px;
+  margin: 110px 0 0 100px;
+  color: white;
 }
 
 /* Section Content */
+
+#section-content {
+  background-color: #ededed;
+}
+
+.content-mt {
+  padding-top: 30px;
+}
 
 .header-phone, .price {
   margin-top: 30px;
@@ -227,6 +233,7 @@ body {
 
 .price {
   text-align: center;
+  width: 100px;
 }
 
 input.button-buy {
@@ -271,7 +278,7 @@ input.button-buy:active {
 footer {
   background-color: black;
   width: 100%;
-  height: auto;
+  height: 200px;
 }
 
 .social {

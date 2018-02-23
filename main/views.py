@@ -1,5 +1,6 @@
 """Views for main app of PowerSocket project."""
 
+from django.db.models import Q
 from django.shortcuts import render
 
 from .models import Smartphone, SmartphonesBrands
@@ -30,8 +31,13 @@ def smartphones_list(request):
 
 def search_smartphones(request):
     """Render page with specific smartphones list."""
-    search_by = request.GET.get('search_by')
-    smartphones = Smartphone.objects.get(title__contains=search_by)
-
-    context = paginate(smartphones, 6, request, {}, var_name='smartphones')
-    return render(request, 'main/smartphones_list.html', context)
+    search_by = request.GET.get('q')
+    if search_by:
+        q = Q()
+        for tag in request.GET.get('q').split():
+            q |= Q(brand__brand_name__iexact=tag) | Q(model__iexact=tag)
+        smartphones = Smartphone.objects.filter(q)
+    else:
+        smartphones = Smartphone.objects.all()
+    context = paginate(smartphones, 10, request, {}, var_name='smartphones')
+    return render(request, 'main/search_results.html', context)

@@ -8,6 +8,7 @@
   <title>Document</title>
    <link rel="stylesheet" href="{% static "css/style.css" %}">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -25,6 +26,37 @@
   		</ul>
 		</nav>
 	</header><hr class="head-mb">
+
+  <section id="info">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <ul class="info-list">
+            <li class="info-item">Top sales</li>
+            <li class="info-item">Brand focus</li>
+            <li class="info-item">Hi-tech</li>
+            <li class="info-item">Best sellers</li>
+            <li class="info-item">Projects</li>
+          </ul>
+        </div>
+        <div class="col-md-1 center">
+          <!-- <a class="support" href="#">support</a> -->
+        </div>
+        <div class=" col-md-4 ">
+          <div class="topnav">
+            <div class="search-container">
+              <form id="searchform" action="{% url 'search_smartphones' %}" method="get" accept-charset="utf-8">
+                <button type="submit" class="button-search">
+                  <i class="fa fa-search icon"></i>
+                </button>
+                <input class="searchfield" name="q" type="text" id="search" placeholder="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   {% block content %}
   {% endblock %}

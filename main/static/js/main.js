@@ -21,3 +21,25 @@ $(document).ready(function(){
   initBrandSelector();
 
 });
+
+
+$(document).ready(function() {
+  
+ $('.wrapper>.tab').not(':first-of-type').hide();
+ 
+  
+  $('.wrapper>.header-tabs').click(function() {
+    
+    var findArticle = $(this).next();
+    var findWrapper = $(this).closest('.wrapper');
+    
+    if (findArticle.is(':visible')) {
+      findArticle.slideUp('fast');
+    }
+    else {
+      findWrapper.find('>.tab').slideUp('fast');
+      findArticle.slideDown('fast');
+    }
+  });
+  
+});

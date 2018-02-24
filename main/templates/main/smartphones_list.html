@@ -24,9 +24,9 @@
 
 	<section id="section-content">
     <div class="container content">
-  
-	<div class="row content-mt ">
 
+	<div class="row content-mt">
+  <div class="col-md-3">
     <div class="wrapper">
       <h1 class="header-tabs">Brands</h1>
       <div class="tab">
@@ -34,14 +34,15 @@
           <button value="{{ brand.id }}">{{ brand.brand_name }}</button>
         {% endfor %}
       </div>
-    </div>  
+    </div>
+  </div>
 
  {% for sm in smartphones %}
 
     {% if forloop.counter > 1 %}
       <div class="col-md-3"></div>
     {% endif %}
-      
+
     <div class="col-md-2">
       <img class="photo-phone" src="../../static/img/lenovo small.jpg">
     </div>
@@ -53,14 +54,15 @@
       <h4 class="price">{{ sm.price }}$</h4>
       <input type="button" class="button-buy" value="Buy">
     </div>
-      
-  </div>
+
+
   {% endfor %}
-  	</div>
+   </div>
+   </div>
   </section>
 
 {% with object_list=smartphones %}
-{% include "main/pagination.html" %}
+  {% include "main/pagination.html" %}
 {% endwith %}
 
 {% endblock %}

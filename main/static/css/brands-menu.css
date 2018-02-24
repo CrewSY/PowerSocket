@@ -42,7 +42,7 @@
 }
 
 .wrapper {
-  width:190px;
+  width:225px;
 }
 
 .header-tabs {
@@ -64,7 +64,5 @@
   background:#FFFFF7;
   border-radius:0 0 5px 5px;
   color: #60646D;
-  width: 190px;
+  width: 225px;
 }
-
-

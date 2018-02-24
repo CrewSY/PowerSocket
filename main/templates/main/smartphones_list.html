@@ -1,5 +1,3 @@
-
-
 {% extends 'main/base.html' %}
 {% load i18n %}
 {% load staticfiles %}
@@ -29,7 +27,18 @@
 
 
 	<div class="row content-mt">
-        <div class="col-md-3" id="brand-selector">
+
+      <div class="tab">
+        {% for brand in brands %}
+          <button class="tablinks" value="{{ brand.id }}"{% if brand.selected%}selected="1"{% endif %}>{{ brand.brand_name }}</button>
+        {% endfor %}
+      </div>
+
+
+
+
+
+        <!-- <div class="col-md-3" id="brand-selector">
           <strong>{% trans "Brand" %}:</strong>
           <select>
             <option value="">{% trans "All brand" %}</option>
@@ -38,7 +47,7 @@
             </option>
             {% endfor %}
           </select>
-        </div>
+        </div> -->
  {% for sm in smartphones %}
         <div class="col-md-2 col-sm-2 col-sm-offcet-1">
           <img class="photo-phone" src="../../static/img/lenovo small.jpg">

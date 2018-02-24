@@ -24,30 +24,37 @@
 
 	<section id="section-content">
     <div class="container content">
+  
+	<div class="row content-mt ">
 
-
-	<div class="row content-mt">
-
+    <div class="wrapper">
+      <h1 class="header-tabs">Brands</h1>
       <div class="tab">
         {% for brand in brands %}
           <button value="{{ brand.id }}">{{ brand.brand_name }}</button>
         {% endfor %}
       </div>
+    </div>  
 
  {% for sm in smartphones %}
-        <div class="col-md-2 col-sm-2 col-sm-offcet-1">
-          <img class="photo-phone" src="../../static/img/lenovo small.jpg">
-        </div>
-        <div class="col-md-5 col-sm-4">
-           <h3 class="header-phone">{{ sm.brand }} {{ sm.model }}</h3>
-           <p descr-phone>{{ sm.description }}</p>
-        </div>
-        <div class="col-md-2 col-sm-3">
-           <h4 class="price">{{ sm.price }}$</h4>
-           <input type="button" class="button-buy" value="Buy">
-        </div>
-        <div></div>
-    </div><hr>
+
+    {% if forloop.counter > 1 %}
+      <div class="col-md-3"></div>
+    {% endif %}
+      
+    <div class="col-md-2">
+      <img class="photo-phone" src="../../static/img/lenovo small.jpg">
+    </div>
+     <div class="col-md-5">
+      <h3 class="header-phone">{{ sm.brand }} {{ sm.model }}</h3>
+      <p descr-phone>{{ sm.description }}</p>
+    </div>
+    <div class="col-md-2">
+      <h4 class="price">{{ sm.price }}$</h4>
+      <input type="button" class="button-buy" value="Buy">
+    </div>
+      
+  </div>
   {% endfor %}
   	</div>
   </section>

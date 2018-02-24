@@ -43,7 +43,11 @@
     {% endif %}
       
     <div class="col-md-2">
-      <img class="photo-phone" src="../../static/img/lenovo small.jpg">
+      {% if sm.photo %}
+          <img class="photo-phone" height="150" width="150" src="{{ sm.photo.url }}">
+          {% else %}
+          <img class="photo-phone" height="150" width="150" src="{% static "img/default_sm.png" %}">
+      {% endif %}
     </div>
      <div class="col-md-5">
       <h3 class="header-phone">{{ sm.brand }} {{ sm.model }}</h3>
@@ -55,12 +59,13 @@
     </div>
       
   </div>
+
   {% endfor %}
   	</div>
   </section>
 
 {% with object_list=smartphones %}
-{% include "main/pagination.html" %}
+  {% include "main/pagination.html" %}
 {% endwith %}
 
 {% endblock %}

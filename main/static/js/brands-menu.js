@@ -11,28 +11,12 @@ function initBrandSelector() {
   });
 }
 
-
-$(document).ready(function(){
-  var brand = $.cookie('current_brand');
-  if (brand) {
-    $('.tab button[value=' + brand + ']').addClass("active");
-  }
-
-  initBrandSelector();
-
-});
-
-
-$(document).ready(function() {
-  
- $('.wrapper>.tab').not(':first-of-type').hide();
- 
-  
+function accordion(){
+  $('.wrapper>.tab').not(':first-of-type').hide();
   $('.wrapper>.header-tabs').click(function() {
-    
+
     var findArticle = $(this).next();
     var findWrapper = $(this).closest('.wrapper');
-    
     if (findArticle.is(':visible')) {
       findArticle.slideUp('fast');
     }
@@ -41,5 +25,14 @@ $(document).ready(function() {
       findArticle.slideDown('fast');
     }
   });
-  
+}
+
+
+$(document).ready(function(){
+  var brand = $.cookie('current_brand');
+  if (brand) {
+    $('.tab button[value=' + brand + ']').addClass("active");
+  }
+  initBrandSelector();
+  accordion();
 });

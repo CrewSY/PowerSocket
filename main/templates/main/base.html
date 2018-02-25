@@ -6,11 +6,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
-   <link rel="stylesheet" href="{% static "css/style.css" %}">
-   <link rel="stylesheet" href="{% static "css/brands-menu.css" %}">
+   <link rel="stylesheet" href="{% static "css/base.css" %}">
+   {% block extra_css %}{% endblock %}
+
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
 </head>
 <body>
 	<header id="header">
@@ -89,9 +89,8 @@
   </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="{% static "js/jquery.cookie.js" %}"></script>
-<script src="{% static "js/main.js" %}"></script>
 <script src="{% static "js/slider.js" %}"></script>
 <script src="{% static "js/jquerymenu.js" %}"></script>
+{% block extra_js %}{% endblock %}
 </body>
 </html>

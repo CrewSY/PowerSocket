@@ -1,6 +1,13 @@
 {% extends 'main/base.html' %}
+
 {% load i18n %}
 {% load staticfiles %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static "css/brands-menu.css" %}">
+  <link rel="stylesheet" href="{% static "css/content.css" %}">
+  {% endblock %}
+
 {% block content %}
 
 	<section id="section1 black">
@@ -26,6 +33,7 @@
     <div class="container parent-container">
 
       <!-- menu -->
+
         <div class="wrapper"><h1 class="header-tabs">Brands</h1>
           <div class="tab">
             {% for brand in brands %}
@@ -63,4 +71,9 @@
   {% include "main/pagination.html" %}
 {% endwith %}
 
+{% endblock %}
+
+{% block extra_js %}
+  <script src="{% static "js/jquery.cookie.js" %}"></script>
+  <script src="{% static "js/brands-menu.js" %}"></script>
 {% endblock %}

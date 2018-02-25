@@ -13,28 +13,28 @@
 	<section id="section-content">
     <div class="container parent-container">
 
-        <div class="row">
-          
-            <p class="result-search">Showing results for {{ brand__brand_name__iexact }}</p>
-          
+        <div class="row justify-content-center">
+
+            <p class="result-search">Showing results for "{{ search_by }}" :</p>
+
         {% for sm in smartphones %}
-      
-          <div class="col-md-2">
+
+          <div class="col-md-2 offset-md-2">
             {% if sm.photo %}
               <img class="photo-phone" height="130" width="130" src="{{ sm.photo.url }}">
               {% else %}
               <img class="photo-phone" height="130" width="130" src="{% static "img/default_sm.png" %}">
             {% endif %}
           </div>
-          <div class="col-md-8">
+          <div class="col-md-4">
             <h3 class="header-phone">{{ sm.brand }} {{ sm.model }}</h3>
             <p descr-phone>{{ sm.description }}</p>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-4">
             <h4 class="price">{{ sm.price }}$</h4>
             <input type="button" class="button-buy" value="Buy">
           </div>
-          
+
         {% endfor %}
 
         </div>

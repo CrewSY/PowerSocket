@@ -39,5 +39,5 @@ def search_smartphones(request):
         smartphones = Smartphone.objects.filter(q)
     else:
         smartphones = Smartphone.objects.all()
-    context = paginate(smartphones, 10, request, {}, var_name='smartphones')
+    context = paginate(smartphones, 10, request, {'search_by': search_by}, var_name='smartphones')
     return render(request, 'main/search_results.html', context)

@@ -1,6 +1,13 @@
 {% extends 'main/base.html' %}
+
 {% load i18n %}
 {% load staticfiles %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static "css/brands-menu.css" %}">
+  <link rel="stylesheet" href="{% static "css/content.css" %}">
+  {% endblock %}
+
 {% block content %}
 
 	<section id="section1 black">
@@ -23,44 +30,50 @@
 	</section>
 
 	<section id="section-content">
-    <div class="container content">
+    <div class="container parent-container">
 
+      <!-- menu -->
 
-	<div class="row content-mt">
-        <div class="col-md-3" id="brand-selector">
-          <strong>{% trans "Brand" %}:</strong>
-          <select>
-            <option value="">{% trans "All brand" %}</option>
+        <div class="wrapper"><h1 class="header-tabs">Brands</h1>
+          <div class="tab">
             {% for brand in brands %}
-            <option value="{{ brand.id }}"{% if brand.selected%}selected="1"{% endif %}>{{ brand.brand_name }}
-            </option>
+              <button value="{{ brand.id }}">{{ brand.brand_name }}</button>
             {% endfor %}
-          </select>
+          </div>
         </div>
- {% for sm in smartphones %}
-        <div class="col-md-2 col-sm-2 col-sm-offcet-1">
-          {% if sm.photo %}
-          <img class="photo-phone" height="150" width="150" src="{{ sm.photo.url }}">
-          {% else %}
-          <img class="photo-phone" height="150" width="150" src="{% static "img/default_sm.png" %}">
-          {% endif %}
+
+      <!-- content -->
+        <div class="row">
+        {% for sm in smartphones %}
+          <div class="col-md-3">
+            {% if sm.photo %}
+              <img class="photo-phone" height="150" width="150" src="{{ sm.photo.url }}">
+              {% else %}
+              <img class="photo-phone" height="150" width="150" src="{% static "img/default_sm.png" %}">
+            {% endif %}
+          </div>
+          <div class="col-md-5">
+            <h3 class="header-phone">{{ sm.brand }} {{ sm.model }}</h3>
+            <p descr-phone>{{ sm.description }}</p>
+          </div>
+          <div class="col-md-2">
+            <h4 class="price">{{ sm.price }}$</h4>
+            <input type="button" class="button-buy" value="Buy">
+          </div>
+
+        {% endfor %}
         </div>
-        <div class="col-md-5 col-sm-4">
-           <h3 class="header-phone">{{ sm.brand }} {{ sm.model }}</h3>
-           <p descr-phone>{{ sm.description }}</p>
-        </div>
-        <div class="col-md-2 col-sm-3">
-           <h4 class="price">{{ sm.price }}$</h4>
-           <input type="button" class="button-buy" value="Buy">
-        </div>
-        <div></div>
-    </div><hr>
-  {% endfor %}
-  	</div>
+    </div>
+
   </section>
 
 {% with object_list=smartphones %}
   {% include "main/pagination.html" %}
 {% endwith %}
 
+{% endblock %}
+
+{% block extra_js %}
+  <script src="{% static "js/jquery.cookie.js" %}"></script>
+  <script src="{% static "js/brands-menu.js" %}"></script>
 {% endblock %}

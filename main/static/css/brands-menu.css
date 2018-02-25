@@ -1,0 +1,51 @@
+/*Style for tabs*/
+.tab {
+  height: 300px;
+  width: 200px;
+  background: #FFFFF7;
+  color: #60646D;
+  border: 1px solid #ccc;
+  border-radius:0 0 5px 5px;
+}
+
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 18px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+/*Styles for title of tabs*/
+.wrapper {
+  width:200px;
+}
+
+.header-tabs {
+  background: #4B4A4A;
+  border-radius:5px 5px 0 0;
+  margin:10px 0 0 0;
+  color:#FFFFF7;
+  font-size:20px;
+  padding: 13px;
+  text-align:center;
+  width:200px;
+ }
+
+.header-tabs:hover {
+  cursor: pointer;
+  background: black;
+}

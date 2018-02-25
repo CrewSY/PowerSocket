@@ -32,14 +32,11 @@ def get_brands(request):
     """Return all brands."""
     from .models import SmartphonesBrands
 
-    cur_brand = get_current_brand(request)
-
     brands = []
     for brand in SmartphonesBrands.objects.all().order_by('brand_name'):
         brands.append({
             'id': brand.id,
             'brand_name': brand.brand_name,
-            'selected': cur_brand and cur_brand.id == brand.id and True or False
         })
     return brands
 

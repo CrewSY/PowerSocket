@@ -48,20 +48,29 @@ nav li a:hover {
 
 .top-menu, .top-menu:hover, .top-menu:visited {
     color: black;
-    font-size: 15px;
+    font-size: 22px;
     display: inline-block;
     padding: 0;
     padding-right: 15px;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .shopping-cart {
-  margin-left: 50px;
+  margin-left: 80px;
 }
 
 .btn-log {
   border: 1px solid gray !important;
   border-radius: 5px !important;
+}
+
+.logout{
+  margin-top: -10px !important;
+}
+
+.login {
+  margin-left: 150px;
+  margin-top: 15px;
 }
 
 /* Section Info */

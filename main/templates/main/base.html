@@ -16,22 +16,6 @@
 <body>
 	<header id="header">
 		<nav>
-  		<!-- <a href="#" class="menu-trigger"><img src="../../static/img/CLXbY05.jpg"></a>
-      <a class="logo-head" href="{% url 'home' %}"><img src="../../static/img/logo.png"></a>
- 			<ul class="text-center">
-    		<li><a href="#">Devices</a></li>
-    		<li><a href="#">Delivery & Payment</a></li>
-    		<li><a href="#">Guarantee</a></li>
-    		<li><a href="#">About us</a></li>
-
-        {% if user.is_authenticated %}
-          <a class="top-menu shopping-cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-          <a class="top-menu" href="#"><span class="glyphicon glyphicon-user"></span></a>
-          <a class="btn btn-outline-secondary btn-log" href="{% url 'logout' %}">{% trans "Log out" %}</a>
-      {% else %}
-        <a href="{% url 'login' %}" class="btn btn-outline-secondary btn-log">Sign in</a>
-      {% endif %}
-  		</ul> -->
       <div class="container mt-head">
         <div class="row">
           <div class="col-md-2">
@@ -45,13 +29,13 @@
               <li><a href="#">About us</a></li>
             </ul>
           </div>
-          <div class="col-md-3">
+           <div class="col-md-3">
             {% if user.is_authenticated %}
               <a class="top-menu shopping-cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
               <a class="top-menu" href="#"><span class="glyphicon glyphicon-user"></span></a>
-              <a class="btn btn-outline-secondary btn-log" href="{% url 'logout' %}">{% trans "Log out" %}</a>
+              <a class="btn btn-outline-secondary btn-log logout" href="{% url 'logout' %}">{% trans "Log out" %}</a>
             {% else %}
-              <a href="{% url 'login' %}" class="btn btn-outline-secondary btn-log">Sign in</a>
+              <a class="btn btn-outline-secondary btn-log login" id="login" href="{% url 'login' %}">{% trans "Sign in" %}</a>
             {% endif %}
           </div>
         </div>
@@ -72,7 +56,6 @@
           </ul>
         </div>
         <div class="col-md-1 center">
-          <!-- <a class="support" href="#">support</a> -->
         </div>
         <div class=" col-md-4 ">
           <div class="topnav">

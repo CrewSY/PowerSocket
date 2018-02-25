@@ -13,10 +13,6 @@ nav ul li {
   display:inline-block;
 }
 
-.navbar-brand  {
-  padding-right: 150px;
-}
-
 nav a {
   color:black;
   display:block;
@@ -24,11 +20,6 @@ nav a {
   padding:20px 30px;
   font-weight: bold;
   font-size: 14px;
- }
-
-nav a img {
-  width: 40px;
-  height: 40px;
 }
 
 nav li a:hover {
@@ -37,17 +28,23 @@ nav li a:hover {
   text-decoration: none;
 }
 
+.mt-head {
+  margin-top: 20px;
+}
+
 .logo-head {
   padding-right: 40px;
+}
+
+.logo-head-photo {
+  width: 92px;
+  height: 25px;
 }
 
 .menu-trigger {
   display:none;
 }
 
-.head-mb{
-  margin-bottom: 0;
-}
 
 .top-menu, .top-menu:hover, .top-menu:visited {
     color: black;
@@ -55,6 +52,7 @@ nav li a:hover {
     display: inline-block;
     padding: 0;
     padding-right: 15px;
+    margin-top: 15px;
 }
 
 .shopping-cart {

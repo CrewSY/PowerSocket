@@ -30,10 +30,10 @@ def paginate(objects, size, request, context, var_name='object_list'):
 
 def get_brands(request):
     """Return all brands."""
-    from .models import SmartphonesBrands
+    from .models import SmartphoneBrand
 
     brands = []
-    for brand in SmartphonesBrands.objects.all().order_by('brand_name'):
+    for brand in SmartphoneBrand.objects.all().order_by('brand_name'):
         brands.append({
             'id': brand.id,
             'brand_name': brand.brand_name,
@@ -46,10 +46,10 @@ def get_current_brand(request):
     pk = request.COOKIES.get('current_brand')
 
     if pk:
-        from .models import SmartphonesBrands
+        from .models import SmartphoneBrand
         try:
-            brand = SmartphonesBrands.objects.get(pk=int(pk))
-        except SmartphonesBrands.DoesNotExist:
+            brand = SmartphoneBrand.objects.get(pk=int(pk))
+        except SmartphoneBrand.DoesNotExist:
             return None
         else:
             return brand

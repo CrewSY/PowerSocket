@@ -17,7 +17,7 @@ class Smartphone(models.Model):
     photo = models.ImageField(verbose_name=_(u'Photo'),
                               blank=True,
                               null=True)
-    brand = models.ForeignKey('SmartphonesBrands',
+    brand = models.ForeignKey('SmartphoneBrand',
                               verbose_name=_(u'Brand'),
                               blank=False,
                               null=True,
@@ -39,8 +39,14 @@ class Smartphone(models.Model):
         return u'%s %s' % (self.brand, self.model)
 
 
-class SmartphonesBrands(models.Model):
-    """Model that represents brands of smartphones."""
+class SmartphoneBrand(models.Model):
+    """Model that represents brand of smartphone."""
+
+    class Meta:
+        """Meta data of smartphone."""
+
+        verbose_name = _(u'Smartphone Brand')
+        verbose_name_plural = _(u'Smartphone Brands')
 
     brand_name = models.CharField(verbose_name=_(u'Brand'),
                                   max_length=64)

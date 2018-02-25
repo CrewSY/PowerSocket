@@ -3,7 +3,7 @@
 from django.db.models import Q
 from django.shortcuts import render
 
-from .models import Smartphone, SmartphonesBrands
+from .models import Smartphone, SmartphoneBrand
 from .utils import paginate, get_current_brand
 
 
@@ -24,7 +24,7 @@ def smartphones_list(request):
         request.GET.order_by = 'publish_date'
         smartphones = smartphones.order_by('publish_date')
 
-    brands = SmartphonesBrands.objects.all().order_by('brand_name')
+    brands = SmartphoneBrand.objects.all().order_by('brand_name')
     context = paginate(smartphones, 6, request, {'brands': brands}, var_name='smartphones')
     return render(request, 'main/smartphones_list.html', context)
 

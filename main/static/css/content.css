@@ -39,12 +39,24 @@ input.button-buy:active {
   50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
 }
 
+.result-search {
+  width: 100%;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 25px;
+}
+
 .parent-container {
    display: flex;
 }
 
 .header-phone, .price {
-  margin-top: 30px;
+  margin-top: 20px;
+}
+
+.header-phone {
+  margin-bottom: 5px;
 }
 
 .price {

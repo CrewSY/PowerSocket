@@ -37,6 +37,10 @@ nav li a:hover {
   text-decoration: none;
 }
 
+.logo-head {
+  padding-right: 40px;
+}
+
 .menu-trigger {
   display:none;
 }
@@ -257,8 +261,9 @@ footer {
   list-style: none;
 }
 
-.logo {
+.logo-footer {
   padding-top: 100px;
+  margin-right: 20px;
 }
 
 .footer-menu {

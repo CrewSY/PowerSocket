@@ -1,4 +1,4 @@
-"""Models for PowerSocket project."""
+"""Smartphone models for PowerSocket project."""
 
 from django.db import models
 from django.utils import timezone

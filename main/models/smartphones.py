@@ -8,6 +8,12 @@ from django.utils.translation import ugettext_lazy as _
 class Smartphone(models.Model):
     """Model that represents smartphones."""
 
+    class Meta:
+        """Meta data of smartphone."""
+
+        verbose_name = _(u'Smartphone')
+        verbose_name_plural = _(u'Smartphones')
+
     photo = models.ImageField(verbose_name=_(u'Photo'),
                               blank=True,
                               null=True)
@@ -19,9 +25,14 @@ class Smartphone(models.Model):
     model = models.CharField(verbose_name=_(u'Model'),
                              max_length=255)
     description = models.TextField(verbose_name=_(u'Description'))
-    price = models.FloatField(verbose_name=_(u'Price'))
+    price = models.DecimalField(verbose_name=_(u'Price'),
+                                max_digits=8,
+                                decimal_places=2,
+                                default=0)
     publish_date = models.DateTimeField(verbose_name=_(u'Created date'),
                                         default=timezone.now)
+    in_stock = models.BooleanField(verbose_name=_(u'In stock'),
+                                   default=True)
 
     def __str__(self):
         """Render the smartphone instance as a string."""

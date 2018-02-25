@@ -45,6 +45,23 @@ nav li a:hover {
   margin-bottom: 0;
 }
 
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: black;
+    font-size: 15px;
+    display: inline-block;
+    padding: 0;
+    padding-right: 15px;
+}
+
+.shopping-cart {
+  margin-left: 50px;
+}
+
+.btn-log {
+  border: 1px solid gray !important;
+  border-radius: 5px !important;
+}
+
 /* Section Info */
 .info-list, .info-item {
   display:inline-block;

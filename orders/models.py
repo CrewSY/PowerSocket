@@ -48,11 +48,7 @@ class Order(models.Model):
 
     def __str__(self):
         """Render the order instance as a string."""
-        return '%s - %s' % (self.id, self.status.name)
-
-    def save(self, *args, **kwargs):
-        """Save order in data base."""
-        super(Order, self).save(*args, **kwargs)
+        return '%s - %s' % (self.id, self.status)
 
 
 class SmartphoneInOrder(models.Model):
@@ -85,7 +81,7 @@ class SmartphoneInOrder(models.Model):
 
     def __str__(self):
         """Render the smartphone in order instance as a string."""
-        return self.smartphone
+        return '%s %s' % (self.smartphone.brand.brand_name, self.smartphone.model)
 
     def save(self, *args, **kwargs):
         """Save smartphone in order in data base."""
@@ -99,7 +95,8 @@ class SmartphoneInOrder(models.Model):
 def smartphone_in_order_post_save(sender, instance, created, **kwargs):
     """Post save of smartphone in order."""
     order = instance.order
-    all_smartphone_in_order = SmartphoneInOrder.objects.filter(order=order, is_active=True)
+    all_smartphone_in_order = SmartphoneInOrder.objects.filter(order=order,
+                                                               smartphone__in_stock=True)
 
     order_total_price = 0
     for item in all_smartphone_in_order:

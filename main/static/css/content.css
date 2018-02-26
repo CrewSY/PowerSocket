@@ -65,6 +65,14 @@ input.button-buy:active {
    display: flex;
 }
 
+.photo-phone {
+  margin: 10px 0 0 70px;
+}
+
+.photo-phone-search {
+  margin: 10px 0 0 130px;
+}
+
 .header-phone, .price {
   margin-top: 20px;
 }

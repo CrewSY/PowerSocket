@@ -23,10 +23,9 @@
           </div>
           <div class="col-md-7">
             <ul class="text-center">
-              <li><a href="#">Devices</a></li>
-              <li><a href="#">Delivery & Payment</a></li>
-              <li><a href="#">Guarantee</a></li>
-              <li><a href="#">About us</a></li>
+              <li><a href="{% url 'home' %}">Home</a></li>
+              <li><a href="#">New products</a></li>
+              <li><a href="#">Top sales</a></li>
             </ul>
           </div>
            <div class="col-md-3">
@@ -46,25 +45,14 @@
   <section id="info">
     <div class="container">
       <div class="row">
-        <div class="col-md-7">
-          <ul class="info-list">
-            <li class="info-item">Top sales</li>
-            <li class="info-item">Brand focus</li>
-            <li class="info-item">Hi-tech</li>
-            <li class="info-item">Best sellers</li>
-            <li class="info-item">Projects</li>
-          </ul>
-        </div>
-        <div class="col-md-1 center">
-        </div>
-        <div class=" col-md-4 ">
+        <div class=" col-md-5 offset-md-7">
           <div class="topnav">
             <div class="search-container">
               <form id="searchform" action="{% url 'search_smartphones' %}" method="get" accept-charset="utf-8">
+                <input class="searchfield" name="q" type="text" id="search" placeholder="Search">
                 <button type="submit" class="button-search">
                   <i class="fa fa-search icon"></i>
                 </button>
-                <input class="searchfield" name="q" type="text" id="search" placeholder="Search">
               </form>
             </div>
           </div>
@@ -80,22 +68,19 @@
     <div class="container">
       <div class="row">
         <div class="col-md-2">
-          <img class="logo-footer" src="../../static/img/logo.png">
+          <p class="copy">&copy; 2018 CrewSY</p>
         </div>
-        <div class="col-md-9">
-          <ul class="footer-menu text-center">
-            <li class="footer-item">Home</li>
-            <li class="footer-item">Shop</li>
-            <li class="footer-item">Team</li>
+        <div class="col-md-4 offset-md-3">
+          <ul class="footer-menu">
             <li class="footer-item">About us</li>
             <li class="footer-item">Contact</li>
           </ul>
         </div>
-        <div class="col-md-1">
+        <div class="col-md-3">
           <ul class="social">
-            <li class="social-items"></li>
-            <li class="social-items"></li>
-            <li class="social-items"></li>
+            <li class="social-items"><a href="https://www.instagram.com/ihordubas/"><img src="https://png.icons8.com/nolan/50/000000/twitter.png"></li>
+            <li class="social-items"><a href="https://www.instagram.com/kozirnaya_dama/"><img src="https://png.icons8.com/nolan/50/000000/instagram-new.png"></li>
+            <li class="social-items"><a href="https://www.instagram.com/ihordubas/"><img src="https://png.icons8.com/nolan/50/000000/google-plus.png"></a></li>
           </ul>
         </div>
       </div>

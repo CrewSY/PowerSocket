@@ -125,9 +125,9 @@ input.button-buy:active {
 .pagination ul li.active {
   background-color: black !important;
   color: white !important;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
 .pagination ul li.active a {
-  color: white !important; 
+  color: white !important;
 }

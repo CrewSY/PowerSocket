@@ -23,8 +23,10 @@ class Smartphone(models.Model):
                               null=True,
                               on_delete=models.PROTECT)
     model = models.CharField(verbose_name=_(u'Model'),
+                             blank=True,
                              max_length=255)
-    description = models.TextField(verbose_name=_(u'Description'))
+    description = models.TextField(verbose_name=_(u'Description'),
+                                   blank=True)
     price = models.DecimalField(verbose_name=_(u'Price'),
                                 max_digits=8,
                                 decimal_places=2,

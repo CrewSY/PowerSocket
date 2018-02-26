@@ -14,7 +14,7 @@ class SmartphoneInOrderInline(admin.TabularInline):
 class OrderAdmin (admin.ModelAdmin):
     """Config order on admin page."""
 
-    list_display = ('status', 'total_price', )
+    list_display = ('id', 'status', 'total_price', )
     list_filter = ('status', )
     inlines = [SmartphoneInOrderInline]
 

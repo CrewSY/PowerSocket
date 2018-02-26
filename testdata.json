@@ -1,0 +1,1452 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "main",
+    "model": "smartphone"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "main",
+    "model": "smartphonebrand"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "orders",
+    "model": "order"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "orders",
+    "model": "smartphoneinorder"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "kwrhb7lg8bsfjur8uwertmaggsy55oap",
+  "fields": {
+    "session_data": "NjMzNDIzZWQ5N2U0ZjYyYzQyMjY3NmRmMzI2ODgzOWM0Y2FmODkyYzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjNGVhZjYyNTM4ZjdjODRmNDZjNDIwOTkzMzZkNWYyOTU3MjcyMGU2In0=",
+    "expire_date": "2018-03-12T09:37:06.623Z"
+  }
+},
+{
+  "model": "main.smartphone",
+  "pk": 1,
+  "fields": {
+    "photo": "",
+    "brand": 1,
+    "model": "Galaxy J7 Pro",
+    "description": "The Samsung Galaxy J7 Pro is powered by 1.6GHz octa-core. It comes with 3GB of RAM. The phone packs 64GB of internal storage that can be expanded up to 128GB via a microSD card. As far as the cameras are concerned, the Samsung Galaxy J7 Pro packs a 13-megapixel primary camera on the rear and a 13-megapixel front shooter for selfies. The Samsung Galaxy J7 Pro runs Android 7.0 and is powered by a 3600mAh non removable battery. It measures 152.40 x 74.70 x 7.90 (height x width x thickness) . The Samsung Galaxy J7 Pro is a dual SIM (GSM) . Connectivity options include Wi-Fi, GPS, Bluetooth, NFC, USB OTG and 4G (with support for Band 40 used by some LTE networks in India). Sensors on the phone include Compass Magnetometer, Proximity sensor, Accelerometer, Ambient light sensor and Gyroscope.",
+    "price": "99.00",
+    "publish_date": "2018-02-26T09:40:27Z",
+    "in_stock": true
+  }
+},
+{
+  "model": "main.smartphone",
+  "pk": 2,
+  "fields": {
+    "photo": "",
+    "brand": 1,
+    "model": "Galaxy J2",
+    "description": "The Samsung Galaxy J5 is the best phone if you are looking for a smartphone that has a sleek look and comes with the latest updates in software. The phone combines functionality with a pleasant presence factor that makes it one of the best android phones in its category in the market today. Keeping your phone safe while still looking good is easy thanks to the snappy grooved texture of this phone that sits nicely in your hand. Combined with the toughened 5-inch Gorilla Glass screen the HTC Desire 650 is safer than ever. Keeping your phone safe while still looking good is easy thanks to the snappy grooved texture of this phone that sits nicely in your hand. Combined with the toughened 5-inch Gorilla Glass screen the HTC Desire 650 is safer than ever.",
+    "price": "20.00",
+    "publish_date": "2018-02-26T09:41:11Z",
+    "in_stock": true
+  }
+},
+{
+  "model": "main.smartphone",
+  "pk": 3,
+  "fields": {
+    "photo": "",
+    "brand": 1,
+    "model": "Galaxy A5",
+    "description": "Easily juggle in between your personal and professional life with the dual SIM support feature of the Samsung smartphone. With the dual SIM support feature, you can enjoy the best of network connectivity and avail the benefits of two different network service providers simultaneously. Easily juggle in between your personal and professional life with the dual SIM support feature of the Samsung smartphone. With the dual SIM support feature, you can enjoy the best of network connectivity and avail the benefits of two different network service providers simultaneously. Keeping your phone safe while still looking good is easy thanks to the snappy grooved texture of this phone that sits nicely in your hand. Combined with the toughened 5-inch Gorilla Glass screen the HTC Desire 650 is safer than ever. Keeping your phone safe while still looking good is easy thanks to the snappy grooved texture of this phone that sits nicely in your hand. Combined with the toughened 5-inch Gorilla Glass screen the HTC Desire 650 is safer than ever.",
+    "price": "35.00",
+    "publish_date": "2018-02-26T09:42:29Z",
+    "in_stock": true
+  }
+},
+{
+  "model": "main.smartphone",
+  "pk": 4,
+  "fields": {
+    "photo": "",
+    "brand": 1,
+    "model": "Galaxy S Duos 3",
+    "description": "Watch your favourite movies and play graphic intensive games on a bright 10.16 cm (4) TFT touchscreen of the Samsung Galaxy S Duos 3 smartphone. With its 480 x 800 pixels, it displays every image with outstanding clarity and rich image details for a more comfortable and convenient viewing experience.",
+    "price": "16.99",
+    "publish_date": "2018-02-26T09:43:15Z",
+    "in_stock": true
+  }
+},
+{
+  "model": "main.smartphone",
+  "pk": 5,
+  "fields": {
+    "photo": "",
+    "brand": 2,
+    "model": "Gold K8 NOTE",
+    "description": "Lenovo K8 smartphones have been launched India. The phones are primarily mid-range smartphones, featuring improved cameras, battery life and the stock Android user interface. Out of the two smartphones, Lenovo K8 has a superior hardware. The phone is powered by a MediaTek\u2019s octa-core Helio P25 chipset clocks at 2.3Ghz coupled with 3GB RAM, 32GB storage and a dedicated microSD card slot(up to 128GB). Lenovo K8 is backed by a 4,000mAh battery, which the company claims should last at least two days. The phone has a 5.2-inch Full HD display, with an Oleophobic coating and Corning Gorilla Glass protection. It gets a dual-lens configuration with 13MP and 8MP sensors and users can add a depth effect to their images. The front camera is 8MP and it includes a front flash, advanced pro mode as well. Lenovo K8 looks identical to the company\u2019s K8 Note, with a full metal design. The phone also promises an \u201camazing multimedia experience\u201d thanks to the Dolby Atmos sound technology. There is a dedicated music key as well on this phone, just like the K8 Note. The smartphone runs Android 7.1 Nougat out of the box. Lenovo says the user interface is a pure version of Android like the company did with the K8 Note. Lenovo has promised the latest Android 7.1 Oreo in the near future. Lenovo K8 will go on sale on September 16 at 6 PM in India. The smartphone is exclusive to SNAPDEAL and it. Lenovo also announced the K8. The phone packs watered down specs compared to the K8 . The phone will go on sale soon in India via leading retail channels. The pricing has not been disclosed at the time of launch. This one has a 5.2-inch HD resolution display (720p), MediaTek P20 processor, 4000 mAh battery and 13MP rear camera and an 8MP front camera. Lenovo has not specified the exact storage and RAM on the K8 smartphone.",
+    "price": "66.66",
+    "publish_date": "2018-02-26T09:44:00Z",
+    "in_stock": true
+  }
+},
+{
+  "model": "main.smartphone",
+  "pk": 6,
+  "fields": {
+    "photo": "",
+    "brand": 2,
+    "model": "Gold XT190",
+    "description": "Lenovo K8 smartphones have been launched India. The phones are primarily mid-range smartphones, featuring improved cameras, battery life and the stock Android user interface. Out of the two smartphones, Lenovo K8 has a superior hardware. The phone is powered by a MediaTek\u2019s octa-core Helio P25 chipset clocks at 2.3Ghz coupled with 3GB RAM, 32GB storage and a dedicated microSD card slot(up to 128GB). Lenovo K8 is backed by a 4,000mAh battery, which the company claims should last at least two days. The phone has a 5.2-inch Full HD display, with an Oleophobic coating and Corning Gorilla Glass protection. It gets a dual-lens configuration with 13MP and 8MP sensors and users can add a depth effect to their images. The front camera is 8MP and it includes a front flash, advanced pro mode as well. Lenovo K8 looks identical to the company\u2019s K8 Note, with a full metal design. The phone also promises an \u201camazing multimedia experience\u201d thanks to the Dolby Atmos sound technology. There is a dedicated music key as well on this phone, just like the K8 Note.",
+    "price": "120.00",
+    "publish_date": "2018-02-26T09:45:24Z",
+    "in_stock": true
+  }
+},
+{
+  "model": "main.smartphone",
+  "pk": 7,
+  "fields": {
+    "photo": "",
+    "brand": 2,
+    "model": "Vibe P1 Turbo",
+    "description": "The smartphone runs Android 7.1 Nougat out of the box. Lenovo says the user interface is a pure version of Android like the company did with the K8 Note. Lenovo has promised the latest Android 7.1 Oreo in the near future. Lenovo K8 will go on sale on September 16 at 6 PM in India. The smartphone is exclusive to SNAPDEAL and it. Lenovo also announced the K8. The phone packs watered down specs compared to the K8 . The phone will go on sale soon in India via leading retail channels. The pricing has not been disclosed at the time of launch. This one has a 5.2-inch HD resolution display (720p), MediaTek P20 processor, 4000 mAh battery and 13MP rear camera and an 8MP front camera. Lenovo has not specified the exact storage and RAM on the K8 smartphone.",
+    "price": "322.22",
+    "publish_date": "2018-02-26T09:46:28Z",
+    "in_stock": true
+  }
+},
+{
+  "model": "main.smartphone",
+  "pk": 8,
+  "fields": {
+    "photo": "",
+    "brand": 3,
+    "model": "4S 8 GB",
+    "description": "Watch clear and detailed images on the bright 8.89 cm (3.5) Retina display of the Apple iPhone 4S. With its 960 x 640 pixels, every image is displayed with maximum clarity and optimum colour balance for an enhanced viewing and gaming experience without straining your eyes. Moreover, the Corning Gorilla glass with oleophobic coating on front and back makes it more durable and scratch resistant.",
+    "price": "25.50",
+    "publish_date": "2018-02-26T09:46:55Z",
+    "in_stock": true
+  }
+},
+{
+  "model": "main.smartphone",
+  "pk": 9,
+  "fields": {
+    "photo": "",
+    "brand": 3,
+    "model": "6 (32GB)",
+    "description": "Keeping your phone safe while still looking good is easy thanks to the snappy grooved texture of this phone that sits nicely in your hand. Combined with the toughened 5-inch Gorilla Glass screen the HTC Desire 650 is safer than ever.",
+    "price": "35.00",
+    "publish_date": "2018-02-26T09:48:17Z",
+    "in_stock": true
+  }
+},
+{
+  "model": "main.smartphone",
+  "pk": 10,
+  "fields": {
+    "photo": "",
+    "brand": 3,
+    "model": "7 (32GB)",
+    "description": "Keeping your phone safe while still looking good is easy thanks to the snappy grooved texture of this phone that sits nicely in your hand. Combined with the toughened 5-inch Gorilla Glass screen the HTC Desire 650 is safer than ever.",
+    "price": "110.00",
+    "publish_date": "2018-02-26T09:48:40Z",
+    "in_stock": true
+  }
+},
+{
+  "model": "main.smartphone",
+  "pk": 11,
+  "fields": {
+    "photo": "",
+    "brand": 3,
+    "model": "5C 16 GB Pink",
+    "description": "",
+    "price": "300.00",
+    "publish_date": "2018-02-26T09:49:00Z",
+    "in_stock": true
+  }
+},
+{
+  "model": "main.smartphone",
+  "pk": 12,
+  "fields": {
+    "photo": "",
+    "brand": 3,
+    "model": "5S 64 GB Silver",
+    "description": "Progress is a beautiful thing and the new Apple iPhoneS 64 GB defines progress in many ways. Equipped with a 64-bit architecture chip, a fingerprint identity sensor, a camera that takes your photography skills to the next level and an operating system built specially for 64 bit architecture, Apple iPhone 5S is nothing short of a wonder. You call it a wonder; Apple calls it forward thinking!",
+    "price": "430.00",
+    "publish_date": "2018-02-26T09:49:21Z",
+    "in_stock": true
+  }
+},
+{
+  "model": "main.smartphone",
+  "pk": 13,
+  "fields": {
+    "photo": "",
+    "brand": 3,
+    "model": "8",
+    "description": "",
+    "price": "600.00",
+    "publish_date": "2018-02-26T09:49:55Z",
+    "in_stock": true
+  }
+},
+{
+  "model": "main.smartphone",
+  "pk": 14,
+  "fields": {
+    "photo": "",
+    "brand": 3,
+    "model": "8 64GB",
+    "description": "Keeping your phone safe while still looking good is easy thanks to the snappy grooved texture of this phone that sits nicely in your hand. Combined with the toughened 5-inch Gorilla Glass screen the HTC Desire 650 is safer than ever.",
+    "price": "1111.00",
+    "publish_date": "2018-02-26T09:51:11Z",
+    "in_stock": true
+  }
+},
+{
+  "model": "main.smartphone",
+  "pk": 15,
+  "fields": {
+    "photo": "",
+    "brand": 3,
+    "model": "7 32 GB",
+    "description": "Keeping your phone safe while still looking good is easy thanks to the snappy grooved texture of this phone that sits nicely in your hand. Combined with the toughened 5-inch Gorilla Glass screen the HTC Desire 650 is safer than ever.",
+    "price": "550.00",
+    "publish_date": "2018-02-26T09:51:30Z",
+    "in_stock": true
+  }
+},
+{
+  "model": "main.smartphone",
+  "pk": 16,
+  "fields": {
+    "photo": "",
+    "brand": 3,
+    "model": "SE 16GB",
+    "description": "Keeping your phone safe while still looking good is easy thanks to the snappy grooved texture of this phone that sits nicely in your hand. Combined with the toughened 5-inch Gorilla Glass screen the HTC Desire 650 is safer than ever.",
+    "price": "400.00",
+    "publish_date": "2018-02-26T09:51:56Z",
+    "in_stock": true
+  }
+},
+{
+  "model": "main.smartphone",
+  "pk": 17,
+  "fields": {
+    "photo": "",
+    "brand": 4,
+    "model": "P8 Lite 2017",
+    "description": "Keeping your phone safe while still looking good is easy thanks to the snappy grooved texture of this phone that sits nicely in your hand. Combined with the toughened 5-inch Gorilla Glass screen the HTC Desire 650 is safer than ever.",
+    "price": "400.00",
+    "publish_date": "2018-02-26T09:52:20Z",
+    "in_stock": true
+  }
+},
+{
+  "model": "main.smartphone",
+  "pk": 18,
+  "fields": {
+    "photo": "",
+    "brand": 5,
+    "model": "Desire 650",
+    "description": "Keeping your phone safe while still looking good is easy thanks to the snappy grooved texture of this phone that sits nicely in your hand. Combined with the toughened 5-inch Gorilla Glass screen the HTC Desire 650 is safer than ever.",
+    "price": "200.00",
+    "publish_date": "2018-02-26T09:53:26Z",
+    "in_stock": true
+  }
+},
+{
+  "model": "main.smartphonebrand",
+  "pk": 1,
+  "fields": {
+    "brand_name": "Samsung"
+  }
+},
+{
+  "model": "main.smartphonebrand",
+  "pk": 2,
+  "fields": {
+    "brand_name": "Lenovo"
+  }
+},
+{
+  "model": "main.smartphonebrand",
+  "pk": 3,
+  "fields": {
+    "brand_name": "Iphone"
+  }
+},
+{
+  "model": "main.smartphonebrand",
+  "pk": 4,
+  "fields": {
+    "brand_name": "Huawei"
+  }
+},
+{
+  "model": "main.smartphonebrand",
+  "pk": 5,
+  "fields": {
+    "brand_name": "HTC"
+  }
+},
+{
+  "model": "main.smartphonebrand",
+  "pk": 6,
+  "fields": {
+    "brand_name": "Nokia"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 1,
+  "fields": {
+    "status": "New",
+    "total_price": "446.50",
+    "customer_name": "Petrushynskyi Oleksii",
+    "customer_email": "fantsimple@gmail.com",
+    "customer_phone": "0632804004",
+    "customer_address": "Morozna 8/50",
+    "comments": "Home delivery",
+    "created": "2018-02-26T10:05:54.741Z",
+    "updated": "2018-02-26T10:05:54.750Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 2,
+  "fields": {
+    "status": "New",
+    "total_price": "1111.00",
+    "customer_name": "Ihor Dubas",
+    "customer_email": "ihorkdesktop1450@gmai.com",
+    "customer_phone": "0734571110",
+    "customer_address": "selo Vynnyky",
+    "comments": "Self-checkout",
+    "created": "2018-02-26T10:08:56.544Z",
+    "updated": "2018-02-26T10:08:56.547Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 3,
+  "fields": {
+    "status": "New",
+    "total_price": "0.00",
+    "customer_name": "Nazar Bondarchuk",
+    "customer_email": "nazarbondarchuk@gmail.com",
+    "customer_phone": "0981122345",
+    "customer_address": "Morozna 8/74",
+    "comments": "",
+    "created": "2018-02-26T10:09:35.776Z",
+    "updated": "2018-02-26T10:09:35.776Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 4,
+  "fields": {
+    "status": "Completed",
+    "total_price": "420.00",
+    "customer_name": "Nazar Ben",
+    "customer_email": "nazarben@gmail.com",
+    "customer_phone": "2223345",
+    "customer_address": "Syhivska 8/4",
+    "comments": "All black!",
+    "created": "2018-02-26T10:10:50.070Z",
+    "updated": "2018-02-26T10:10:50.078Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 5,
+  "fields": {
+    "status": "In process",
+    "total_price": "398.00",
+    "customer_name": "Yulia Kuhar",
+    "customer_email": "kuhar99@gmail.com",
+    "customer_phone": "0751234999 0329456712",
+    "customer_address": "selo Stryi",
+    "comments": "Home delivery",
+    "created": "2018-02-26T10:12:10.673Z",
+    "updated": "2018-02-26T10:12:10.678Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 6,
+  "fields": {
+    "status": "Closed",
+    "total_price": "99.00",
+    "customer_name": "Stepn Dibok",
+    "customer_email": "dibok@gmail.com",
+    "customer_phone": "0994485632",
+    "customer_address": "Kyiv Shevchenka 241a/55",
+    "comments": "",
+    "created": "2018-02-26T10:13:37.094Z",
+    "updated": "2018-02-26T10:13:37.096Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 7,
+  "fields": {
+    "status": "New",
+    "total_price": "1111.00",
+    "customer_name": "Serhuy Magyr",
+    "customer_email": "magyr@gmail.com",
+    "customer_phone": "0873948567",
+    "customer_address": "Dobrotvir",
+    "comments": "",
+    "created": "2018-02-26T10:15:27.278Z",
+    "updated": "2018-02-26T10:15:27.280Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 8,
+  "fields": {
+    "status": "New",
+    "total_price": "600.00",
+    "customer_name": "Myhailenko Mariana",
+    "customer_email": "myhailenko@gmail.com",
+    "customer_phone": "0557892345",
+    "customer_address": "Cherkasy",
+    "comments": "Home delivery",
+    "created": "2018-02-26T10:16:20.956Z",
+    "updated": "2018-02-26T10:16:20.961Z"
+  }
+},
+{
+  "model": "orders.smartphoneinorder",
+  "pk": 1,
+  "fields": {
+    "order": 1,
+    "smartphone": 1,
+    "count": 1,
+    "price_per_item": "99.00",
+    "total_price": "99.00"
+  }
+},
+{
+  "model": "orders.smartphoneinorder",
+  "pk": 2,
+  "fields": {
+    "order": 1,
+    "smartphone": 2,
+    "count": 1,
+    "price_per_item": "20.00",
+    "total_price": "20.00"
+  }
+},
+{
+  "model": "orders.smartphoneinorder",
+  "pk": 3,
+  "fields": {
+    "order": 1,
+    "smartphone": 8,
+    "count": 5,
+    "price_per_item": "25.50",
+    "total_price": "127.50"
+  }
+},
+{
+  "model": "orders.smartphoneinorder",
+  "pk": 4,
+  "fields": {
+    "order": 1,
+    "smartphone": 18,
+    "count": 1,
+    "price_per_item": "200.00",
+    "total_price": "200.00"
+  }
+},
+{
+  "model": "orders.smartphoneinorder",
+  "pk": 5,
+  "fields": {
+    "order": 2,
+    "smartphone": 14,
+    "count": 1,
+    "price_per_item": "1111.00",
+    "total_price": "1111.00"
+  }
+},
+{
+  "model": "orders.smartphoneinorder",
+  "pk": 6,
+  "fields": {
+    "order": 4,
+    "smartphone": 16,
+    "count": 1,
+    "price_per_item": "400.00",
+    "total_price": "400.00"
+  }
+},
+{
+  "model": "orders.smartphoneinorder",
+  "pk": 7,
+  "fields": {
+    "order": 4,
+    "smartphone": 2,
+    "count": 1,
+    "price_per_item": "20.00",
+    "total_price": "20.00"
+  }
+},
+{
+  "model": "orders.smartphoneinorder",
+  "pk": 8,
+  "fields": {
+    "order": 5,
+    "smartphone": 18,
+    "count": 1,
+    "price_per_item": "200.00",
+    "total_price": "200.00"
+  }
+},
+{
+  "model": "orders.smartphoneinorder",
+  "pk": 9,
+  "fields": {
+    "order": 5,
+    "smartphone": 1,
+    "count": 2,
+    "price_per_item": "99.00",
+    "total_price": "198.00"
+  }
+},
+{
+  "model": "orders.smartphoneinorder",
+  "pk": 10,
+  "fields": {
+    "order": 6,
+    "smartphone": 1,
+    "count": 1,
+    "price_per_item": "99.00",
+    "total_price": "99.00"
+  }
+},
+{
+  "model": "orders.smartphoneinorder",
+  "pk": 11,
+  "fields": {
+    "order": 7,
+    "smartphone": 14,
+    "count": 1,
+    "price_per_item": "1111.00",
+    "total_price": "1111.00"
+  }
+},
+{
+  "model": "orders.smartphoneinorder",
+  "pk": 12,
+  "fields": {
+    "order": 8,
+    "smartphone": 13,
+    "count": 1,
+    "price_per_item": "600.00",
+    "total_price": "600.00"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can add Smartphone",
+    "content_type": 7,
+    "codename": "add_smartphone"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can change Smartphone",
+    "content_type": 7,
+    "codename": "change_smartphone"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can delete Smartphone",
+    "content_type": 7,
+    "codename": "delete_smartphone"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can add Smartphone Brand",
+    "content_type": 8,
+    "codename": "add_smartphonebrand"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can change Smartphone Brand",
+    "content_type": 8,
+    "codename": "change_smartphonebrand"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can delete Smartphone Brand",
+    "content_type": 8,
+    "codename": "delete_smartphonebrand"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add Order",
+    "content_type": 9,
+    "codename": "add_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change Order",
+    "content_type": 9,
+    "codename": "change_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete Order",
+    "content_type": 9,
+    "codename": "delete_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can add Smartphone in order",
+    "content_type": 10,
+    "codename": "add_smartphoneinorder"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can change Smartphone in order",
+    "content_type": 10,
+    "codename": "change_smartphoneinorder"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can delete Smartphone in order",
+    "content_type": 10,
+    "codename": "delete_smartphoneinorder"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$S55pJbqcURNt$Z2fQ4SRHRztpEcMOSIAdj+P5uos6+eFvUYDgN88kJp0=",
+    "last_login": "2018-02-26T09:37:06.603Z",
+    "is_superuser": true,
+    "username": "fantbook",
+    "first_name": "",
+    "last_name": "",
+    "email": "qwer@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2018-02-26T09:36:55.873Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2018-02-26T09:40:37.809Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Samsung",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2018-02-26T09:41:11.780Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Samsung Galaxy J7 Pro",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2018-02-26T09:41:58.280Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Samsung Galaxy J2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2018-02-26T09:42:10.738Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Samsung Galaxy J2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2018-02-26T09:43:15.587Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Samsung Galaxy A5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2018-02-26T09:44:00.655Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Samsung Galaxy S Duos 3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2018-02-26T09:44:52.391Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Lenovo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2018-02-26T09:45:24.331Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Lenovo Gold K8 NOTE",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2018-02-26T09:46:28.624Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Lenovo Gold XT190",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2018-02-26T09:46:55.723Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Lenovo Vibe P1 Turbo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2018-02-26T09:47:56.189Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Iphone",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2018-02-26T09:48:17.580Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Iphone 4S 8 GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2018-02-26T09:48:40.813Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "Iphone 6 (32GB)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2018-02-26T09:49:00.591Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Iphone 7 (32GB)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2018-02-26T09:49:20.989Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "Iphone 5C 16 GB Pink",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2018-02-26T09:49:54.957Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "12",
+    "object_repr": "Iphone 5S 64 GB Silver",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2018-02-26T09:51:11.816Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "13",
+    "object_repr": "Iphone 8",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2018-02-26T09:51:30.756Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "14",
+    "object_repr": "Iphone 8 64GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2018-02-26T09:51:56.678Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "15",
+    "object_repr": "Iphone 7 32 GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2018-02-26T09:52:20.658Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "16",
+    "object_repr": "Iphone SE 16GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2018-02-26T09:53:12.969Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Huawei",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2018-02-26T09:53:26.827Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "17",
+    "object_repr": "Huawei P8 Lite 2017",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2018-02-26T09:53:49.091Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "HTC",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2018-02-26T09:54:04.038Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "18",
+    "object_repr": "HTC Desire 650",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2018-02-26T09:54:10.243Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Nokia",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2018-02-26T09:54:59.916Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "18",
+    "object_repr": "HTC Desire 650",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2018-02-26T09:55:09.627Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "17",
+    "object_repr": "Huawei P8 Lite 2017",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2018-02-26T09:55:13.056Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "16",
+    "object_repr": "Iphone SE 16GB",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2018-02-26T09:55:15.828Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "15",
+    "object_repr": "Iphone 7 32 GB",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2018-02-26T09:55:18.865Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "14",
+    "object_repr": "Iphone 8 64GB",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2018-02-26T09:55:32.465Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Iphone 7 (32GB)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2018-02-26T09:55:35.362Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "Iphone 6 (32GB)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2018-02-26T09:55:57.599Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Samsung Galaxy A5",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2018-02-26T09:56:06.215Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Samsung Galaxy J2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2018-02-26T10:05:54.755Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "1 - New",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"Smartphone in order\", \"object\": \"Samsung Galaxy J7 Pro\"}}, {\"added\": {\"name\": \"Smartphone in order\", \"object\": \"Samsung Galaxy J2\"}}, {\"added\": {\"name\": \"Smartphone in order\", \"object\": \"Iphone 4S 8 GB\"}}, {\"added\": {\"name\": \"Smartphone in order\", \"object\": \"HTC Desire 650\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2018-02-26T10:08:56.549Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "2 - New",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"Smartphone in order\", \"object\": \"Iphone 8 64GB\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2018-02-26T10:09:35.777Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "3 - New",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2018-02-26T10:10:50.080Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "4 - Completed",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"Smartphone in order\", \"object\": \"Iphone SE 16GB\"}}, {\"added\": {\"name\": \"Smartphone in order\", \"object\": \"Samsung Galaxy J2\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2018-02-26T10:12:10.679Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "5 - In process",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"Smartphone in order\", \"object\": \"HTC Desire 650\"}}, {\"added\": {\"name\": \"Smartphone in order\", \"object\": \"Samsung Galaxy J7 Pro\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2018-02-26T10:13:37.099Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "6 - Closed",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"Smartphone in order\", \"object\": \"Samsung Galaxy J7 Pro\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2018-02-26T10:15:27.282Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "7 - New",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"Smartphone in order\", \"object\": \"Iphone 8 64GB\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2018-02-26T10:16:20.962Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "8 - New",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"Smartphone in order\", \"object\": \"Iphone 8\"}}]"
+  }
+}
+]

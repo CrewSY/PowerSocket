@@ -15,7 +15,8 @@
 
         <div class="row justify-content-center">
         {% if smartphones %}
-            <p class="result-search">Showing results for "{{ search_by }}" :</p>
+          <p class="result-search">Showing results for "{{ search_by }}" :</p>
+            
 
 
         {% for sm in smartphones %}
@@ -29,7 +30,7 @@
           </div>
           <div class="col-md-4">
             <h3 class="header-phone">{{ sm.brand }} {{ sm.model }}</h3>
-            <p descr-phone>{{ sm.description }}</p>
+            <p descr-phone>{{ sm.description|truncatewords:45 }}</p>
           </div>
           <div class="col-md-4">
             <h4 class="price">{{ sm.price }}$</h4>
@@ -37,9 +38,10 @@
           </div>
 
         {% endfor %}
-      {% else %}
-        <p>No results</p>
-      {% endif %}
+        {% else %}
+        <div class="col-md-12 no-result-position">
+          <p class="no-result">On request "{{ search_by }}" nothing found, try change request</p></div>
+        {% endif %}
         </div>
     </div>
 

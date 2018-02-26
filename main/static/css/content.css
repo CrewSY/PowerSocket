@@ -1,5 +1,7 @@
 #section-content {
   background-color: #ededed;
+  padding: 50px 0 50px 0;
+  min-height: 400px;
 }
 
 input.button-buy {
@@ -47,6 +49,18 @@ input.button-buy:active {
   margin-top: 25px;
 }
 
+.no-result-brand, .no-result {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center !important;
+  padding-top: 50px;
+}
+
+.no-result-position {
+  top: 30%;
+  left: 40%;
+}
+
 .parent-container {
    display: flex;
 }
@@ -69,7 +83,7 @@ input.button-buy:active {
   position: relative;
   overflow:hidden;
   height:40px;
-  margin:30px 0
+  margin:30px;
 }
 
 .pagination ul {

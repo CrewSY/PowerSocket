@@ -18,8 +18,7 @@ input.button-buy {
   outline: none;
   border: none;
   border-radius: 3px;
-  background: #0c9c0d linear-gradient(#82d18d, #0c9c0d);
-  box-shadow: inset #72de26 0 -1px 1px, inset 0 1px 1px #98ff98, #3caa3c 0 0 0 1px, rgba(0,0,0,.3) 0 2px 5px;
+  background: #4B4A4A;
   -webkit-animation: pulsate 1.2s linear infinite;
   animation: pulsate 1.2s linear infinite;
 }
@@ -27,6 +26,7 @@ input.button-buy:hover {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
   cursor: pointer;
+  background-color: black;
 }
 input.button-buy:active {
   top: 1px;

@@ -106,7 +106,6 @@ input.button-buy:active {
 
 }
 .pagination ul li {
-
   position:relative;
   left:-50%;
   float:left;
@@ -115,15 +114,20 @@ input.button-buy:active {
 
 }
 .pagination ul li a {
-  color: black;
   display:block;
   text-decoration:none;
   padding:0 15px;
   line-height: 40px;
-  background-color: white;
   font-size: 18px;
+  border-radius: 5px;
 }
-.pagination ul li a:hover {
-  background-color: black;
-  color: white;
+
+.pagination ul li.active {
+  background-color: black !important;
+  color: white !important;
+  border-radius: 5px; 
+}
+
+.pagination ul li.active a {
+  color: white !important; 
 }

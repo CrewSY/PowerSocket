@@ -1,0 +1,104 @@
+#basket {
+	min-height: 600px;
+}
+
+.header-cart {
+	text-align: left;
+	color: #3D3737;
+	margin: 25px 10px 25px 15px;
+	display: inline-block;
+}
+
+.item {
+	color: #857C7C;
+	font-size: 16px;
+	display: inline-block;
+}
+
+.gray-line {
+	background-color: #F5F2F2;
+	height: 50px;
+}
+
+.center-text {
+	color: #857C7C;
+	font-size: 16px;
+	text-align: center;
+	margin-top: 13px;
+}
+
+.photo-ph {
+	width: 40px;
+	height: 80px;
+	display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.header-ph, .price, .subtotal {
+	color: #3D3737;
+	font-size: 16px;
+	margin-top: 30px;
+}
+
+.btn-remove {
+	background-color: white;
+	border: none !important;
+	color: gray;
+	margin-top: 20px;
+}
+
+.btn-remove:hover {
+	color: black;
+}
+
+.price, .subtotal {
+	text-align: center;
+}
+
+.quantity_goods {
+	text-align: center;
+}
+
+.input-quantity {
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	border-radius: 3px;
+	margin: 25px 8px 0 8px;
+	display: inline-block;
+}
+
+.buttonsquant {
+	cursor: pointer;
+	font-size: 20px;
+	width: 20px;
+	margin: 0;
+	display: inline-block;
+}
+
+input.button-buy {
+  font-size: 12px;
+  font-weight:200;
+  width: 100%;
+  height: 60px;
+  color: rgb(245,245,245);
+  text-shadow: 0 -1px rgba(0,0,0,.1);
+  text-decoration: none;
+  user-select: none;
+  padding: .3em 1em;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  background: #4B4A4A;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 100px;
+}
+input.button-buy:hover {
+  cursor: pointer;
+  background-color: black;
+}
+
+
+ 

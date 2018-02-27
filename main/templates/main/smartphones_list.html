@@ -48,7 +48,7 @@
         {% for sm in smartphones %}
           <div class="col-md-3">
             {% if sm.photo %}
-              <img class="photo-phone" id="myImg" height="130" width="65" src="{{ sm.photo.url }}" alt="{{ sm.brand }} {{ sm.model }}">
+              <img class="photo-phone popup" height="130" width="65" src="{{ sm.photo.url }}" alt="{{ sm.brand }} {{ sm.model }}">
 
               {% else %}
               <img class="photo-phone-error" height="150" width="150" src="{% static "img/default_sm.png" %}">
@@ -87,5 +87,5 @@
 {% block extra_js %}
   <script src="{% static "js/jquery.cookie.js" %}"></script>
   <script src="{% static "js/brands-menu.js" %}"></script>
-  <script src="{% static "js/modal.js" %}"></script>
+  <script src="{% static "js/popup.js" %}"></script>
 {% endblock %}

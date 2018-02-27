@@ -1,1 +1,57 @@
-djkdgfjgdfk
+{% extends 'main/base.html' %}
+
+{% load i18n %}
+{% load staticfiles %}
+
+{% block extra_css %}
+  
+  <link rel="stylesheet" href="{% static "css/basket.css" %}">
+ {% endblock %}
+
+{% block content %}
+	<hr>
+	<section id="basket">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5"><h4 class="header-cart">Shopping Cart</h4><p class="item">(1 item)</p></div>
+			</div>
+			<div class="row gray-line">
+				<div class="col-lg-2"><p class="center-text">Item Details</p></div>
+				<div class="col-lg-1 offset-lg-3"><p class="center-text">Price</p></div>
+				<div class="col-lg-2"><p class="center-text">Quantity</p></div>
+				<div class="col-lg-2 offset-lg-2"><p class="center-text">Subtotal</p></div>
+			</div>
+			<div class="row">
+				<div class="col-lg-2"><img class="photo-ph" src="../../static/img/../../../../media/sga8.jpg"></div>
+				<div class="col-lg-3">
+					<p class="header-ph">Samsung Galaxy A8 (64GB)</p>	
+					<button class="btn-remove" type="submit">&times; Remove</button>
+				</div>
+				<div class="col-lg-1"><p class="price">499$</p></div>
+				<div class="col-lg-2">
+					<div class="input-group quantity_goods">
+						<p class="buttonsquant" id="button_minus">-</p>
+  					<input class="input-quantity" step="1" min="1" max="10" id="num_count" value="1">
+  					<p class="buttonsquant" id="button_plus">+</p>
+					</div>
+				</div>
+				<div class="col-lg-2 offset-lg-2">
+					<p class="subtotal">499$</p>
+					<input class="button-buy" value="Proceed to pay 499$">
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	
+
+
+{% endblock %}
+
+{% block extra_js %}
+  <script src="{% static "js/quantity_goods.js" %}"></script>
+{% endblock %}
+<!--  -->
+
+

@@ -77,28 +77,24 @@
 	display: inline-block;
 }
 
-input.button-buy {
+button.button-buy {
   font-size: 12px;
-  font-weight:200;
-  width: 100%;
-  height: 60px;
-  color: rgb(245,245,245);
-  text-shadow: 0 -1px rgba(0,0,0,.1);
-  text-decoration: none;
-  user-select: none;
-  padding: .3em 1em;
-  outline: none;
-  border: none;
-  border-radius: 3px;
-  background: #4B4A4A;
+  font-weight: 700;
+  letter-spacing: 1px;
+  width: 70%;
+  height: 50px;
+  color: rgb(245, 245, 245);
   text-align: center;
   text-transform: uppercase;
-  margin-top: 100px;
-}
-input.button-buy:hover {
-  cursor: pointer;
+  margin-top: 35%;
+  padding: 0.3em 1em;
   background-color: black;
+  border: none;
+  border-radius: 8px;
+  float: right;
+
 }
-
-
- 
+button.button-buy:hover {
+  cursor: pointer;
+  background-color: gray;
+}

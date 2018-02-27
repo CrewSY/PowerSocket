@@ -11,4 +11,3 @@ minusBtn.onclick = function() {
   qty = qty - 1;
   numCount.value = qty;
 }
-

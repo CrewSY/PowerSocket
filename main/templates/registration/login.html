@@ -20,7 +20,7 @@
             <input type="password"  placeholder="password" name="password" />
             <button type="submit" value="login">login</button>
             <input type="hidden" name="next" value="{{ next }}" />
-            <p class="message">Not registered? <a href="#">Create an account</a></p>
+            <p class="message">Not registered? <a href="{% url 'users:registration_register' %}">Create an account</a></p>
         </form>
     </div>
   </div>

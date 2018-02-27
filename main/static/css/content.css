@@ -66,6 +66,12 @@ input.button-buy:active {
 }
 
 .photo-phone {
+  display: block;
+  margin-left: 110px;
+  margin-top: 25px; 
+}
+
+.photo-phone-error {
   margin: 10px 0 0 70px;
 }
 

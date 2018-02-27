@@ -48,9 +48,9 @@
         {% for sm in smartphones %}
           <div class="col-md-3">
             {% if sm.photo %}
-              <img class="photo-phone" height="150" width="150" src="{{ sm.photo.url }}">
+              <img class="photo-phone" height="130" width="65" src="{{ sm.photo.url }}">
               {% else %}
-              <img class="photo-phone" height="150" width="150" src="{% static "img/default_sm.png" %}">
+              <img class="photo-phone-error" height="150" width="150" src="{% static "img/default_sm.png" %}">
             {% endif %}
           </div>
           <div class="col-md-5">

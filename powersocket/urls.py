@@ -9,7 +9,9 @@ from django.contrib.auth import views
 
 urlpatterns = [
     url(r'', include('main.urls')),
+
     url(r'^accounts/login/$', views.login, name='login'),
     url(r'^accounts/logout/$', views.logout, name='logout', kwargs={'next_page': '/'}),
+    url(r'^accounts/', include('registration.backends.simple.urls', namespace='users')),
     url(r'^admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

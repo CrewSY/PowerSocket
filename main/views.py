@@ -46,3 +46,10 @@ def search_smartphones(request):
 def basket(request):
     """Render page with list of smartphones in basket."""
     return render(request, 'main/basket.html', {})
+
+
+def new_products(request):
+    """Render page with list of new smartphones ."""
+    smartphones = Smartphone.objects.all().order_by('-publish_date')[:10]
+    brands = SmartphoneBrand.objects.all().order_by('brand_name')
+    return render(request, 'main/smartphones_list.html', {'brands': brands, 'smartphones': smartphones})

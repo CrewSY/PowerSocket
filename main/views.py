@@ -6,6 +6,8 @@ from django.shortcuts import render
 from .models import Smartphone, SmartphoneBrand
 from .utils import paginate, get_current_brand
 
+from orders.models import SmartphoneInOrder, Order
+
 
 def smartphones_list(request):
     """Render page with smartphones list."""
@@ -45,4 +47,15 @@ def search_smartphones(request):
 
 def basket(request):
     """Render page with list of smartphones in basket."""
-    return render(request, 'main/basket.html', {})
+    owner = request.user
+
+    try:
+        order = Order.objects.get(owner=owner)
+    except Exception:
+        order = None
+
+    if order:
+        smartphones = SmartphoneInOrder.objects.filter(order=order)
+        return render(request, 'main/basket.html', {'order': order, 'smartphones': smartphones})
+    else:
+        return render(request, 'main/basket.html', {})

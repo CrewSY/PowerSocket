@@ -14,10 +14,6 @@ class UserProfile(models.Model):
         verbose_name = _(u'User Profile')
 
     user = models.OneToOneField(User)
-    full_name = models.CharField(verbose_name=_(u'Full name'),
-                                 max_length=64,
-                                 blank=True)
-
     phone_number = models.CharField(verbose_name=_(u'Phone number'),
                                     max_length=48,
                                     blank=True)
@@ -27,7 +23,7 @@ class UserProfile(models.Model):
 
     def __str__(self):
         """Render the user instance as a string."""
-        if self.full_name:
-            return self.full_name
+        if self.user.first_name and self.user.last_name:
+            return '%s %s' % (self.user.first_name, self.user.last_name)
         else:
             return self.user.username

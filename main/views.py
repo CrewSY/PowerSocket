@@ -48,6 +48,12 @@ def basket(request):
     return render(request, 'main/basket.html', {})
 
 
+def profile(request):
+    """Render profile page."""
+    user = request.user
+    return render(request, 'main/profile.html', {'user': user})
+
+
 def new_products(request):
     """Render page with list of new smartphones ."""
     smartphones = Smartphone.objects.all().order_by('-publish_date')[:10]

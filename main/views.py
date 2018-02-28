@@ -50,4 +50,5 @@ def basket(request):
 
 def profile(request):
     """Render profile page."""
-    return render(request, 'main/profile.html', {})
+    user = request.user
+    return render(request, 'main/profile.html', {'user': user})

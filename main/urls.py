@@ -11,4 +11,5 @@ urlpatterns = [
     url(r'^about_us/$', TemplateView.as_view(template_name='main/about_us.html')),
     url(r'^basket/$', views.basket, name='basket'),
     url(r'^profile/$', views.profile, name='profile'),
+    url(r'^new_products/$', views.new_products, name='new_products'),
 ]

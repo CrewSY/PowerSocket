@@ -2,6 +2,7 @@
 
 from django.db import models
 from django.db.models.signals import post_save
+from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 
 from main.models import Smartphone
@@ -22,6 +23,7 @@ class Order(models.Model):
         ('Completed', 'Completed'),
         ('Closed', 'Closed',)
     )
+    owner = models.OneToOneField(User, default='fantbook')
     status = models.CharField(verbose_name=_(u'Status'),
                               max_length=12,
                               choices=STATUS_CHOICES,

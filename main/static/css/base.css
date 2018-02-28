@@ -5,6 +5,10 @@ body {
   margin: 0;
 }
 
+html {
+ overflow-x:  hidden;
+}
+
 /* Header */
 nav {
   width: 100%;
@@ -295,4 +299,73 @@ footer {
   display: inline-block;
   padding-right: 10px;
   cursor: pointer;
+}
+
+      /* Footer adaptive*/
+
+@media(min-width:0px) and (max-width: 320px) {
+  .copy {
+    padding-top: 30px;
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .footer-menu {
+    padding-top: 25px;
+    padding-right: 11px;
+    letter-spacing: 1px;
+  }
+
+  .social {
+    display: inline;
+    margin-top: -120px;
+  }
+
+  .social-items {
+    width: 1px;
+    height: 1px;
+    padding-right: 40px;
+  }
+}
+
+@media(min-width:321px) and (max-width: 575px) {
+  .copy {
+    padding-top: 30px;
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .footer-menu {
+    padding-right: 11px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-left: 30%;
+    margin-top: -40px;
+  }
+
+  .footer-item {
+    padding-top: -100px;
+  }
+
+  .social {
+    display: inline;
+    margin-top: -120px;
+  }
+
+  .social-items {
+    width: 1px;
+    height: 1px;
+    padding-right: 50px;
+  }
+}
+
+@media(min-width:576px) and (max-width: 768px) {
+  .social-items {
+    display: inline;
+    padding-right: 0;
+  }
+
+  .copy {
+    padding-top: 20px;
+  }
 }

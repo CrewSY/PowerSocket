@@ -21,13 +21,18 @@
 				<div class="col-sm-2"><p class="center-text">Quantity</p></div>
 				<div class="col-sm-2 offset-sm-2"><p class="center-text">Subtotal</p></div>
 			</div>
+			{% for sm in smartphones %}
 			<div class="row">
-				<div class="col-sm-2"><img class="photo-ph popup" src="../../static/img/../../../../media/sga8.jpg"></div>
+				{% if sm.smartphone.photo %}
+				  <div class="col-sm-2"><img src="{{ sm.smartphone.photo.url }}"></div>
+				{% else %}
+				  <div class="col-sm-2"><img height="140" width="150" src="{% static "img/default_sm.png" %}"></div>
+				{% endif %}
 				<div class="col-sm-3">
-					<p class="header-ph">Samsung Galaxy A8 (64GB)</p>
+					<p class="header-ph">{{ sm.smartphone.brand }} {{ sm.smartphone.model }}</p>
 					<button class="btn-remove" type="submit">&times; Remove</button>
 				</div>
-				<div class="col-sm-1"><p class="price">499$</p></div>
+				<div class="col-sm-1"><p class="price">{{ sm.smartphone.price }}$</p></div>
 				<div class="col-sm-2">
 					<div class="input-group quantity_goods">
 						<p class="buttonsquant" id="button_minus">-</p>
@@ -36,12 +41,13 @@
 					</div>
 				</div>
 				<div class="col-sm-2 offset-sm-2">
-					<p class="subtotal">499$</p>
+					<p class="subtotal">{{ sm.total_price }}$</p>
 				</div>
 			</div>
+			{% endfor %}
 			<div class="row">
 				<div class="col-sm-3 offset-sm-9">
-					<button class="button-buy" type="submit">Proceed to pay 499$</button>
+					<button class="button-buy" type="submit">Proceed to pay {{ order.total_price }}$</button>
 				</div>
 			</div>
 		</div>

@@ -1,0 +1,72 @@
+{% extends "main/base.html" %}
+
+{% load i18n %}
+{% load staticfiles %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static "css/content.css" %}">
+  <link rel="stylesheet" href="{% static "css/smartphone_details.css" %}">
+
+{% endblock %}
+
+{% block content %}
+  <section id="details">
+    <div class="container bgc-wh">
+      <div class="row">
+        <div class="col-sm-5">
+          <div class="row">
+            <div class="column">
+              <img class="img-detail" src="../../static/img/samsung_sm_j7.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+          </div>
+
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+              <div class="mySlides">
+                <img src="../../static/img/iphone7.png">
+              </div>
+              <div class="mySlides">
+                <img src="../../static/img/samsung_sm_j7.jpg">
+              </div>
+              <div class="mySlides">
+                <img src="../../static//img/samsungs8.png">
+              </div> 
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-sm-7">
+          <div class="col-sm-12">
+            <h3 class="header-phone">Samsung Galaxy S8 64GB Midnight Black</h3><hr>
+            <div class="col-sm-3 offset-sm-1">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <p class="descr-phone">Screen (5.8 ", Super AMOLED, 2960х1440) / Samsung Exynos 8895 (4 x 2.3 GHz + 4 x 1.7 GHz) / main camera 12 Mp + front 8 Mp / RAM 4 GB / 64 GB internal memory + microSD (up to 256 GB) / 3G / LTE / GPS / support for 2 SIM cards (Nano-SIM) / Android 7.0 (Nougat) / 3000 mAh</p>
+          </div>
+          <div class="col-sm-5 offset-sm-1">
+            <h4 class="price">899$</h4>
+          </div>
+          <div class="col-sm-6">
+            <a href="{% url 'basket' %}"><input type="button" class="button-buy" value="Buy"></a>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </section>
+
+<!--  -->
+{% endblock %}
+
+{% block extra_js %}
+  <script src="{% static "js/gallery.js" %}"></script>
+{% endblock %}

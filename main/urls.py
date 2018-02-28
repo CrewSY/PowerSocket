@@ -12,4 +12,5 @@ urlpatterns = [
     url(r'^basket/$', views.basket, name='basket'),
     url(r'^profile/$', views.profile, name='profile'),
     url(r'^new_products/$', views.new_products, name='new_products'),
+    url(r'^basket_adding/$', views.basket_adding, name='basket_adding'),
 ]

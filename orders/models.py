@@ -107,3 +107,21 @@ def smartphone_in_order_post_save(sender, instance, created, **kwargs):
 
 
 post_save.connect(smartphone_in_order_post_save, sender=SmartphoneInOrder)
+
+
+class SmartphoneInBasket(models.Model):
+    """Model that represents smartphone in basket."""
+
+    order = models.ForeignKey(Order, blank=True, null=True, default=None)
+    smartphone = models.ForeignKey(Smartphone, blank=True, null=True)
+    nmb = models.IntegerField(default=1)
+    price_per_item = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    total_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+
+    def save(self, *args, **kwargs):
+        """Save smartphone in basket in data base."""
+        price_per_item = self.smartphone.price
+        self.price_per_item = price_per_item
+        self.total_price = int(self.nmb) * price_per_item
+
+        super(SmartphoneInBasket, self).save(*args, **kwargs)

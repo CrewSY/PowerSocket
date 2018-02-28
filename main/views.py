@@ -59,3 +59,8 @@ def new_products(request):
     smartphones = Smartphone.objects.all().order_by('-publish_date')[:10]
     brands = SmartphoneBrand.objects.all().order_by('brand_name')
     return render(request, 'main/smartphones_list.html', {'brands': brands, 'smartphones': smartphones})
+
+
+def smartphone_details(request):
+    """Render page with smartphone_details."""
+    return render(request, 'main/smartphone_details.html', {})

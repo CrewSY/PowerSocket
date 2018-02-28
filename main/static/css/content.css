@@ -163,6 +163,19 @@ input.button-buy:active {
   margin: 10px 0 0 170px;
 }
 
+.header-href, .header-phone {
+  color: black;
+  text-decoration: none;
+}
+
+.header-phone:hover {
+  color: grey;
+}
+
+.header-href:hover {
+  text-decoration: none;
+}
+
 .header-phone, .price {
   margin-top: 20px;
 }

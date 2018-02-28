@@ -46,3 +46,8 @@ def search_smartphones(request):
 def basket(request):
     """Render page with list of smartphones in basket."""
     return render(request, 'main/basket.html', {})
+
+
+def profile(request):
+    """Render profile page."""
+    return render(request, 'main/profile.html', {})

@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^search_smartphones/$', views.search_smartphones, name='search_smartphones'),
     url(r'^about_us/$', TemplateView.as_view(template_name='main/about_us.html')),
     url(r'^basket/$', views.basket, name='basket'),
+    url(r'^profile/$', views.profile, name='profile'),
 ]

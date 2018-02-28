@@ -41,8 +41,8 @@
             {% endfor %}
           </div>
         </div>
-
       <!-- content -->
+      <form id="form_buying_product" > {% csrf_token %}
       {% if smartphones %}
         <div class="row">
         {% for sm in smartphones %}
@@ -67,13 +67,15 @@
           </div>
           <div class="col-md-2">
             <h4 class="price">{{ sm.price }}$</h4>
-            <input type="button" class="button-buy" value="Buy">
+            <input type="submit" action="{% url 'basket_adding' %}" class="button-buy" data-smartphone_id = "{{ sm.id }}" value="Buy">
           </div>
         {% endfor %}
         </div>
       {% else %}
         <div class="col-md-10"><p class="no-result-brand">Nothing found, try change request</p></div>
       {% endif %}
+      </form>
+
     </div>
 
   </section>
@@ -88,4 +90,5 @@
   <script src="{% static "js/jquery.cookie.js" %}"></script>
   <script src="{% static "js/brands-menu.js" %}"></script>
   <script src="{% static "js/popup.js" %}"></script>
+  <script src="{% static "js/basketUpdating.js" %}"></script>
 {% endblock %}

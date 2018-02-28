@@ -4,6 +4,7 @@ from django.db.models import Q
 from django.shortcuts import render
 
 from .models import Smartphone, SmartphoneBrand
+from orders.models import SmartphoneInBasket
 from .utils import paginate, get_current_brand
 
 
@@ -59,3 +60,12 @@ def new_products(request):
     smartphones = Smartphone.objects.all().order_by('-publish_date')[:10]
     brands = SmartphoneBrand.objects.all().order_by('brand_name')
     return render(request, 'main/smartphones_list.html', {'brands': brands, 'smartphones': smartphones})
+
+
+def basket_adding(request):
+    """Add new smartphone to basket."""
+    data = request.POST
+    product_id = data.get('product_id')
+    SmartphoneInBasket.objects.create(smartphone_id=product_id)
+
+    return True

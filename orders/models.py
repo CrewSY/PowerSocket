@@ -23,7 +23,7 @@ class Order(models.Model):
         ('Completed', 'Completed'),
         ('Closed', 'Closed',)
     )
-    owner = models.OneToOneField(User, default='fantbook')
+    owner = models.OneToOneField(User)
     status = models.CharField(verbose_name=_(u'Status'),
                               max_length=12,
                               choices=STATUS_CHOICES,

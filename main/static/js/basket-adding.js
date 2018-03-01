@@ -1,5 +1,5 @@
 function initBuyButton(){
-    $('.button-buy').click(function(e){
+    $('.basket-adding').click(function(e){
         e.preventDefault();
         var test = $(this);
         var product_id = test.data("product_id");

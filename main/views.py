@@ -3,6 +3,7 @@
 from django.db.models import Q
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 from .models import Product, ProductBrand
 from orders.models import ProductInOrder, Order
@@ -36,6 +37,7 @@ def search_products(request):
     return render(request, 'main/search_results.html', context)
 
 
+@login_required
 def basket(request):
     """Render page with list of products in basket."""
     owner = request.user
@@ -52,6 +54,7 @@ def basket(request):
         return render(request, 'main/basket.html', {})
 
 
+@login_required
 def profile(request):
     """Render profile page."""
     user = request.user
@@ -65,6 +68,7 @@ def new_products(request):
     return render(request, 'main/products_list.html', {'brands': brands, 'products': products})
 
 
+@login_required
 def basket_adding(request):
     """Add new product to basket."""
     data = request.POST

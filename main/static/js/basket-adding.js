@@ -32,11 +32,11 @@ function changeIcons() {
     button.prop("disabled", "disabled");
     var icon = button.find('i').removeClass('fa-cart-plus').addClass('fa-check-circle');
   });
-
 }
 
 
 $(document).ready(function(){
     initBuyButton();
     changeIcons();
+
 });

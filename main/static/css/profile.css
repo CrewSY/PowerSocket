@@ -1,0 +1,76 @@
+#profile {
+	width: 100%;
+	height: 60vh;
+	margin-bottom: 30px;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form {
+	max-width: 100%;
+	border-radius: 6px;
+	height: auto;
+	height: 50vh;
+}
+
+.form input {
+	width: 80%;
+	float: left;
+	border-bottom: 1px solid #CBC6C6 !important;
+	background-color: white;
+	padding: 10px;
+	margin: 0 0 10px;
+}
+
+.update-btn {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4B4A4A;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  width: 40%;
+	height: 30px;
+	padding: 5px;
+	float: right;
+	margin-top: 15px;
+	margin-right: 20%;
+}
+
+.update-btn:hover, .update-btn:active, .update-btn:focus {
+  background: black;
+}
+
+.btn-remove {
+	background-color: white;
+	border: none !important;
+	color: gray;
+	margin-top: 20px;
+	float: left;
+	margin-left: 50px;
+}

@@ -1,0 +1,46 @@
+{% extends 'main/base.html' %}
+
+{% load i18n %}
+{% load staticfiles %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static "css/profile.css" %}">
+ {% endblock %}
+
+{% block content %}
+	<hr>
+	<section id="profile">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 offset-sm-2 content">
+					<div class="form">
+						<div class="col-sm-8">
+	        		<form class="profile-form" method="post" action="{% url 'login' %}">
+	            	<input type="text" {% if first_name %} placeholder="{{ user.first_name }}" {% else %} placeholder="first name" {% endif %} name="firstname"/>
+	            	<input type="text" {% if user.last_name %} placeholder="{{ user.last_name }}" {% else %} placeholder="last name" {% endif %} name="lastname"/>
+								<input type="text" {% if user.email %} placeholder="{{ user.email }}" {% else %} placeholder="email" {% endif %}  name="email" />
+								<input type="text" {% if user.userprofile.address %} placeholder="{{ user.userprofile.address }}" {% else %} placeholder="address" {% endif %} name="address" />
+								<input type="text" {% if user.userprofile.phone %} placeholder="{{ user.userprofile.phone_number }}"  {% else %} placeholder="phone" {% endif %} name="phone" />
+								<button class="btn-remove" type="submit">&times; Remove</button>
+	            	<button type="submit" class="update-btn" value="update">update</button>
+	            	<input type="hidden" name="next" value="{{ next }}" />
+	        		</form>
+    				</div>
+    				<div class="col-sm-4">
+    				photo</div>
+    			</div>
+    		</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+{% endblock %}
+
+{% block extra_js %}
+
+{% endblock %}
+<!--  -->

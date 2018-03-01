@@ -2,8 +2,10 @@
 
 from django.db.models import Q
 from django.shortcuts import render
+from django.http import HttpResponse
 
 from .models import Smartphone, SmartphoneBrand
+from orders.models import SmartphoneInBasket
 from .utils import paginate, get_current_brand
 
 from orders.models import SmartphoneInOrder, Order
@@ -59,3 +61,25 @@ def basket(request):
         return render(request, 'main/basket.html', {'order': order, 'smartphones': smartphones})
     else:
         return render(request, 'main/basket.html', {})
+
+
+def profile(request):
+    """Render profile page."""
+    user = request.user
+    return render(request, 'main/profile.html', {'user': user})
+
+
+def new_products(request):
+    """Render page with list of new smartphones ."""
+    smartphones = Smartphone.objects.all().order_by('-publish_date')[:10]
+    brands = SmartphoneBrand.objects.all().order_by('brand_name')
+    return render(request, 'main/smartphones_list.html', {'brands': brands, 'smartphones': smartphones})
+
+
+def basket_adding(request):
+    """Add new smartphone to basket."""
+    data = request.POST
+    smartphone_id = data.get('smartphone_id')
+    SmartphoneInBasket.objects.create(smartphone_id=smartphone_id)
+
+    return HttpResponse()

@@ -2,26 +2,26 @@ function initBuyButton(){
     $('.button-buy').click(function(e){
         e.preventDefault();
         var test = $(this);
-        var product_id = test.data("smartphone_id");
+        var smartphone_id = test.data("smartphone_id");
         var url = test.attr("action");
 
-        basketUpdating(product_id, url);
+        basketUpdating(smartphone_id, url);
     });
 }
 
 
-function basketUpdating(product_id, url){
+function basketUpdating(smartphone_id, url){
     var data = {};
     var csrf_token = $('#form_buying_product [name="csrfmiddlewaretoken"]').val();
 
     data["csrfmiddlewaretoken"] = csrf_token;
-    data.product_id = product_id;
+    data.smartphone_id = smartphone_id;
 
     $.ajax({
         url: url,
         type: 'POST',
         data: data,
-        cache: true;
+        cache: true,
     });
 }
 

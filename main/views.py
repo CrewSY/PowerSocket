@@ -2,6 +2,7 @@
 
 from django.db.models import Q
 from django.shortcuts import render
+from django.http import HttpResponse
 
 from .models import Smartphone, SmartphoneBrand
 from orders.models import SmartphoneInBasket
@@ -65,7 +66,7 @@ def new_products(request):
 def basket_adding(request):
     """Add new smartphone to basket."""
     data = request.POST
-    product_id = data.get('product_id')
-    SmartphoneInBasket.objects.create(smartphone_id=product_id)
+    smartphone_id = data.get('smartphone_id')
+    SmartphoneInBasket.objects.create(smartphone_id=smartphone_id)
 
-    return True
+    return HttpResponse()

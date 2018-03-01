@@ -118,6 +118,10 @@ class SmartphoneInBasket(models.Model):
     price_per_item = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     total_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
 
+    def __str__(self):
+        """Render the smartphone in order instance as a string."""
+        return '%s %s' % (self.smartphone.brand.brand_name, self.smartphone.model)
+
     def save(self, *args, **kwargs):
         """Save smartphone in basket in data base."""
         price_per_item = self.smartphone.price

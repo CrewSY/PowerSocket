@@ -1,13 +1,13 @@
 """Management of admin panel."""
 
 from django.contrib import admin
-from .models import Order, SmartphoneInOrder
+from .models import Order, ProductInOrder
 
 
-class SmartphoneInOrderInline(admin.TabularInline):
+class ProductInOrderInline(admin.TabularInline):
     """Additional field to Order on admin page."""
 
-    model = SmartphoneInOrder
+    model = ProductInOrder
     extra = 0
 
 
@@ -16,7 +16,7 @@ class OrderAdmin (admin.ModelAdmin):
 
     list_display = ('id', 'status', 'total_price', )
     list_filter = ('status', )
-    inlines = [SmartphoneInOrderInline]
+    inlines = [ProductInOrderInline]
 
     class Meta:
         """Meta data of OrderAdmin."""
@@ -27,15 +27,15 @@ class OrderAdmin (admin.ModelAdmin):
 admin.site.register(Order, OrderAdmin)
 
 
-class SmartphoneInOrderAdmin(admin.ModelAdmin):
-    """Config smartphone in order on admin page."""
+class ProductInOrderAdmin(admin.ModelAdmin):
+    """Config product in order on admin page."""
 
-    list_display = [field.name for field in SmartphoneInOrder._meta.fields]
+    list_display = [field.name for field in ProductInOrder._meta.fields]
 
     class Meta:
         """Meta data of OrderAdmin."""
 
-        model = SmartphoneInOrder
+        model = ProductInOrder
 
 
-admin.site.register(SmartphoneInOrder, SmartphoneInOrderAdmin)
+admin.site.register(ProductInOrder, ProductInOrderAdmin)

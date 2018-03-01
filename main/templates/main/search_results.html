@@ -14,16 +14,16 @@
     <div class="container parent-container">
 
         <div class="row justify-content-center">
-        {% if smartphones %}
+        {% if products %}
           <p class="result-search">Showing results for "{{ search_by }}" :</p>
 
 
 
-        {% for sm in smartphones %}
+        {% for pr in products %}
 
           <div class="col-md-3 offset-md-1">
-            {% if sm.photo %}
-              <img class="photo-phone-search popup" height="120" width="60" src="{{ sm.photo.url }}" alt="{{ sm.brand }} {{ sm.model }}">
+            {% if pr.photo %}
+              <img class="photo-phone-search popup" height="120" width="60" src="{{ pr.photo.url }}" alt="{{ pr.brand }} {{ pr.model }}">
               {% else %}
               <img class="photo-phone-search" height="150" width="150" src="{% static "img/default_sm.png" %}">
             {% endif %}
@@ -35,11 +35,11 @@
               </div>
           </div>
           <div class="col-md-5">
-            <h3 class="header-phone">{{ sm.brand }} {{ sm.model }}</h3>
-            <p descr-phone>{{ sm.description|truncatewords:45 }}</p>
+            <h3 class="header-phone">{{ pr.brand }} {{ pr.model }}</h3>
+            <p descr-phone>{{ pr.description|truncatewords:45 }}</p>
           </div>
           <div class="col-md-3">
-            <h4 class="price">{{ sm.price }}$</h4>
+            <h4 class="price">{{ pr.price }}$</h4>
             <input type="button" class="button-buy" value="Buy">
           </div>
 
@@ -53,7 +53,7 @@
 
   </section>
 
-{% with object_list=smartphones %}
+{% with object_list=products %}
   {% include "main/pagination.html" %}
 {% endwith %}
 

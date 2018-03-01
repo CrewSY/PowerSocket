@@ -41,14 +41,14 @@
             {% endfor %}
           </div>
         </div>
-
       <!-- content -->
-      {% if smartphones %}
+      <form id="form_buying_product" > {% csrf_token %}
+      {% if products %}
         <div class="row">
-        {% for sm in smartphones %}
+        {% for pr in products %}
           <div class="col-md-3">
-            {% if sm.photo %}
-              <img class="photo-phone popup" height="130" width="65" src="{{ sm.photo.url }}" alt="{{ sm.brand }} {{ sm.model }}">
+            {% if pr.photo %}
+              <img class="photo-phone popup" height="130" width="65" src="{{ pr.photo.url }}" alt="{{ pr.brand }} {{ pr.model }}">
 
               {% else %}
               <img class="photo-phone-error" height="150" width="150" src="{% static "img/default_sm.png" %}">
@@ -62,23 +62,25 @@
               </div>
           </div>
           <div class="col-md-5">
-            <a class="header-href" href="{% url 'smartphone_details' %}"><h3 class="header-phone">{{ sm.brand }} {{ sm.model }}</h3></a>
-            <p descr-phone>{{ sm.description|truncatewords:45 }}</p>
+            <a class="header-href" href="{% url 'smartphone_details' %}"><h3 class="header-phone">{{ pr.brand }} {{ pr.model }}</h3></a>
+            <p descr-phone>{{ pr.description|truncatewords:45 }}</p>
           </div>
           <div class="col-md-2">
-            <h4 class="price">{{ sm.price }}$</h4>
-            <input type="button" class="button-buy" value="Buy">
+            <h4 class="price">{{ pr.price }}$</h4>
+            <input type="submit" action="{% url 'basket_adding' %}" class="button-buy" data-product_id = "{{ pr.id }}" value="Buy">
           </div>
         {% endfor %}
         </div>
       {% else %}
         <div class="col-md-10"><p class="no-result-brand">Nothing found, try change request</p></div>
       {% endif %}
+      </form>
+
     </div>
 
   </section>
 
-{% with object_list=smartphones %}
+{% with object_list=products %}
   {% include "main/pagination.html" %}
 {% endwith %}
 
@@ -88,4 +90,5 @@
   <script src="{% static "js/jquery.cookie.js" %}"></script>
   <script src="{% static "js/brands-menu.js" %}"></script>
   <script src="{% static "js/popup.js" %}"></script>
+  <script src="{% static "js/basket-updating.js" %}"></script>
 {% endblock %}

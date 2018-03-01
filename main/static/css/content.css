@@ -4,7 +4,7 @@
   min-height: 400px;
 }
 
-input.button-buy {
+button.button-buy {
   position: relative;
   display: inline-block;
   font-family: Arial,Helvetica,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif;
@@ -22,13 +22,14 @@ input.button-buy {
   -webkit-animation: pulsate 1.2s linear infinite;
   animation: pulsate 1.2s linear infinite;
 }
-input.button-buy:hover {
+button.button-buy:hover {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
   cursor: pointer;
   background-color: black;
 }
-input.button-buy:active {
+
+button.button-buy:active {
   top: 1px;
   color: #fff;
   text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;
@@ -40,6 +41,7 @@ input.button-buy:active {
 @keyframes pulsate {
   50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
 }
+
 
 .result-search {
   width: 100%;

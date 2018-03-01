@@ -26,6 +26,16 @@ function basketUpdating(product_id, url){
 }
 
 
+function changeIcons() {
+  $('.fa-cart-arrow-down').click(function(){
+    $(this).removeClass('fa-cart-arrow-down').addClass('fa-cart-plus');
+  });
+}
+
+
+
+
 $(document).ready(function(){
     initBuyButton();
+    changeIcons();
 });

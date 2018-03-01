@@ -28,14 +28,15 @@ function basketUpdating(product_id, url){
 
 function changeIcons() {
   $('.fa-cart-arrow-down').click(function(){
-    $(this).removeClass('fa-cart-arrow-down').addClass('fa-cart-plus');
+    $(this).removeClass('fa-cart-arrow-down').addClass('fa-thumbs-down').attr('disabled', true);
   });
-}
 
+}
 
 
 
 $(document).ready(function(){
     initBuyButton();
     changeIcons();
+
 });

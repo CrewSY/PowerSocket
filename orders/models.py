@@ -27,7 +27,7 @@ class Order(models.Model):
     status = models.CharField(verbose_name=_(u'Status'),
                               max_length=12,
                               choices=STATUS_CHOICES,
-                              default='1')
+                              default='New')
     total_price = models.DecimalField(verbose_name=_(u'Total price'),
                                       max_digits=8,
                                       decimal_places=2,

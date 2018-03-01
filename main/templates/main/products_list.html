@@ -67,8 +67,14 @@
           </div>
           <div class="col-md-2">
             <h4 class="price">{{ pr.price }}$</h4>
-            <input type="submit" action="{% url 'basket_adding' %}" class="button-buy" data-product_id = "{{ pr.id }}" value="Buy">
-          </div>
+            {% if user.is_authenticated %}
+              <input type="submit" action="{% url 'basket_adding' %}" class="button-buy basket-adding" data-product_id = "{{ pr.id }}" value="Buy">
+            {% else %}
+            <a href="{% url 'login' %}">
+              <input type="button" class="button-buy" value="Buy">
+            </a>
+            {% endif %}
+            </div>
         {% endfor %}
         </div>
       {% else %}
@@ -90,5 +96,5 @@
   <script src="{% static "js/jquery.cookie.js" %}"></script>
   <script src="{% static "js/brands-menu.js" %}"></script>
   <script src="{% static "js/popup.js" %}"></script>
-  <script src="{% static "js/basket-updating.js" %}"></script>
+  <script src="{% static "js/basket-adding.js" %}"></script>
 {% endblock %}

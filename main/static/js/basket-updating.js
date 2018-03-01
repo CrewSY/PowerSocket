@@ -2,20 +2,20 @@ function initBuyButton(){
     $('.button-buy').click(function(e){
         e.preventDefault();
         var test = $(this);
-        var smartphone_id = test.data("smartphone_id");
+        var product_id = test.data("product_id");
         var url = test.attr("action");
 
-        basketUpdating(smartphone_id, url);
+        basketUpdating(product_id, url);
     });
 }
 
 
-function basketUpdating(smartphone_id, url){
+function basketUpdating(product_id, url){
     var data = {};
     var csrf_token = $('#form_buying_product [name="csrfmiddlewaretoken"]').val();
 
     data["csrfmiddlewaretoken"] = csrf_token;
-    data.smartphone_id = smartphone_id;
+    data.product_id = product_id;
 
     $.ajax({
         url: url,

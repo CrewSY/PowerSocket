@@ -21,18 +21,18 @@
 				<div class="col-sm-2"><p class="center-text">Quantity</p></div>
 				<div class="col-sm-2 offset-sm-2"><p class="center-text">Subtotal</p></div>
 			</div>
-			{% for sm in smartphones %}
+			{% for pr in products %}
 			<div class="row">
-				{% if sm.smartphone.photo %}
-				  <div class="col-sm-2"><img src="{{ sm.smartphone.photo.url }}"></div>
+				{% if pr.product.photo %}
+				  <div class="col-sm-2"><img src="{{ pr.product.photo.url }}"></div>
 				{% else %}
 				  <div class="col-sm-2"><img height="140" width="150" src="{% static "img/default_sm.png" %}"></div>
 				{% endif %}
 				<div class="col-sm-3">
-					<p class="header-ph">{{ sm.smartphone.brand }} {{ sm.smartphone.model }}</p>
+					<p class="header-ph">{{ pr.product.brand }} {{ pr.product.model }}</p>
 					<button class="btn-remove" type="submit">&times; Remove</button>
 				</div>
-				<div class="col-sm-1"><p class="price">{{ sm.smartphone.price }}$</p></div>
+				<div class="col-sm-1"><p class="price">{{ pr.product.price }}$</p></div>
 				<div class="col-sm-2">
 					<div class="input-group quantity_goods">
 						<p class="buttonsquant" id="button_minus">-</p>
@@ -41,7 +41,7 @@
 					</div>
 				</div>
 				<div class="col-sm-2 offset-sm-2">
-					<p class="subtotal">{{ sm.total_price }}$</p>
+					<p class="subtotal">{{ pr.total_price }}$</p>
 				</div>
 			</div>
 			{% endfor %}
@@ -53,13 +53,8 @@
 		</div>
 	</section>
 
-
-
-
-
 {% endblock %}
 
 {% block extra_js %}
   <script src="{% static "js/quantity_goods.js" %}"></script>
 {% endblock %}
-<!--  -->

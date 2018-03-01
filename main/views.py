@@ -4,49 +4,40 @@ from django.db.models import Q
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from .models import Smartphone, SmartphoneBrand
-from orders.models import SmartphoneInOrder, Order
+from .models import Product, ProductBrand
+from orders.models import ProductInOrder, Order
 from .utils import paginate, get_current_brand
 
 
-def smartphones_list(request):
-    """Render page with smartphones list."""
+def products_list(request):
+    """Render page with products list."""
     current_brand = get_current_brand(request)
     if current_brand:
-        smartphones = Smartphone.objects.filter(brand=current_brand)
+        products = Product.objects.filter(brand=current_brand)
     else:
-        smartphones = Smartphone.objects.all()
+        products = Product.objects.all()
 
-    order_by = request.GET.get('order_by', '')
-    if order_by in ('title', 'price', 'publish_date'):
-        smartphones = smartphones.order_by(order_by)
-        if request.GET.get('reverse', '') == '1':
-            smartphones = smartphones.reverse()
-    else:
-        request.GET.order_by = 'publish_date'
-        smartphones = smartphones.order_by('publish_date')
-
-    brands = SmartphoneBrand.objects.all().order_by('brand_name')
-    context = paginate(smartphones, 6, request, {'brands': brands}, var_name='smartphones')
-    return render(request, 'main/smartphones_list.html', context)
+    brands = ProductBrand.objects.all().order_by('brand_name')
+    context = paginate(products, 6, request, {'brands': brands}, var_name='products')
+    return render(request, 'main/products_list.html', context)
 
 
-def search_smartphones(request):
-    """Render page with specific smartphones list."""
+def search_products(request):
+    """Render page with specific products list."""
     search_by = request.GET.get('q')
     if search_by:
         q = Q()
         for tag in request.GET.get('q').split():
             q |= Q(brand__brand_name__iexact=tag) | Q(model__iexact=tag)
-        smartphones = Smartphone.objects.filter(q)
+        products = Product.objects.filter(q)
     else:
-        smartphones = Smartphone.objects.all()
-    context = paginate(smartphones, 10, request, {'search_by': search_by}, var_name='smartphones')
+        products = Product.objects.all()
+    context = paginate(products, 10, request, {'search_by': search_by}, var_name='products')
     return render(request, 'main/search_results.html', context)
 
 
 def basket(request):
-    """Render page with list of smartphones in basket."""
+    """Render page with list of products in basket."""
     owner = request.user
 
     try:
@@ -55,8 +46,8 @@ def basket(request):
         order = None
 
     if order:
-        smartphones = SmartphoneInOrder.objects.filter(order=order)
-        return render(request, 'main/basket.html', {'order': order, 'smartphones': smartphones})
+        products = ProductInOrder.objects.filter(order=order)
+        return render(request, 'main/basket.html', {'order': order, 'products': products})
     else:
         return render(request, 'main/basket.html', {})
 
@@ -68,18 +59,18 @@ def profile(request):
 
 
 def new_products(request):
-    """Render page with list of new smartphones ."""
-    smartphones = Smartphone.objects.all().order_by('-publish_date')[:10]
-    brands = SmartphoneBrand.objects.all().order_by('brand_name')
-    return render(request, 'main/smartphones_list.html', {'brands': brands, 'smartphones': smartphones})
+    """Render page with list of new products ."""
+    products = Product.objects.all().order_by('-publish_date')[:10]
+    brands = ProductBrand.objects.all().order_by('brand_name')
+    return render(request, 'main/products_list.html', {'brands': brands, 'products': products})
 
 
 def basket_adding(request):
-    """Add new smartphone to basket."""
+    """Add new product to basket."""
     data = request.POST
     user = request.user
     order, created = Order.objects.get_or_create(owner=user)
-    smartphone_id = data.get('smartphone_id')
-    SmartphoneInOrder.objects.create(smartphone_id=smartphone_id, order=order)
+    product_id = data.get('product_id')
+    ProductInOrder.objects.create(product_id=product_id, order=order)
 
     return HttpResponse()

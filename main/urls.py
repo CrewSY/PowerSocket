@@ -6,8 +6,8 @@ from django.views.generic import TemplateView
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.smartphones_list, name='home'),
-    url(r'^search_smartphones/$', views.search_smartphones, name='search_smartphones'),
+    url(r'^$', views.products_list, name='home'),
+    url(r'^search_products/$', views.search_products, name='search_products'),
     url(r'^about_us/$', TemplateView.as_view(template_name='main/about_us.html')),
     url(r'^basket/$', views.basket, name='basket'),
     url(r'^profile/$', views.profile, name='profile'),

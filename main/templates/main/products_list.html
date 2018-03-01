@@ -62,7 +62,7 @@
               </div>
           </div>
           <div class="col-md-5">
-            <h3 class="header-phone">{{ pr.brand }} {{ pr.model }}</h3>
+            <a class="header-href" href="{% url 'smartphone_details' %}"><h3 class="header-phone">{{ pr.brand }} {{ pr.model }}</h3></a>
             <p descr-phone>{{ pr.description|truncatewords:45 }}</p>
           </div>
           <div class="col-md-2">

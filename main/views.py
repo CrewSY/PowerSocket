@@ -74,3 +74,8 @@ def basket_adding(request):
     ProductInOrder.objects.create(product_id=product_id, order=order)
 
     return HttpResponse()
+
+
+def smartphone_details(request):
+    """Render page with smartphone_details."""
+    return render(request, 'main/smartphone_details.html', {})

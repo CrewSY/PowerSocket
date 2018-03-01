@@ -8,20 +8,26 @@
 
 {% endblock %}
 {% block content %}
-    <div class="login-div">
-    {% if form.errors %}
-        <p class="error-message">Your username and password didn't match. Please try again.</p>
-    {% endif %}
-
-    <div class="form">
-        <form class="login-form" method="post" action="{% url 'login' %}">
-        {% csrf_token %}
-            <input type="text" placeholder="username" name="username"/>
-            <input type="password"  placeholder="password" name="password" />
-            <button type="submit" value="login">login</button>
-            <input type="hidden" name="next" value="{{ next }}" />
-            <p class="message">Not registered? <a href="{% url 'users:registration_register' %}">Create an account</a></p>
-        </form>
+  <div class="login-div">
+    <div class="container">
+      <div class="row">
+        {% if form.errors %}
+        <div class="col-sm-8 offset-sm-2 col-md-8 offset-md-2">
+          <p class="error-message">Your username and password didn't match. Please try again.</p></div>
+        {% endif %}
+        <div class=" col-md-6 offset-md-3">
+          <div class="form">
+            <form class="login-form" method="post" action="{% url 'login' %}">
+              {% csrf_token %}
+              <input type="text" placeholder="username" name="username"/>
+              <input type="password"  placeholder="password" name="password" />
+              <button type="submit" value="login">login</button>
+              <input type="hidden" name="next" value="{{ next }}" />
+              <p class="message">Not registered? <a href="{% url 'users:registration_register' %}">Create an account</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 {% endblock %}

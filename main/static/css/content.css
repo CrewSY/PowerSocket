@@ -4,6 +4,10 @@
   min-height: 400px;
 }
 
+i {
+  pointer-events:none;
+}
+
 button.button-buy {
   position: relative;
   display: inline-block;

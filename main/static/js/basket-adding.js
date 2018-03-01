@@ -27,12 +27,13 @@ function basketUpdating(product_id, url){
 
 
 function changeIcons() {
-  $('.fa-cart-arrow-down').click(function(){
-    $(this).removeClass('fa-cart-arrow-down').addClass('fa-cart-plus');
+  $('.change-icon').click(function(){
+    var button = $(this);
+    button.prop("disabled", "disabled");
+    var icon = button.find('i').removeClass('fa-cart-plus').addClass('fa-check-circle');
   });
+
 }
-
-
 
 
 $(document).ready(function(){

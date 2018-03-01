@@ -31,6 +31,7 @@ class ProductInOrderAdmin(admin.ModelAdmin):
     """Config product in order on admin page."""
 
     list_display = [field.name for field in ProductInOrder._meta.fields]
+    list_filter = ('order__status',)
 
     class Meta:
         """Meta data of OrderAdmin."""

@@ -42,6 +42,11 @@
 	margin: 0 0 10px;
 }
 
+input.placeh[type="text"]::-webkit-input-placeholder {color:red;}
+input.placeh[type="text"]::-moz-placeholder          {color:red;}
+input.placeh[type="text"]:-moz-placeholder           {color:red;}
+input.placeh[type="text"]:-ms-input-placeholder     {color:red;}
+
 .update-btn {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;

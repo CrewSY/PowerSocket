@@ -5,10 +5,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 from .models import Smartphone, SmartphoneBrand
-from orders.models import SmartphoneInBasket
-from .utils import paginate, get_current_brand
-
 from orders.models import SmartphoneInOrder, Order
+from .utils import paginate, get_current_brand
 
 
 def smartphones_list(request):
@@ -79,7 +77,9 @@ def new_products(request):
 def basket_adding(request):
     """Add new smartphone to basket."""
     data = request.POST
+    user = request.user
+    order, created = Order.objects.get_or_create(owner=user)
     smartphone_id = data.get('smartphone_id')
-    SmartphoneInBasket.objects.create(smartphone_id=smartphone_id)
+    SmartphoneInOrder.objects.create(smartphone_id=smartphone_id, order=order)
 
     return HttpResponse()

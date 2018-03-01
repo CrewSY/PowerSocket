@@ -1,7 +1,7 @@
 """Management of admin panel."""
 
 from django.contrib import admin
-from .models import Order, SmartphoneInOrder, SmartphoneInBasket
+from .models import Order, SmartphoneInOrder
 
 
 class SmartphoneInOrderInline(admin.TabularInline):
@@ -25,7 +25,6 @@ class OrderAdmin (admin.ModelAdmin):
 
 
 admin.site.register(Order, OrderAdmin)
-admin.site.register(SmartphoneInBasket)
 
 
 class SmartphoneInOrderAdmin(admin.ModelAdmin):

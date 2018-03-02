@@ -68,12 +68,12 @@
           <div class="col-md-2">
             <h4 class="price">{{ pr.price }}$</h4>
             {% if user.is_authenticated %}
-              <button  type="button" action="{% url 'basket_adding' %}" class="change-icon button-buy basket-adding" data-product_id = "{{ pr.id }}" value="Buy">
+              <button  type="button" action="{% url 'basket_adding' %}" class="change-icon button-buy basket-adding" data-product_id = "{{ pr.id }}">
                 <i class="fa fa-cart-plus"></i>
               </button>
             {% else %}
             <a href="{% url 'login' %}">
-              <input type="button" class="button-buy" value="Buy">
+              <button type="button" class="button-buy" value="Buy"><i class="fa fa-cart-plus"></i></button>
             </a>
             {% endif %}
             </div>

@@ -17,7 +17,11 @@
         <div class="col-sm-5">
           <div class="row">
             <div class="column">
-              <img class="img-detail" src="../../static/img/samsung_sm_j7.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+              {% if pr.photo %}
+                <img class="img-detail" src="{{ pr.photo.url }}" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+              {% else %}
+                <img class="photo-phone-error" height="150" width="150" src="{% static "img/default_sm.png" %}">
+              {% endif %}
             </div>
           </div>
 
@@ -41,7 +45,7 @@
         </div>
         <div class="col-sm-7">
           <div class="col-sm-12">
-            <h3 class="header-phone">Samsung Galaxy S8 64GB Midnight Black</h3><hr>
+            <h3 class="header-phone">{{ product.brand }} {{ product.model }}</h3><hr>
             <div class="col-sm-6 offset-sm-3">
               <div class="rating">
                 <span class="fa fa-star checked"></span>
@@ -53,20 +57,19 @@
             </div>
           </div>
           <div class="col-sm-12">
-            <p class="descr-phone">Screen (5.8 ", Super AMOLED, 2960х1440) / Samsung Exynos 8895 (4 x 2.3 GHz + 4 x 1.7 GHz) / main camera 12 Mp + front 8 Mp / RAM 4 GB / 64 GB internal memory + microSD (up to 256 GB) / 3G / LTE / GPS / support for 2 SIM cards (Nano-SIM) / Android 7.0 (Nougat) / 3000 mAh</p>
+            <p class="descr-phone">{{ product.description }}</p>
           </div>
           <div class="col-sm-5 offset-sm-1">
-            <h4 class="price">899$</h4>
+            <h4 class="price">{{ product.price }}$</h4>
           </div>
           <div class="col-sm-6">
-            <a href="{% url 'basket' %}"><input type="button" class="button-buy" value="Buy"></a>
+            <a href="{% url 'basket' %}"><button type="button" class="button-buy" ><i class="fa fa-cart-plus"></i></button></a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-<!--  -->
 {% endblock %}
 
 {% block extra_js %}

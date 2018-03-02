@@ -4,6 +4,7 @@ from django.db.models import Q
 from django.shortcuts import render
 
 from .models import Product
+from orders.models import ProductInOrder, Order
 from .utils import paginate, get_current_brand, get_brands
 
 
@@ -15,8 +16,24 @@ def products_list(request):
     else:
         products = Product.objects.all()
 
+    try:
+        user = request.user
+    except user.DoesNotExist:
+        user = None
+    else:
+        try:
+            order = Order.objects.get(owner=user)
+            product_in_basket = ProductInOrder.objects.filter(order=order)
+            set_id = set()
+            for pr in product_in_basket:
+                set_id.add(pr.product.id)
+        except Exception as e:
+            product_in_basket = set()
+
     brands = get_brands(request)
-    context = paginate(products, 6, request, {'brands': brands}, var_name='products')
+    context = paginate(products, 6, request, {'brands': brands,
+                                              'product_in_basket': set_id},
+                       var_name='products')
     return render(request, 'main/products_list.html', context)
 
 

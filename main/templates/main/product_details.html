@@ -63,7 +63,11 @@
             <h4 class="price">{{ product.price }}$</h4>
           </div>
           <div class="col-sm-6">
+            {% if in_basket %}
+              <button type="button" class="button-buy" disabled><i class="fa fa-check-circle"></i></button>
+            {% else %}
             <a href="{% url 'basket' %}"><button type="button" class="button-buy" ><i class="fa fa-cart-plus"></i></button></a>
+            {% endif %}
           </div>
         </div>
       </div>

@@ -34,10 +34,10 @@
 				</div>
 				<div class="col-sm-1"><p class="price">{{ pr.product.price }}$</p></div>
 				<div class="col-sm-2">
-					<div class="input-group quantity_goods">
-						<p class="buttonsquant" id="button_minus">-</p>
-  					<input class="input-quantity" step="1" min="1" max="10" id="num_count" value="1">
-  					<p class="buttonsquant" id="button_plus">+</p>
+					<div class="input-group quantity_goods" id="quantity_goods"> {% csrf_token %}
+						<p class="buttonsquant button_minus">-</p>
+  						<input action="{% url 'update_quantity' %}" class="input-quantity num_count" value="{{ pr.count }}" data-product_id = "{{ pr.id }}" disabled>
+  						<p class="buttonsquant button_plus">+</p>
 					</div>
 				</div>
 				<div class="col-sm-2 offset-sm-2">

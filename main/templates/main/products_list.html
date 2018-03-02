@@ -69,8 +69,8 @@
               {% endfor %}
               </div>
             </div>
-        </div>  
-        
+        </div>
+
         <div class="col-sm-9">
           <form id="form_buying_product" > {% csrf_token %}
           {% for pr in products %}
@@ -86,7 +86,7 @@
                   <span class="close">&times;</span>
                   <img class="modal-content" id="img01">
                   <div id="caption"></div>
-                </div> 
+                </div>
                 <a class="header-href" href="{% url 'product_details' pk=pr.id %}"><h3 class="header-phone">{{ pr.brand }} {{ pr.model }}</h3></a>
                 <h4 class="price">{{ pr.price }}$</h4>
               {% if user.is_authenticated %}
@@ -105,15 +105,15 @@
               </div>
             </div>
           {% endfor %}
-          </form>      
+          </form>
         </div>
-      
 
-          
-        
-        
-        
-        </div> 
+
+
+
+
+
+        </div>
       </div>
 
       <!-- menu -->
@@ -126,9 +126,9 @@
           </div>
         </div> -->
       <!-- content -->
-      
 
-    
+
+
 
   </section>
 

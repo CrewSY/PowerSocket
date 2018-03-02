@@ -37,38 +37,35 @@
 
       <div class="row content">
         <div class="col-sm-3">
-          
-            <div class="wrapper"><h1 class="header-tabs">Brands</h1>
-          <div class="tab">
-            {% for brand in brands %}
-              <button value="{{ brand.id }}">{{ brand.brand_name }}</button>
-            {% endfor %}
-          </div>
-        </div>
-          
-        </div>
-        
-         
+            <div class="wrapper">
+              <h1 class="header-tabs">Brands</h1>
+              <div class="tab">
+              {% for brand in brands %}
+                <button value="{{ brand.id }}">{{ brand.brand_name }}</button>
+              {% endfor %}
+              </div>
+            </div>
+        </div>  
         
         <div class="col-sm-9">
-        <form id="form_buying_product" > {% csrf_token %}
-        {% for pr in products %}
-        <div class="col-sm-4">
-          <div class="test1">
-            {% if pr.photo %}
-              <img class="photo-phone popup" height="170" width="85" src="{{ pr.photo.url }}" alt="{{ pr.brand }} {{ pr.model }}">
+          <form id="form_buying_product" > {% csrf_token %}
+          {% for pr in products %}
+            <div class="col-sm-4">
+              <div class="content-col">
+              {% if pr.photo %}
+                <img class="photo-phone popup" height="170" width="85" src="{{ pr.photo.url }}" alt="{{ pr.brand }} {{ pr.model }}">
               {% else %}
-              <img class="photo-phone-error" height="170" width="170" src="{% static "img/default_sm.png" %}">
-            {% endif %}
-            <!-- The Modal -->
-              <div id="myModal" class="modal">
-                <span class="close">&times;</span>
-                <img class="modal-content" id="img01">
-                <div id="caption"></div>
-              </div> 
-              <a class="header-href" href="{% url 'product_details' pk=pr.id %}"><h3 class="header-phone">{{ pr.brand }} {{ pr.model }}</h3></a>
-              <h4 class="price">{{ pr.price }}$</h4>
-            {% if user.is_authenticated %}
+                <img class="photo-phone-error" height="170" width="170" src="{% static "img/default_sm.png" %}">
+              {% endif %}
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                  <span class="close">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                </div> 
+                <a class="header-href" href="{% url 'product_details' pk=pr.id %}"><h3 class="header-phone">{{ pr.brand }} {{ pr.model }}</h3></a>
+                <h4 class="price">{{ pr.price }}$</h4>
+              {% if user.is_authenticated %}
               {% if pr.id in product_in_basket %}
                 <button type="button" class="button-buy" disabled><i class="fa fa-check-circle"></i></button>
               {% else %}
@@ -76,16 +73,15 @@
                 <i class="fa fa-cart-plus"></i>
                 </button>
               {% endif %}
-
-            {% else %}
-            <a href="{% url 'login' %}">
-              <button type="button" class="button-buy"><i class="fa fa-cart-plus"></i></button>
-            </a>
-            {% endif %}
-          </div>
-          </div>
-        {% endfor %}
-        </form>      
+              {% else %}
+                <a href="{% url 'login' %}">
+                  <button type="button" class="button-buy"><i class="fa fa-cart-plus"></i></button>
+                </a>
+              {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+          </form>      
         </div>
       
 

@@ -53,13 +53,16 @@ function removeProduct(){
         var data = {};
         var csrf_token = $('#quantity_goods [name="csrfmiddlewaretoken"]').val();
         data["csrfmiddlewaretoken"] = csrf_token;
-        data.product_id = $(this).data("product_id");
+        var product = $(this);
+        data.product_id = product.data("product_id");
+        var url = product.attr("action");
 
         $.ajax({
             url: url,
             type: 'POST',
             data: data,
             cache: true,
+            success: location.reload(),
         });
 
     });

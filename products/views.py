@@ -41,6 +41,6 @@ def new_products(request):
     return render(request, 'main/products_list.html', {'brands': brands, 'products': products})
 
 
-def smartphone_details(request):
+def product_details(request):
     """Render page with smartphone_details."""
-    return render(request, 'main/smartphone_details.html', {})
+    return render(request, 'main/product_details.html', {})

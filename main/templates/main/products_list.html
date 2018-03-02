@@ -30,43 +30,37 @@
 	</section>
 
 	<section id="section-content">
-    <div class="container parent-container">
+    <div class="container">
+      <div class="row white-line">
+        
+      </div>
 
-      <!-- menu -->
-
-        <div class="wrapper"><h1 class="header-tabs">Brands</h1>
-          <div class="tab">
-            {% for brand in brands %}
-              <button value="{{ brand.id }}">{{ brand.brand_name }}</button>
-            {% endfor %}
+      <div class="row content">
+        <div class="col-sm-3">
+          <div class="test1">
+            
           </div>
         </div>
-      <!-- content -->
-      <form id="form_buying_product" > {% csrf_token %}
-      {% if products %}
-        <div class="row">
+        
+          <!--  --><!-- {% csrf_token %} -->
+  
+        <div class="col-sm-9">
         {% for pr in products %}
-          <div class="col-md-3">
+        <div class="col-sm-4">
+          <div class="test1">
             {% if pr.photo %}
               <img class="photo-phone popup" height="130" width="65" src="{{ pr.photo.url }}" alt="{{ pr.brand }} {{ pr.model }}">
-
               {% else %}
               <img class="photo-phone-error" height="150" width="150" src="{% static "img/default_sm.png" %}">
-
             {% endif %}
             <!-- The Modal -->
-              <div id="myModal" class="modal">
+              <!-- <div id="myModal" class="modal">
                 <span class="close">&times;</span>
                 <img class="modal-content" id="img01">
                 <div id="caption"></div>
-              </div>
-          </div>
-          <div class="col-md-5">
-            <a class="header-href" href="{% url 'product_details' pk=pr.id %}"><h3 class="header-phone">{{ pr.brand }} {{ pr.model }}</h3></a>
-            <p descr-phone>{{ pr.description|truncatewords:45 }}</p>
-          </div>
-          <div class="col-md-2">
-            <h4 class="price">{{ pr.price }}$</h4>
+              </div> -->
+              <a class="header-href" href=""><h3 class="header-phone">{{ pr.brand }} {{ pr.model }}</h3></a>
+              <h4 class="price">{{ pr.price }}$</h4>
             {% if user.is_authenticated %}
               {% if pr.id in product_in_basket %}
                 <button type="button" class="button-buy" disabled><i class="fa fa-check-circle"></i></button>
@@ -81,16 +75,31 @@
               <button type="button" class="button-buy"><i class="fa fa-cart-plus"></i></button>
             </a>
             {% endif %}
-
-            </div>
-        {% endfor %}
+          </div>
+          </div>
+        {% endfor %}      
         </div>
-      {% else %}
-        <div class="col-md-10"><p class="no-result-brand">Nothing found, try change request</p></div>
-      {% endif %}
-      </form>
+     <!--  </form> -->
+          
+        
+        
+        
+        </div> 
+      </div>
 
-    </div>
+      <!-- menu -->
+        <!--
+        <div class="wrapper"><h1 class="header-tabs">Brands</h1>
+          <div class="tab">
+            {% for brand in brands %}
+              <button value="{{ brand.id }}">{{ brand.brand_name }}</button>
+            {% endfor %}
+          </div>
+        </div> -->
+      <!-- content -->
+      
+
+    
 
   </section>
 

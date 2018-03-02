@@ -30,7 +30,7 @@
 				{% endif %}
 				<div class="col-sm-3">
 					<p class="header-ph">{{ pr.product.brand }} {{ pr.product.model }}</p>
-					<button class="btn-remove" type="submit">&times; Remove</button>
+					<button action="{% url 'remove_product' %}" class="btn-remove" type="button" data-product_id = "{{ pr.id }}">&times;  Remove</button>
 				</div>
 				<div class="col-sm-1"><p class="price">{{ pr.product.price }}$</p></div>
 				<div class="col-sm-2">
@@ -56,5 +56,5 @@
 {% endblock %}
 
 {% block extra_js %}
-  <script src="{% static "js/quantity_goods.js" %}"></script>
+  <script src="{% static "js/basket.js" %}"></script>
 {% endblock %}

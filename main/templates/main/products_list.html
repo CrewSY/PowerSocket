@@ -30,23 +30,89 @@
 	</section>
 
 	<section id="section-content">
-    <div class="container parent-container">
-
-      <!-- menu -->
-        <div class="wrapper"><h1 class="header-tabs">Brands</h1>
-          <div class="tab">
-            {% for brand in brands %}
-              <button  value="{{ brand.id }}" >{{ brand.brand_name }}</button>
-            {% endfor %}
+    <div class="container">
+      <div class="row white-line">
+        <div class="col-sm-3">
+          <div class="dropdown">
+            <p class="sort-by">sort by:</p>
+            <div class="dropdown-content">
+              <p>Price</p>
+              <p>Test</p>
+              <p>Test2</p>
+            </div>
           </div>
         </div>
+        <div class="col-sm-6">
+          <div class="topnav">
+            <div class="search-container">
+              <form id="searchform" action="{% url 'search_products' %}" method="get" accept-charset="utf-8">
+                <input class="searchfield" name="q" type="text" id="search" placeholder="Search ...">
+                <button type="submit" class="button-search">
+                  <i class="fa fa-search icon"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <a href="#"><p class="skip">Skip</p></a>
+        </div>
+      </div>
+
+      <div class="row content">
+        <div class="col-sm-3">
+            <div class="wrapper">
+              <h1 class="header-tabs">Brands</h1>
+              <div class="tab">
+              {% for brand in brands %}
+                <button value="{{ brand.id }}">{{ brand.brand_name }}</button>
+              {% endfor %}
+              </div>
+            </div>
+        </div>
+
+        <div class="col-sm-9">
+          <form id="form_buying_product" > {% csrf_token %}
+          {% for pr in products %}
+            <div class="col-sm-4">
+              <div class="content-col">
+              {% if pr.photo %}
+                <img class="photo-phone popup" height="170" width="85" src="{{ pr.photo.url }}" alt="{{ pr.brand }} {{ pr.model }}">
+              {% else %}
+                <img class="photo-phone-error" height="170" width="170" src="{% static "img/default_sm.png" %}">
+              {% endif %}
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                  <span class="close">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                </div>
+                <a class="header-href" href="{% url 'product_details' pk=pr.id %}"><h3 class="header-phone">{{ pr.brand }} {{ pr.model }}</h3></a>
+                <h4 class="price">{{ pr.price }}$</h4>
+              {% if user.is_authenticated %}
+              {% if pr.id in product_in_basket %}
+                <button type="button" class="button-buy" disabled><i class="fa fa-check-circle"></i></button>
+              {% else %}
+                <button  type="button" action="{% url 'basket_adding' %}" class="change-icon button-buy basket-adding" data-product_id = "{{ pr.id }}">
+                <i class="fa fa-cart-plus"></i>
+                </button>
+              {% endif %}
+              {% else %}
+                <a href="{% url 'login' %}">
+                  <button type="button" class="button-buy"><i class="fa fa-cart-plus"></i></button>
+                </a>
+              {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+          </form>
+        </div>
+        </div>
+      </div>
       <!-- content -->
       <div class="product_content">
         {% include 'product_content.html' %}
       </div>
-
-    </div>
-
   </section>
 
 {% with object_list=products %}

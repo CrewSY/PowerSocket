@@ -1,7 +1,7 @@
 /*Style for tabs*/
 .tab {
   height: 220px;
-  width: 190px;
+  width: 100%;
   background: #FFFFF7;
   color: #60646D;
   border: 1px solid #ccc;
@@ -30,21 +30,20 @@
     background-color: #ccc;
 }
 
-/*Styles for title of tabs*/
 .wrapper {
-  width: 190px;
-  margin-right: 10px;
+  width: 100%;
 }
 
 .header-tabs {
   background: #4B4A4A;
   border-radius: 5px 5px 0 0;
-  margin: 10px 0 0 0;
+  margin: 0;
   color: #FFFFF7;
   font-size: 20px;
   padding: 13px;
   text-align: center;
-  width: 190px;
+  width: 100%;
+  text-align: left;
  }
 
 .header-tabs:hover {

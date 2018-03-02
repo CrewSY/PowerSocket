@@ -1,0 +1,375 @@
+[
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "photo": "",
+        "brand": 1,
+        "category": 1,
+        "model": "X",
+        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
+        "price": "999.99",
+        "publish_date": "2018-03-02T07:20:19Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "photo": "",
+        "brand": 1,
+        "category": 1,
+        "model": "8+",
+        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
+        "price": "800.00",
+        "publish_date": "2018-03-02T07:21:45Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0
+    }
+},
+{
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "photo": "",
+        "brand": 1,
+        "category": 1,
+        "model": "5S",
+        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
+        "price": "200.00",
+        "publish_date": "2018-03-02T07:22:03Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0
+    }
+},
+{
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "photo": "",
+        "brand": 1,
+        "category": 1,
+        "model": "SE",
+        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
+        "price": "300.00",
+        "publish_date": "2018-03-02T07:22:14Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0
+    }
+},
+{
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+        "photo": "",
+        "brand": 1,
+        "category": 1,
+        "model": "6 (32GB)",
+        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
+        "price": "355.99",
+        "publish_date": "2018-03-02T07:22:26Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0
+    }
+},
+{
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+        "photo": "",
+        "brand": 1,
+        "category": 1,
+        "model": "7 (32GB)",
+        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
+        "price": "400.00",
+        "publish_date": "2018-03-02T07:22:40Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0
+    }
+},
+{
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+        "photo": "",
+        "brand": 1,
+        "category": 1,
+        "model": "X Black",
+        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
+        "price": "1999.99",
+        "publish_date": "2018-03-02T07:22:53Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0
+    }
+},
+{
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+        "photo": "",
+        "brand": 5,
+        "category": 1,
+        "model": "Desire 650",
+        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
+        "price": "99.50",
+        "publish_date": "2018-03-02T07:23:24Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0
+    }
+},
+{
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+        "photo": "",
+        "brand": 5,
+        "category": 1,
+        "model": "Desire 420",
+        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
+        "price": "340.00",
+        "publish_date": "2018-03-02T07:23:52Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0
+    }
+},
+{
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+        "photo": "",
+        "brand": 5,
+        "category": 1,
+        "model": "Desire 1000",
+        "description": "",
+        "price": "200.00",
+        "publish_date": "2018-03-02T07:24:12Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0
+    }
+},
+{
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+        "photo": "",
+        "brand": 2,
+        "category": 1,
+        "model": "J2 Black",
+        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
+        "price": "200.00",
+        "publish_date": "2018-03-02T07:24:26Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0
+    }
+},
+{
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+        "photo": "",
+        "brand": 2,
+        "category": 1,
+        "model": "J3 Blue 64 GB",
+        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking. From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
+        "price": "300.00",
+        "publish_date": "2018-03-02T07:24:47Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0
+    }
+},
+{
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+        "photo": "",
+        "brand": 2,
+        "category": 1,
+        "model": "J5 Pink",
+        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
+        "price": "500.00",
+        "publish_date": "2018-03-02T07:25:26Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0
+    }
+},
+{
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+        "photo": "",
+        "brand": 2,
+        "category": 1,
+        "model": "S8",
+        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
+        "price": "800.00",
+        "publish_date": "2018-03-02T07:25:39Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0
+    }
+},
+{
+    "model": "products.product",
+    "pk": 15,
+    "fields": {
+        "photo": "",
+        "brand": 2,
+        "category": 1,
+        "model": "A8",
+        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking. From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
+        "price": "900.00",
+        "publish_date": "2018-03-02T07:25:58Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0
+    }
+},
+{
+    "model": "products.product",
+    "pk": 16,
+    "fields": {
+        "photo": "",
+        "brand": 3,
+        "category": 1,
+        "model": "Gold XT190",
+        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
+        "price": "20.00",
+        "publish_date": "2018-03-02T07:26:15Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0
+    }
+},
+{
+    "model": "products.product",
+    "pk": 17,
+    "fields": {
+        "photo": "",
+        "brand": 4,
+        "category": 1,
+        "model": "Gold K8 NOTE",
+        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking. From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
+        "price": "0.00",
+        "publish_date": "2018-03-02T07:26:41Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0
+    }
+},
+{
+    "model": "products.product",
+    "pk": 18,
+    "fields": {
+        "photo": "",
+        "brand": 4,
+        "category": 1,
+        "model": "Gold K4 NOTE",
+        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
+        "price": "100.00",
+        "publish_date": "2018-03-02T07:26:55Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0
+    }
+},
+{
+    "model": "products.productbrand",
+    "pk": 1,
+    "fields": {
+        "brand_name": "Iphone"
+    }
+},
+{
+    "model": "products.productbrand",
+    "pk": 2,
+    "fields": {
+        "brand_name": "Samsung"
+    }
+},
+{
+    "model": "products.productbrand",
+    "pk": 3,
+    "fields": {
+        "brand_name": "Xiaomi"
+    }
+},
+{
+    "model": "products.productbrand",
+    "pk": 4,
+    "fields": {
+        "brand_name": "Lenovo"
+    }
+},
+{
+    "model": "products.productbrand",
+    "pk": 5,
+    "fields": {
+        "brand_name": "HTC"
+    }
+},
+{
+    "model": "products.productcategory",
+    "pk": 1,
+    "fields": {
+        "category_name": "Phones"
+    }
+},
+{
+    "model": "products.productcategory",
+    "pk": 2,
+    "fields": {
+        "category_name": "Laptops"
+    }
+}
+]

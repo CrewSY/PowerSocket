@@ -32,10 +32,17 @@
 	<section id="section-content">
     <div class="container">
       <div class="row white-line">
-        <div class="col-sm-4">
-          <p class="sort-by">sort by:</p>
+        <div class="col-sm-3">
+          <div class="dropdown">
+            <p class="sort-by">sort by:</p>
+            <div class="dropdown-content">
+              <p>Price</p>
+              <p>Test</p>
+              <p>Test2</p>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-5">
+        <div class="col-sm-6">
           <div class="topnav">
             <div class="search-container">
               <form id="searchform" action="{% url 'search_products' %}" method="get" accept-charset="utf-8">
@@ -46,6 +53,9 @@
               </form>
             </div>
           </div>
+        </div>
+        <div class="col-sm-3">
+          <a href="#"><p class="skip">Skip</p></a>
         </div>
       </div>
 

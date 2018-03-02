@@ -34,3 +34,25 @@ def basket_adding(request):
     ProductInOrder.objects.create(product_id=product_id, order=order)
 
     return HttpResponse()
+
+
+def update_quantity(request):
+    """Update quantity of product in order."""
+    data = request.POST
+    product_id = data.get('product_id')
+    qty = data.get('qty')
+
+    ProductInOrder.objects.filter(id=product_id).update(count=qty)
+
+    return HttpResponse()
+
+
+def remove_product(request):
+    """Remove product from basket."""
+    data = request.POST
+    product_id = data.get('product_id')
+
+    product = ProductInOrder.objects.filter(id=product_id)
+    product.delete()
+
+    return HttpResponse()

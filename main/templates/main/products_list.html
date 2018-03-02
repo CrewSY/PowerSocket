@@ -107,29 +107,12 @@
           {% endfor %}
           </form>
         </div>
-
-
-
-
-
-
         </div>
       </div>
-
-      <!-- menu -->
-        <!--
-        <div class="wrapper"><h1 class="header-tabs">Brands</h1>
-          <div class="tab">
-            {% for brand in brands %}
-              <button value="{{ brand.id }}">{{ brand.brand_name }}</button>
-            {% endfor %}
-          </div>
-        </div> -->
       <!-- content -->
-
-
-
-
+      <div class="product_content">
+        {% include 'product_content.html' %}
+      </div>
   </section>
 
 {% with object_list=products %}
@@ -138,9 +121,15 @@
 
 {% endblock %}
 
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+
 {% block extra_js %}
   <script src="{% static "js/jquery.cookie.js" %}"></script>
-  <script src="{% static "js/brands-menu.js" %}"></script>
   <script src="{% static "js/popup.js" %}"></script>
   <script src="{% static "js/basket-adding.js" %}"></script>
+  <script src="{% static "js/brands-menu.js" %}"></script>
 {% endblock %}

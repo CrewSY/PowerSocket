@@ -39,19 +39,3 @@ def get_brands(request):
             'brand_name': brand.brand_name,
         })
     return brands
-
-
-def get_current_brand(request):
-    """Return current brand."""
-    pk = request.COOKIES.get('current_brand')
-
-    if pk:
-        from .models import ProductBrand
-        try:
-            brand = ProductBrand.objects.get(pk=int(pk))
-        except ProductBrand.DoesNotExist:
-            return None
-        else:
-            return brand
-    else:
-        return None

@@ -5,36 +5,72 @@ from django.shortcuts import render
 
 from .models import Product
 from orders.models import ProductInOrder, Order
-from .utils import paginate, get_current_brand, get_brands
+from .utils import paginate, get_brands
 
 
 def products_list(request):
-    """Render page with products list."""
-    current_brand = get_current_brand(request)
-    if current_brand:
-        products = Product.objects.filter(brand=current_brand)
-    else:
-        products = Product.objects.all()
+    """Render home page with products list."""
+    brands = get_brands(request)
+    products = Product.objects.all().order_by('-publish_date')
 
-    try:
-        user = request.user
-    except user.DoesNotExist:
-        user = None
-    else:
+    user = request.user
+    if user.is_authenticated():
         try:
             order = Order.objects.get(owner=user)
             product_in_basket = ProductInOrder.objects.filter(order=order)
-            set_id = set()
+            set_of_id = set()
             for pr in product_in_basket:
-                set_id.add(pr.product.id)
-        except Exception as e:
-            product_in_basket = set()
+                set_of_id.add(pr.product.id)
+            context = paginate(products, 12,
+                               request,
+                               {'product_in_basket': set_of_id,
+                                'brands': brands},
+                               var_name='products')
+        except Order.DoesNotExist:
+            context = paginate(products, 12,
+                               request,
+                               {'brands': brands},
+                               var_name='products')
+    else:
+        context = paginate(products, 12,
+                           request,
+                           {'brands': brands},
+                           var_name='products')
 
-    brands = get_brands(request)
-    context = paginate(products, 6, request, {'brands': brands,
-                                              'product_in_basket': set_id},
-                       var_name='products')
     return render(request, 'main/products_list.html', context)
+
+
+def update_content(request, pk):
+    """Update content according received pk."""
+    if pk:
+        products = Product.objects.filter(brand=pk)
+    else:
+        products = Product.objects.all()
+
+    user = request.user
+    if user.is_authenticated():
+        try:
+            order = Order.objects.get(owner=user)
+            product_in_basket = ProductInOrder.objects.filter(order=order)
+            set_of_id = set()
+            for pr in product_in_basket:
+                set_of_id.add(pr.product.id)
+            context = paginate(products, 12,
+                               request,
+                               {'product_in_basket': set_of_id},
+                               var_name='products')
+        except Order.DoesNotExist:
+            context = paginate(products, 12,
+                               request,
+                               {},
+                               var_name='products')
+    else:
+        context = paginate(products, 12,
+                           request,
+                           {},
+                           var_name='products')
+
+    return render(request, 'product_content.html', context)
 
 
 def search_products(request):

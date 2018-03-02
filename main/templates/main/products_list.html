@@ -37,14 +37,21 @@
 
       <div class="row content">
         <div class="col-sm-3">
-          <div class="test1">
-            
+          
+            <div class="wrapper"><h1 class="header-tabs">Brands</h1>
+          <div class="tab">
+            {% for brand in brands %}
+              <button value="{{ brand.id }}">{{ brand.brand_name }}</button>
+            {% endfor %}
           </div>
         </div>
+          
+        </div>
         
-          <!--  --><!-- {% csrf_token %} -->
-  
+         
+        
         <div class="col-sm-9">
+        <form id="form_buying_product" > {% csrf_token %}
         {% for pr in products %}
         <div class="col-sm-4">
           <div class="test1">
@@ -54,12 +61,12 @@
               <img class="photo-phone-error" height="150" width="150" src="{% static "img/default_sm.png" %}">
             {% endif %}
             <!-- The Modal -->
-              <!-- <div id="myModal" class="modal">
+              <div id="myModal" class="modal">
                 <span class="close">&times;</span>
                 <img class="modal-content" id="img01">
                 <div id="caption"></div>
-              </div> -->
-              <a class="header-href" href=""><h3 class="header-phone">{{ pr.brand }} {{ pr.model }}</h3></a>
+              </div> 
+              <a class="header-href" href="{% url 'product_details' pk=pr.id %}"><h3 class="header-phone">{{ pr.brand }} {{ pr.model }}</h3></a>
               <h4 class="price">{{ pr.price }}$</h4>
             {% if user.is_authenticated %}
               {% if pr.id in product_in_basket %}
@@ -77,9 +84,11 @@
             {% endif %}
           </div>
           </div>
-        {% endfor %}      
+        {% endfor %}
+        </form>      
         </div>
-     <!--  </form> -->
+      
+
           
         
         

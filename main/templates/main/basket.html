@@ -24,9 +24,9 @@
 			{% for pr in products %}
 			<div class="row">
 				{% if pr.product.photo %}
-				  <div class="col-sm-2"><img src="{{ pr.product.photo.url }}"></div>
+				  <div class="col-sm-2"><img class="photo-ph" height="110px" width="55px" src="{{ pr.product.photo.url }}"></div>
 				{% else %}
-				  <div class="col-sm-2"><img height="140" width="150" src="{% static "img/default_sm.png" %}"></div>
+				  <div class="col-sm-2"><img class="photo-ph-error"  height="130" width="140" src="{% static "img/default_sm.png" %}"></div>
 				{% endif %}
 				<div class="col-sm-3">
 					<p class="header-ph">{{ pr.product.brand }} {{ pr.product.model }}</p>

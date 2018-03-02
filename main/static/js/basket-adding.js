@@ -38,5 +38,4 @@ function changeIcons() {
 $(document).ready(function(){
     initBuyButton();
     changeIcons();
-
 });

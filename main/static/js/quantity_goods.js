@@ -5,7 +5,14 @@ function initQuantity(){
         var qty = parseInt(num_count.val());
         var product_id = num_count.data("product_id");
         var url = num_count.attr("action");
-        qty = qty - 1;
+
+        if (qty==1){
+        	qty = 1;
+        }
+        else{
+        	qty = qty - 1;
+        }
+
         num_count.val(qty);
         updateQuantity(qty, product_id, url);
     });

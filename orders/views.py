@@ -45,3 +45,14 @@ def update_quantity(request):
     ProductInOrder.objects.filter(id=product_id).update(count=qty)
 
     return HttpResponse()
+
+
+def remove_product(request):
+    """Remove product from basket."""
+    data = request.POST
+    product_id = data.get('product_id')
+
+    product = ProductInOrder.objects.filter(id=product_id)
+    product.delete()
+
+    return HttpResponse()

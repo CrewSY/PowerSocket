@@ -18,12 +18,12 @@ function initBrandSelector(){
     $('.tab button').on('click', function(event){
     event.preventDefault();
     var pk = $(this).val();
-    update_content(pk);
+    updateContentByBrands(pk);
   });
 }
 
 
-function update_content(pk) {
+function updateContentByBrands(pk) {
   var url = "/update_content/"+ pk;
   $('.product_content').load(url, function() {
     initBuyButton();

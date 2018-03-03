@@ -64,10 +64,6 @@
   color: white;
 }
 
-.header-tabs:active {
-  background-color: black;
-}
-
 .plus-brands {
   float: right !important ;
 }

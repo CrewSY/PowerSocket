@@ -114,10 +114,10 @@
 }
 
 .label-new {
-  background-color: #55e073; 
+  background-color: #04E620;
   position: absolute;
   top: 30%;
-  width: 15%;
+  width: 20%;
   text-transform: uppercase;
   color: white;
   font-weight: bold;
@@ -126,17 +126,16 @@
   display: inline-block;
 }
 
-.label-discount { 
-  background-color: #F75656;
+.label-discount {
+  background-color: #FF0000;
   position: absolute;
-  top: 30%;
-  width: 25%;
+  top: 39%;
+  width: 20%;
   text-transform: uppercase;
   color: white;
   font-weight: bold;
   padding: 5px 0 5px 0;
   text-align: center;
-  margin-left: 15%;
 }
 
 .photo-phone {
@@ -324,8 +323,6 @@ button.button-buy:active {
 .price {
   text-align: center;
 }
-
-
 
 /*Pagination*/
 

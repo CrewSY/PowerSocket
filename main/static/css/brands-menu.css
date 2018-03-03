@@ -43,7 +43,7 @@
   width: 100%;
 }
 
-.header-tabs, .category {
+.header-tabs, .category, .delivery {
   background: #fff;
   margin: 0;
   border-radius: 5px 5px 0 0;
@@ -70,4 +70,67 @@
 
 .category {
   border-radius: 0 !important;
+}
+
+.wrapper-radio {
+  height: 80px !important;
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.container-radio {
+  display: inline-block;
+  position: relative;
+  padding-left: 15%;
+  margin-top: 4%;
+  margin-left: 15%;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+  background-color: #fff;
+}
+
+.container-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  background-color: grey;
+}
+
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 12px;
+  height: 15px;
+  width: 15px;
+  background-color: #C8C8C8;
+  border-radius: 50%;
+}
+
+.container-radio input:checked ~ .checkmark {
+  background-color: black;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container-radio .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
 }

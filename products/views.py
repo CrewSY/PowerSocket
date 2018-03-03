@@ -175,6 +175,38 @@ def discounted_products(request):
     return render(request, 'main/products_list.html', context)
 
 
+def rated_products(request):
+    """Render page with list of products that ordered by rating."""
+    products = Product.objects.all().order_by('-rating')
+
+    brands = get_brands(request)
+    user = request.user
+    if user.is_authenticated():
+        try:
+            order = Order.objects.get(owner=user)
+            product_in_basket = ProductInOrder.objects.filter(order=order)
+            set_of_id = set()
+            for pr in product_in_basket:
+                set_of_id.add(pr.product.id)
+            context = paginate(products, 9,
+                               request,
+                               {'product_in_basket': set_of_id,
+                                'brands': brands},
+                               var_name='products')
+        except Order.DoesNotExist:
+            context = paginate(products, 9,
+                               request,
+                               {'brands': brands},
+                               var_name='products')
+    else:
+        context = paginate(products, 9,
+                           request,
+                           {'brands': brands},
+                           var_name='products')
+
+    return render(request, 'main/products_list.html', context)
+
+
 def product_details(request, pk):
     """Render page with product details."""
     product = Product.objects.get(id=pk)

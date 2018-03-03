@@ -44,18 +44,26 @@
 }
 
 .header-tabs {
-  background: #4B4A4A;
-  border-radius: 5px 5px 0 0;
+  background: #fff;
   margin: 0;
-  color: #FFFFF7;
-  font-size: 20px;
+  border-radius: 5px 5px 0 0;
+  color: black;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 17px;
   padding: 13px;
   text-align: center;
   width: 100%;
   text-align: left;
+  display:  inline-block;
  }
 
 .header-tabs:hover {
   cursor: pointer;
   background: black;
+  color: white;
+}
+
+.plus-brands {
+  float: right !important ;
 }

@@ -42,7 +42,9 @@ def products_list(request):
 
 def update_content(request, pk):
     """Update content according received pk."""
-    if pk:
+    if pk == 'skip':
+        products = Product.objects.all()
+    elif pk:
         products = Product.objects.filter(brand=pk)
     else:
         products = Product.objects.all()

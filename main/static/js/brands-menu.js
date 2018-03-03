@@ -7,12 +7,12 @@ function initAccordion(){
     var findWrapper = $(this).closest('.wrapper');
     if (findArticle.is(':visible')) {
       findArticle.slideUp(600);
-      $('#brands-icon').removeClass("fa-minus").addClass("fa-plus");
+      $(this).find('i').removeClass("fa-minus").addClass("fa-plus");
     }
     else {
       findWrapper.find('>.tab').slideUp('fast');
       findArticle.slideDown(600);
-      $('#brands-icon').removeClass("fa-plus").addClass("fa-minus");
+      $(this).find('i').removeClass("fa-plus").addClass("fa-minus");
     }
   });
 }

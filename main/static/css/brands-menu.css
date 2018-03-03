@@ -43,7 +43,7 @@
   width: 100%;
 }
 
-.header-tabs {
+.header-tabs, .category {
   background: #fff;
   margin: 0;
   border-radius: 5px 5px 0 0;
@@ -58,7 +58,7 @@
   display:  inline-block;
  }
 
-.header-tabs:hover {
+.header-tabs:hover, .category:hover {
   cursor: pointer;
   background: #4B4A4A;
   color: white;
@@ -66,4 +66,8 @@
 
 .plus-brands {
   float: right !important ;
+}
+
+.category {
+  border-radius: 0 !important;
 }

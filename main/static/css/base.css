@@ -52,14 +52,26 @@ nav li a:hover {
   display:none;
 }
 
-
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: black;
-    font-size: 22px;
-    display: inline-block;
-    padding: 0;
-    padding-right: 15px;
-    margin-top: 20px;
+  color: black;
+  font-size: 22px;
+  display: inline-block;
+  padding: 0;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.basket-quantity {
+  top: 23%;
+  position: absolute;
+  color: white;
+  left: 38%;
+  background-color: red;
+  height: 15px;
+  width: 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  text-align: center;
 }
 
 .shopping-cart {

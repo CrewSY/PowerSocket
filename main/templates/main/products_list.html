@@ -45,8 +45,9 @@
         <div class="col-sm-6">
           <div class="topnav">
             <div class="search-container">
+
               <form id="searchform" accept-charset="utf-8">
-                <input class="searchfield" name="q" type="text" id="search" placeholder="Search ...">
+                <input class="searchfield slick-list" name="q" type="text" id="search" placeholder="Search ...">
                 <button type="submit" id="searchsubmit" class="button-search">
                   <i class="fa fa-search icon"></i>
                 </button>
@@ -62,7 +63,7 @@
       <div class="row content">
         <div class="col-sm-3">
             <div class="wrapper">
-              <h1 class="header-tabs">Brands</h1>
+              <h1 class="header-tabs">Brands<i id="brands-icon" class="fa fa-plus plus-brands"></i></h1>
               <div class="tab">
               {% for brand in brands %}
                 <button value="{{ brand.id }}">{{ brand.brand_name }}</button>

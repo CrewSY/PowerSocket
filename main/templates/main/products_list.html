@@ -78,6 +78,25 @@
               {% endfor %}
               </div>
             </div>
+            <div class="wrapper">
+              <h1 class="header-tabs category">Discount %<i id="category-icon" class="fa fa-plus plus-brands"></i></h1>
+              <div class="tab">
+              {% for brand in brands %}
+                <button value="{{ brand.id }}">{{ brand.brand_name }}</button>
+              {% endfor %}
+              </div>
+            </div>
+            <div class="wrapper wrapper-radio">
+              <h1 class="delivery">Delivery options</h1>
+              <label class="container-radio">FREE
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container-radio">4.99$
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+              </label>
+            </div>
         </div>
 
         <div class="col-sm-9">

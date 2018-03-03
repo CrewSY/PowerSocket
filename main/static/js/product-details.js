@@ -8,7 +8,6 @@ function initVotes(){
         data.vote = $(this).data("vote");
         data.product_id = $('#rating').data("product_id");
         var url = $('#rating').data("url");
-        console.log(url);
 
 
         $.ajax({
@@ -20,6 +19,35 @@ function initVotes(){
         });
 
     });
+}
+
+function initRating(){
+    rating = $('#rating').data("rating");
+    if(rating=='1'){
+        $('#vote-1').addClass('checked');
+    }
+    if(rating=='2'){
+        $('#vote-1').addClass('checked');
+        $('#vote-2').addClass('checked');
+    }
+    if(rating=='3'){
+        $('#vote-1').addClass('checked');
+        $('#vote-2').addClass('checked');
+        $('#vote-3').addClass('checked');
+    }
+    if(rating=='4'){
+        $('#vote-1').addClass('checked');
+        $('#vote-2').addClass('checked');
+        $('#vote-3').addClass('checked');
+        $('#vote-4').addClass('checked');
+    }
+    if(rating=='5'){
+        $('#vote-1').addClass('checked');
+        $('#vote-2').addClass('checked');
+        $('#vote-3').addClass('checked');
+        $('#vote-4').addClass('checked');
+        $('#vote-5').addClass('checked');
+    }
 }
 
 
@@ -95,4 +123,5 @@ $(document).ready(function(){
     initStar3();
     initStar4();
     initStar5();
+    initRating();
 });

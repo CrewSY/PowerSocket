@@ -60,8 +60,12 @@
 
 .header-tabs:hover {
   cursor: pointer;
-  background: black;
+  background: #4B4A4A;
   color: white;
+}
+
+.header-tabs:active {
+  background-color: black;
 }
 
 .plus-brands {

@@ -113,9 +113,34 @@ def search_products(request, search_by):
 
 def new_products(request):
     """Render page with list of new products ."""
-    products = Product.objects.all().order_by('-publish_date')[:10]
+    new_products = Product.objects.all().order_by('-is_new')
+
     brands = get_brands(request)
-    return render(request, 'main/products_list.html', {'brands': brands, 'products': products})
+    user = request.user
+    if user.is_authenticated():
+        try:
+            order = Order.objects.get(owner=user)
+            product_in_basket = ProductInOrder.objects.filter(order=order)
+            set_of_id = set()
+            for pr in product_in_basket:
+                set_of_id.add(pr.product.id)
+            context = paginate(new_products, 9,
+                               request,
+                               {'product_in_basket': set_of_id,
+                                'brands': brands},
+                               var_name='products')
+        except Order.DoesNotExist:
+            context = paginate(new_products, 9,
+                               request,
+                               {'brands': brands},
+                               var_name='products')
+    else:
+        context = paginate(new_products, 9,
+                           request,
+                           {'brands': brands},
+                           var_name='products')
+
+    return render(request, 'main/products_list.html', context)
 
 
 def product_details(request, pk):

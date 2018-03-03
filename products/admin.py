@@ -8,7 +8,7 @@ class ProductAdmin(admin.ModelAdmin):
     """Class that represents products at admin page."""
 
     list_display = ('__str__', 'price', 'publish_date', 'in_stock', )
-    list_filter = ('brand', 'in_stock', )
+    list_filter = ('brand', 'in_stock', 'is_new', )
     search_fields = ['model', 'brand__brand_name', ]
 
     class Meta:

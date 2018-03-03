@@ -113,6 +113,33 @@
   margin-bottom: 30px;
 }
 
+.label-discount {
+  background-color: #F75656;
+  position: absolute;
+  top: 30%;
+  width: 25%;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  padding: 5px 0 5px 0;
+  text-align: center;
+  margin-left: 15%;
+}
+
+.label-new {
+  background-color: #55e073; 
+  position: absolute;
+  top: 30%;
+  width: 15%;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  padding: 5px 0 5px 0;
+  text-align: center;
+  display: inline-block;
+}
+
+
 .photo-phone {
   display: block;
   margin: 0 auto;

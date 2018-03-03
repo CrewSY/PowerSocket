@@ -36,6 +36,10 @@ function updateContent(pk) {
   $('.product_content').load(url, function() {
     initBuyButton();
     changeIcons();
+    $('.tab button').each(function() {
+        $( this ).removeClass("active");
+    });
+    $('.tab button[value=' + pk + ']').addClass("active");
   });
 }
 

@@ -210,4 +210,13 @@ def rated_products(request):
 def product_details(request, pk):
     """Render page with product details."""
     product = Product.objects.get(id=pk)
-    return render(request, 'main/product_details.html', {'product': product})
+    try:
+        vote = int(product.rating/product.count_votes)
+    except ZeroDivisionError:
+        vote = 0
+
+    return render(request,
+                  'main/product_details.html',
+                  {'product': product,
+                   'vote': vote}
+                  )

@@ -45,9 +45,10 @@
         <div class="col-sm-6">
           <div class="topnav">
             <div class="search-container">
-              <form id="searchform" action="{% url 'search_products' %}" method="get" accept-charset="utf-8">
-                <input class="searchfield" name="q" type="text" id="search" placeholder="Search ...">
-                <button type="submit" class="button-search">
+
+              <form id="searchform" accept-charset="utf-8">
+                <input class="searchfield slick-list" name="q" type="text" id="search" placeholder="Search ...">
+                <button type="submit" id="searchsubmit" class="button-search">
                   <i class="fa fa-search icon"></i>
                 </button>
               </form>
@@ -55,14 +56,14 @@
           </div>
         </div>
         <div class="col-sm-3">
-          <a href="#"><p class="skip">Skip</p></a>
+          <a><p id="skipbutton" class="skip">Skip</p></a>
         </div>
       </div>
 
       <div class="row content">
         <div class="col-sm-3">
             <div class="wrapper">
-              <h1 class="header-tabs">Brands</h1>
+              <h1 class="header-tabs">Brands<i id="brands-icon" class="fa fa-plus plus-brands"></i></h1>
               <div class="tab">
               {% for brand in brands %}
                 <button value="{{ brand.id }}">{{ brand.brand_name }}</button>
@@ -87,15 +88,10 @@
 
 {% endblock %}
 
-  <div id="myModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="img01">
-    <div id="caption"></div>
-  </div>
-
 {% block extra_js %}
-  <script src="{% static "js/jquery.cookie.js" %}"></script>
+  <script src="{% static "js/slider.js" %}"></script>
   <script src="{% static "js/popup.js" %}"></script>
   <script src="{% static "js/basket-adding.js" %}"></script>
   <script src="{% static "js/brands-menu.js" %}"></script>
+  <script src="{% static "js/search.js" %}"></script>
 {% endblock %}

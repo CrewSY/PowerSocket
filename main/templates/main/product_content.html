@@ -1,6 +1,7 @@
 {% load staticfiles %}
+
  <form id="form_buying_product" > {% csrf_token %}
-          {% for pr in products %}
+    {% for pr in products %}
             <div class="col-sm-4">
               <div class="content-col">
               {% if pr.photo %}
@@ -8,7 +9,16 @@
               {% else %}
                 <img class="photo-phone-error" height="170" width="170" src="{% static "img/default_sm.png" %}">
               {% endif %}
-                <!-- The Modal -->
+              {% if pr.is_new %}
+              <div class="label-new">
+                <span>new</span>
+              </div>
+              {% endif %}
+              {% if pr.discount %}
+              <div class="label-discount">
+                <span>{{ pr.discount }}%</span>
+              </div>
+              {% endif %}
                 <div id="myModal" class="modal">
                   <span class="close">&times;</span>
                   <img class="modal-content" id="img01">

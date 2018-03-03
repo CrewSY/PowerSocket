@@ -47,7 +47,7 @@
           <div class="col-sm-12">
             <h3 class="header-phone">{{ product.brand }} {{ product.model }}</h3><hr>
             <div class="col-sm-6 offset-sm-3">
-              <div id="rating" class="rating" data-product_id="{{ product.id }}" data-url="{% url 'update_rating' %}">
+              <div id="rating" class="rating" data-product_id="{{ product.id }}" data-url="{% url 'update_rating' %}" data-rating="{{ product.rating }}">
                 {% csrf_token %}
                 <span id="vote-1" class="fa fa-star" data-vote="1"></span>
                 <span id="vote-2" class="fa fa-star" data-vote="2"></span>

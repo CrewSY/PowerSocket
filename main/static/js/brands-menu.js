@@ -18,12 +18,20 @@ function initBrandSelector(){
     $('.tab button').on('click', function(event){
     event.preventDefault();
     var pk = $(this).val();
-    updateContentByBrands(pk);
+    updateContent(pk);
   });
 }
 
 
-function updateContentByBrands(pk) {
+function initSkipButton(){
+  $('#skipbutton').on('click', function(event){
+    event.preventDefault();
+    updateContent('skip');
+  });
+}
+
+
+function updateContent(pk) {
   var url = "/update_content/"+ pk;
   $('.product_content').load(url, function() {
     initBuyButton();
@@ -35,4 +43,5 @@ function updateContentByBrands(pk) {
 $(document).ready(function(){
   initAccordion();
   initBrandSelector();
+  initSkipButton();
 });

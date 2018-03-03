@@ -21,18 +21,18 @@ def products_list(request):
             set_of_id = set()
             for pr in product_in_basket:
                 set_of_id.add(pr.product.id)
-            context = paginate(products, 12,
+            context = paginate(products, 9,
                                request,
                                {'product_in_basket': set_of_id,
                                 'brands': brands},
                                var_name='products')
         except Order.DoesNotExist:
-            context = paginate(products, 12,
+            context = paginate(products, 9,
                                request,
                                {'brands': brands},
                                var_name='products')
     else:
-        context = paginate(products, 12,
+        context = paginate(products, 9,
                            request,
                            {'brands': brands},
                            var_name='products')
@@ -42,7 +42,9 @@ def products_list(request):
 
 def update_content(request, pk):
     """Update content according received pk."""
-    if pk:
+    if pk == 'skip':
+        products = Product.objects.all()
+    elif pk:
         products = Product.objects.filter(brand=pk)
     else:
         products = Product.objects.all()
@@ -55,17 +57,17 @@ def update_content(request, pk):
             set_of_id = set()
             for pr in product_in_basket:
                 set_of_id.add(pr.product.id)
-            context = paginate(products, 12,
+            context = paginate(products, 9,
                                request,
                                {'product_in_basket': set_of_id},
                                var_name='products')
         except Order.DoesNotExist:
-            context = paginate(products, 12,
+            context = paginate(products, 9,
                                request,
                                {},
                                var_name='products')
     else:
-        context = paginate(products, 12,
+        context = paginate(products, 9,
                            request,
                            {},
                            var_name='products')
@@ -73,18 +75,40 @@ def update_content(request, pk):
     return render(request, 'product_content.html', context)
 
 
-def search_products(request):
-    """Render page with specific products list."""
-    search_by = request.GET.get('q')
+def search_products(request, search_by):
+    """Update content according received data from search."""
     if search_by:
         q = Q()
-        for tag in request.GET.get('q').split():
+        for tag in search_by.split():
             q |= Q(brand__brand_name__iexact=tag) | Q(model__iexact=tag)
         products = Product.objects.filter(q)
     else:
         products = Product.objects.all()
-    context = paginate(products, 10, request, {'search_by': search_by}, var_name='products')
-    return render(request, 'main/search_results.html', context)
+
+    user = request.user
+    if user.is_authenticated():
+        try:
+            order = Order.objects.get(owner=user)
+            product_in_basket = ProductInOrder.objects.filter(order=order)
+            set_of_id = set()
+            for pr in product_in_basket:
+                set_of_id.add(pr.product.id)
+            context = paginate(products, 9,
+                               request,
+                               {'product_in_basket': set_of_id},
+                               var_name='products')
+        except Order.DoesNotExist:
+            context = paginate(products, 9,
+                               request,
+                               {'search_by': search_by},
+                               var_name='products')
+    else:
+        context = paginate(products, 9,
+                           request,
+                           {'search_by': search_by},
+                           var_name='products')
+
+    return render(request, 'main/product_content.html', context)
 
 
 def new_products(request):

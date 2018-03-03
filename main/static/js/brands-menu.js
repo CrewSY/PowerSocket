@@ -18,16 +18,28 @@ function initBrandSelector(){
     $('.tab button').on('click', function(event){
     event.preventDefault();
     var pk = $(this).val();
-    update_content(pk);
+    updateContent(pk);
   });
 }
 
 
-function update_content(pk) {
+function initSkipButton(){
+  $('#skipbutton').on('click', function(event){
+    event.preventDefault();
+    updateContent('skip');
+  });
+}
+
+
+function updateContent(pk) {
   var url = "/update_content/"+ pk;
   $('.product_content').load(url, function() {
     initBuyButton();
     changeIcons();
+    $('.tab button').each(function() {
+        $( this ).removeClass("active");
+    });
+    $('.tab button[value=' + pk + ']').addClass("active");
   });
 }
 
@@ -35,4 +47,5 @@ function update_content(pk) {
 $(document).ready(function(){
   initAccordion();
   initBrandSelector();
+  initSkipButton();
 });

@@ -20,14 +20,23 @@
   cursor: pointer;
   transition: 0.3s;
   text-align: center;
+  outline: none;
 }
 
 .tab button:hover {
-    background-color: #ddd;
+  background-color: #ddd;
+  outline: none;
 }
 
-.tab button.active {
-    background-color: #ccc;
+.tab button:active {
+  background-color: #ccc;
+  outline: none;
+  border: none;
+}
+
+.tab button:focus {
+  outline:0;
+  background-color: #ccc;
 }
 
 .wrapper {

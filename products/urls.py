@@ -9,5 +9,5 @@ urlpatterns = [
     url(r'^search_products/(?P<search_by>.*)/$', views.search_products, name='search_products'),
     url(r'^new_products/$', views.new_products, name='new_products'),
     url(r'^product_details/(?P<pk>[0-9]+)/$', views.product_details, name='product_details'),
-    url(r'^update_content/(?P<pk>[0-9]+)/$', views.update_content, name='update_content'),
+    url(r'^update_content/(?P<pk>.*)/$', views.update_content, name='update_content'),
 ]

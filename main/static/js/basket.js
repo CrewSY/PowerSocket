@@ -16,6 +16,7 @@ function initQuantity(){
         num_count.val(qty);
         updateQuantity(qty, product_id, url);
     });
+
     $('.button_plus').click(function(e){
         e.preventDefault();
         var num_count = $(this).parent('.quantity_goods').find('.num_count');
@@ -42,10 +43,10 @@ function updateQuantity(qty, product_id, url){
         type: 'POST',
         data: data,
         cache: true,
+        success: location.reload(),
     });
 
 }
-
 
 function removeProduct(){
     $('.btn-remove').click(function(e){

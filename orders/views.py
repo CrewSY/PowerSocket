@@ -43,7 +43,9 @@ def update_quantity(request):
     product_id = data.get('product_id')
     qty = data.get('qty')
 
-    ProductInOrder.objects.filter(id=product_id).update(count=qty)
+    product = ProductInOrder.objects.get(id=product_id)
+    product.count = qty
+    product.save()
 
     return HttpResponse()
 

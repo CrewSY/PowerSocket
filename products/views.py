@@ -61,9 +61,10 @@ def update_content(request, pk):
 
 def search_products(request, search_by):
     """Update content according received data from search."""
+    print(search_by)
     if search_by:
         q = Q()
-        for tag in search_by.split():
+        for tag in search_by.split('_'):
             q |= Q(brand__brand_name__iexact=tag) | Q(model__iexact=tag)
         products = Product.objects.filter(q)
     else:

@@ -21,107 +21,41 @@ function initVotes(){
     });
 }
 
+
 function initRating(){
     rating = $('#rating').data("rating");
-    if(rating=='1'){
-        $('#vote-1').addClass('checked');
-    }
-    if(rating=='2'){
-        $('#vote-1').addClass('checked');
-        $('#vote-2').addClass('checked');
-    }
-    if(rating=='3'){
-        $('#vote-1').addClass('checked');
-        $('#vote-2').addClass('checked');
-        $('#vote-3').addClass('checked');
-    }
-    if(rating=='4'){
-        $('#vote-1').addClass('checked');
-        $('#vote-2').addClass('checked');
-        $('#vote-3').addClass('checked');
-        $('#vote-4').addClass('checked');
-    }
-    if(rating=='5'){
-        $('#vote-1').addClass('checked');
-        $('#vote-2').addClass('checked');
-        $('#vote-3').addClass('checked');
-        $('#vote-4').addClass('checked');
-        $('#vote-5').addClass('checked');
-    }
-}
-
-
-function initStar1(){
-    $('#vote-1').mouseover(function(e){
-        $(this).addClass('checked');
-    });
-    $('#vote-1').mouseleave(function(e){
-        $(this).removeClass('checked');
+    $(".fa-star").each(function( index ) {
+        if (index <= rating){
+            $(this).addClass('checked');
+        }
+        else{
+            $(this).removeClass('checked');
+        }
     });
 }
 
-function initStar2(){
-    $('#vote-2').mouseover(function(e){
-        $('#vote-1').addClass('checked');
-        $(this).addClass('checked');
+
+function initStars(){
+    buttons = $(".fa-star");
+    buttons.mouseover(function(){
+        button = $(this);
+        buttons.each(function(index){
+            if (button.attr("id") >= $(this).attr("id")){
+                $(this).addClass('checked');
+            }
+            else{
+                $(this).removeClass('checked');
+            }
+        });
     });
-    $('#vote-2').mouseleave(function(e){
-        $('#vote-1').removeClass('checked');
-        $(this).removeClass('checked');
+    buttons.mouseleave(function(){
+        initRating();
     });
 }
 
-function initStar3(){
-    $('#vote-3').mouseover(function(e){
-        $('#vote-1').addClass('checked');
-        $('#vote-2').addClass('checked');
-        $(this).addClass('checked');
-    });
-    $('#vote-3').mouseleave(function(e){
-        $('#vote-1').removeClass('checked');
-        $('#vote-2').removeClass('checked');
-        $(this).removeClass('checked');
-    });
-}
-
-function initStar4(){
-    $('#vote-4').mouseover(function(e){
-        $('#vote-1').addClass('checked');
-        $('#vote-2').addClass('checked');
-        $('#vote-3').addClass('checked');
-        $(this).addClass('checked');
-    });
-    $('#vote-4').mouseleave(function(e){
-        $('#vote-1').removeClass('checked');
-        $('#vote-2').removeClass('checked');
-        $('#vote-3').removeClass('checked');
-        $(this).removeClass('checked');
-    });
-}
-
-function initStar5(){
-    $('#vote-5').mouseover(function(e){
-        $('#vote-1').addClass('checked');
-        $('#vote-2').addClass('checked');
-        $('#vote-3').addClass('checked');
-        $('#vote-4').addClass('checked');
-        $(this).addClass('checked');
-    });
-    $('#vote-5').mouseleave(function(e){
-        $('#vote-1').removeClass('checked');
-        $('#vote-2').removeClass('checked');
-        $('#vote-3').removeClass('checked');
-        $('#vote-4').removeClass('checked');
-        $(this).removeClass('checked');
-    });
-}
 
 $(document).ready(function(){
     initVotes();
-    initStar1();
-    initStar2();
-    initStar3();
-    initStar4();
-    initStar5();
+    initStars();
     initRating();
 });

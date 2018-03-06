@@ -87,9 +87,9 @@ class ProductInOrder(models.Model):
 
     def save(self, *args, **kwargs):
         """Save product in order in data base."""
-        price_per_item = self.product.price
-        self.price_per_item = price_per_item
-        self.total_price = self.count * price_per_item
+        from decimal import Decimal
+        self.price_per_item = self.product.price
+        self.total_price = Decimal(self.count) * self.price_per_item
 
         super(ProductInOrder, self).save(*args, **kwargs)
 

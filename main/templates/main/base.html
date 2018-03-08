@@ -15,6 +15,7 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+  <div id="wrap">
 	<header id="header" class="header">
 		<nav>
       <div class="container mt-head">
@@ -43,9 +44,11 @@
       </div>
 		</nav>
 	</header><hr class="head-mb">
-
+  <main>
   {% block content %}
   {% endblock %}
+  </main>
+  </div>
 
   <footer clas="footer">
     <div class="container">
@@ -78,8 +81,8 @@
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="{% static "js/jquerymenu.js" %}"></script>
-{% block extra_js %}{% endblock %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="{% static "js/jquerymenu.js" %}"></script>
+  {% block extra_js %}{% endblock %}
 </body>
 </html>

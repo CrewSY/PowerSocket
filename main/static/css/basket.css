@@ -54,6 +54,10 @@
 	color: black;
 }
 
+.btn-remove:focus {
+	outline: none;
+}
+
 .price, .subtotal {
 	text-align: center;
 }

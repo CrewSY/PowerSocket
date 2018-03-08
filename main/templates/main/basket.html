@@ -4,9 +4,8 @@
 {% load staticfiles %}
 
 {% block extra_css %}
-
-  <link rel="stylesheet" href="{% static "css/basket.css" %}">
- {% endblock %}
+	<link rel="stylesheet" href="{% static "css/basket.css" %}">
+{% endblock %}
 
 {% block content %}
 	<section id="basket">
@@ -29,7 +28,7 @@
 				{% endif %}
 				<div class="col-sm-3">
 					<p class="header-ph">{{ pr.product.brand }} {{ pr.product.model }}</p>
-					<button action="{% url 'remove_product' %}" class="btn-remove" type="button" data-product_id = "{{ pr.id }}">&times;  Remove</button>
+					<button action="{% url 'remove_product' %}" class="btn-remove" type="button" data-product_id = "{{ pr.id }}">&times; Remove</button>
 				</div>
 				<div class="col-sm-1"><p class="price">{{ pr.product.price }}$</p></div>
 				<div class="col-sm-2">

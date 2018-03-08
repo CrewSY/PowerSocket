@@ -2,6 +2,8 @@ function initSearchForm(){
     $('#searchsubmit').on('click', function(e){
     e.preventDefault();
     q = $('#search').val();
+    q = q.replace(" ", "_");
+    console.log(q);
     updateContentBySearch(q);
   });
 }

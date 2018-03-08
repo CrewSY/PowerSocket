@@ -3,10 +3,11 @@ Global functions for main app of PowerSocket project.
 
   - def paginate(objects, size, request, context, var_name) -> context
   - def get_brand(request) -> objects:brands
-  - def get_current_brand(request) -> object:current brand
-
+  - def get_basket_products(request, products, brands) -> context
+  - def get_count_basket_products(request) -> count products
 """
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from orders.models import ProductInOrder, Order
 
 
 def paginate(objects, size, request, context, var_name='object_list'):
@@ -39,3 +40,48 @@ def get_brands(request):
             'brand_name': brand.brand_name,
         })
     return brands
+
+
+def get_basket_products(request, products, brands):
+    """Return context with paginated products."""
+    user = request.user
+
+    if user.is_authenticated():
+        try:
+            order = Order.objects.get(owner=user)
+            product_in_basket = ProductInOrder.objects.filter(order=order)
+            set_of_id = set()
+            for pr in product_in_basket:
+                set_of_id.add(pr.product.id)
+            context = paginate(products, 9,
+                               request,
+                               {'product_in_basket': set_of_id,
+                                'brands': brands},
+                               var_name='products')
+        except Order.DoesNotExist:
+            context = paginate(products, 9,
+                               request,
+                               {'brands': brands},
+                               var_name='products')
+    else:
+        context = paginate(products, 9,
+                           request,
+                           {'brands': brands},
+                           var_name='products')
+    return context
+
+
+def get_count_basket_products(request):
+    """Return count of products in basket."""
+    user = request.user
+    if user.is_authenticated():
+        try:
+            order = Order.objects.get(owner=user)
+            products_in_basket = ProductInOrder.objects.filter(order=order)
+            count_products = len(products_in_basket)
+        except Order.DoesNotExist:
+            count_products = 0
+    else:
+        count_products = 0
+
+    return count_products

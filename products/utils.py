@@ -53,18 +53,18 @@ def get_basket_products(request, products, brands):
             set_of_id = set()
             for pr in product_in_basket:
                 set_of_id.add(pr.product.id)
-            context = paginate(products, 9,
+            context = paginate(products, 6,
                                request,
                                {'product_in_basket': set_of_id,
                                 'brands': brands},
                                var_name='products')
         except Order.DoesNotExist:
-            context = paginate(products, 9,
+            context = paginate(products, 6,
                                request,
                                {'brands': brands},
                                var_name='products')
     else:
-        context = paginate(products, 9,
+        context = paginate(products, 6,
                            request,
                            {'brands': brands},
                            var_name='products')

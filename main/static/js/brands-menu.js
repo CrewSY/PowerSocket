@@ -18,39 +18,27 @@ function initAccordion(){
 }
 
 
-
 function initBrandSelector(){
-    $('.tab button').on('click', function(event){
+    $('.brand-button').click(function(event){
     event.preventDefault();
-    var pk = $(this).val();
-    updateContent(pk);
+    var brand_id = $(this).data('brand_id');
+
+    updateContent(brand_id);
   });
 }
 
 
-function initSkipButton(){
-  $('#skipbutton').on('click', function(event){
-    event.preventDefault();
-    updateContent('skip');
-  });
-}
-
-
-function updateContent(pk) {
-  var url = "/update_content/"+ pk;
-  $('.product_content').load(url, function() {
-    initBuyButton();
-    changeIcons();
-    $('.tab button').each(function() {
-        $( this ).removeClass("active");
+function updateContent(brand_id) {
+  var url = "/update_content?";
+  $("#product-content").load(
+      url + $.param({brand_id: brand_id}), function() {
+        initBuyButton();
+        changeIcons();
     });
-    $('.tab button[value=' + pk + ']').addClass("active");
-  });
 }
 
 
 $(document).ready(function(){
   initAccordion();
   initBrandSelector();
-  initSkipButton();
 });

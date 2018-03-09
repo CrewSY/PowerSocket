@@ -8,13 +8,14 @@ function initQuantity(){
 
         if (qty==1){
         	qty = 1;
+            num_count.val(qty);
         }
         else{
-        	qty = qty - 1;
+            qty = qty - 1;
+            num_count.val(qty);
+            updateQuantity(qty, product_id, url);
         }
 
-        num_count.val(qty);
-        updateQuantity(qty, product_id, url);
     });
 
     $('.button_plus').click(function(e){

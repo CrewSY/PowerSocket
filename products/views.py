@@ -2,66 +2,66 @@
 
 from django.db.models import Q
 from django.shortcuts import render
+from django.views.generic import ListView
 
-from .models import Product
+
+from .models import Product, ProductBrand
 from orders.models import ProductInOrder, Order
-from .utils import paginate, get_brands, get_basket_products
+from .utils import paginate
 
 
-def products_list(request):
-    """Render home page with products list."""
-    products = Product.objects.all().order_by('-publish_date')
-    brands = get_brands(request)
-    context = get_basket_products(request, products, brands)
+class ProductListView(ListView):
+    """Render list of products according path."""
 
-    return render(request, 'main/products_list.html', context)
+    model = Product
+    template_name = 'main/products_list.html'
+    context_object_name = 'products'
+    paginate_by = 6
 
+    def get_queryset(self):
+        """Create queryset acording request.path."""
+        products = super(ProductListView, self).get_queryset()
 
-def new_products(request):
-    """Render page with list of new products."""
-    new_products = Product.objects.all().order_by('-is_new')
-    brands = get_brands(request)
-    context = get_basket_products(request, new_products, brands)
+        if '/new_products/' in self.request.path:
+            products = products.order_by('-is_new')
+        elif '/rated_products/' in self.request.path:
+            products = products.order_by('-rating')
 
-    return render(request, 'main/products_list.html', context)
+        return products
 
-
-def discounted_products(request):
-    """Render page with list of products that ordered by discounted."""
-    discounted_products = Product.objects.all().order_by('-discount')
-    brands = get_brands(request)
-    context = get_basket_products(request, discounted_products, brands)
-
-    return render(request, 'main/products_list.html', context)
-
-
-def rated_products(request):
-    """Render page with list of products that ordered by rating."""
-    rated_products = Product.objects.all().order_by('-rating')
-    brands = get_brands(request)
-    context = get_basket_products(request, rated_products, brands)
-
-    return render(request, 'main/products_list.html', context)
+    def get_context_data(self, **kwargs):
+        """Create context data."""
+        data = super().get_context_data(**kwargs)
+        data['brands'] = ProductBrand.objects.all().order_by('brand_name')
+        return data
 
 
-def update_content(request, pk):
-    """Update content according received pk."""
-    if pk == 'skip':
-        products = Product.objects.all()
-    elif pk:
-        products = Product.objects.filter(brand=pk)
-    else:
-        products = Product.objects.all()
+class UpdateContentView(ListView):
+    """Update content according filter products."""
 
-    brands = get_brands(request)
-    context = get_basket_products(request, products, brands)
+    model = Product
+    template_name = 'main/product_content.html'
 
-    return render(request, 'product_content.html', context)
+    def get(self, request):
+        """Render product content with filtered queryset."""
+        products = self.get_queryset()
+
+        return render(request, self.template_name, {'products': products})
+
+    def get_queryset(self):
+        """Create queryset according request."""
+        data = self.request.GET
+        brand_id = data.get('brand_id')
+        if brand_id:
+            products = Product.objects.filter(brand=brand_id)
+        else:
+            products = super(UpdateContentView, self).get_queryset()
+
+        return products
 
 
 def search_products(request, search_by):
     """Update content according received data from search."""
-    print(search_by)
     if search_by:
         q = Q()
         for tag in search_by.split('_'):

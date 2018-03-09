@@ -32,6 +32,7 @@ def basket_adding(request):
     user = request.user
     order, created = Order.objects.get_or_create(owner=user)
     product_id = data.get('product_id')
+    print(product_id)
     ProductInOrder.objects.create(product_id=product_id, order=order)
 
     return HttpResponse()

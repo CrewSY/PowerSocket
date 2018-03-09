@@ -3,9 +3,11 @@
 from django.db.models import Q
 from django.shortcuts import render
 from django.views.generic import ListView
+from django.core.exceptions import ObjectDoesNotExist
 
 
 from .models import Product
+from orders.models import Order, ProductInOrder
 from .utils import get_data
 
 
@@ -91,8 +93,15 @@ def product_details(request, pk):
     except ZeroDivisionError:
         vote = 0
 
-    return render(request,
-                  'main/product_details.html',
-                  {'product': product,
-                   'vote': vote}
-                  )
+    user = request.user
+    if user.is_authenticated():
+        try:
+            order = Order.objects.get(owner=user)
+            ProductInOrder.objects.get(order=order, product__id=pk)
+            context = {'product': product, 'vote': vote, 'in_basket': True}
+        except ObjectDoesNotExist:
+            context = {'product': product, 'vote': vote}
+    else:
+        context = {'product': product, 'vote': vote}
+
+    return render(request, 'main/product_details.html', context)

@@ -7,13 +7,14 @@ Global functions for main app of PowerSocket project.
 """
 
 from orders.models import ProductInOrder, Order
-from products.models import ProductBrand
+from products.models import ProductBrand, ProductCategory
 
 
 def get_data(request):
     """Return context with paginated products."""
     user = request.user
     brands = ProductBrand.objects.all().order_by('brand_name')
+    categories = ProductCategory.objects.all().order_by('category_name')
     if user.is_authenticated():
         try:
             order = Order.objects.get(owner=user)
@@ -22,11 +23,14 @@ def get_data(request):
             for pr in product_in_basket:
                 set_of_id.add(pr.product.id)
             context = {'product_in_basket': set_of_id,
-                       'brands': brands}
+                       'brands': brands,
+                       'categories': categories}
         except Order.DoesNotExist:
-            context = {'brands': brands},
+            context = {'brands': brands,
+                       'categories': categories}
     else:
-        context = {'brands': brands}
+        context = {'brands': brands,
+                   'categories': categories}
 
     return context
 

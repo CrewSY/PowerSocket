@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="{% static "css/content.css" %}">
   <link rel="stylesheet" href="{% static "css/smartphone_details.css" %}">
-
 {% endblock %}
 
 {% block content %}
@@ -15,37 +14,16 @@
     <div class="container bgc-wh">
       <div class="row">
         <div class="col-sm-5">
-          <div class="row">
-            <div class="column">
-              {% if product.photo %}
-                <img class="img-detail" src="{{ pr.photo.url }}" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-              {% else %}
-                <img class="photo-phone-error" height="150" width="150" src="{% static "img/default_sm.png" %}">
-              {% endif %}
-            </div>
-          </div>
-
-          <div id="myModal" class="modal">
-            <span class="close cursor" onclick="closeModal()">&times;</span>
-            <div class="modal-content">
-              <div class="mySlides">
-                <img src="../../static/img/iphone7.png">
-              </div>
-              <div class="mySlides">
-                <img src="../../static/img/samsung_sm_j7.jpg">
-              </div>
-              <div class="mySlides">
-                <img src="../../static//img/samsungs8.png">
-              </div>
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-          </div>
-
+          {% if product.photo %}
+            <img class="img-detail" src="{{ pr.photo.url }}" class="hover-shadow cursor">
+          {% else %}
+            <img class="photo-phone-error" height="350" width="350" src="{% static "img/default_sm.png" %}">
+          {% endif %}
         </div>
+
         <div class="col-sm-7">
-          <div class="col-sm-12">
             <h3 class="header-phone">{{ product.brand }} {{ product.model }}</h3><hr>
+
             <div class="col-sm-6 offset-sm-3">
               <div id="rating" class="rating" data-product_id="{{ product.id }}" data-url="{% url 'update_rating' %}" data-rating="{{ vote }}">
                 {% csrf_token %}
@@ -56,28 +34,47 @@
                 <span id="vote-5" class="fa fa-star" data-vote="5"></span>
               </div>
             </div>
-          </div>
+
           <div class="col-sm-12">
             <p class="descr-phone">{{ product.description }}</p>
           </div>
-          <div class="col-sm-5 offset-sm-1">
+
+          <div class="col-sm-6">
             <h4 class="price">{{ product.price }}$</h4>
           </div>
+
           <div class="col-sm-6">
-            {% if in_basket %}
-              <button type="button" class="button-buy" disabled><i class="fa fa-check-circle"></i></button>
-            {% else %}
-            <a href="{% url 'basket' %}"><button type="button" class="button-buy" ><i class="fa fa-cart-plus"></i></button></a>
-            {% endif %}
+            <form id="form_buying_product" > {% csrf_token %}
+              {% if user.is_authenticated %}
+                {% if in_basket %}
+                  <button type="button" class="button-buy" disabled>
+                    <i class="fa fa-check-circle"></i>
+                  </button>
+                {% else %}
+                  <button  type="button" action="{% url 'basket_adding' %}" class="change-icon button-buy basket-adding" data-product_id = "{{ product.id }}">
+                    <i class="fa fa-cart-plus"></i>
+                  </button>
+                {% endif %}
+              {% else %}
+                <a href="{% url 'login' %}">
+                  <button type="button" class="button-buy">
+                    <i class="fa fa-cart-plus"></i>
+                  </button>
+                </a>
+              {% endif %}
+            </form>
           </div>
+
         </div>
+
       </div>
     </div>
   </section>
 
+
 {% endblock %}
 
 {% block extra_js %}
-  <!-- <script src="{% static "js/gallery.js" %}"></script> -->
   <script src="{% static "js/product-details.js" %}"></script>
+  <script src="{% static "js/product-content.js" %}"></script>
 {% endblock %}

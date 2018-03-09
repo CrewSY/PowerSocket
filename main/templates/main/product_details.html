@@ -1,4 +1,4 @@
-{% extends "main/base.html" %}
+ {% extends "main/base.html" %}
 
 {% load i18n %}
 {% load staticfiles %}
@@ -17,7 +17,7 @@
         <div class="col-sm-5">
           <div class="row">
             <div class="column">
-              {% if pr.photo %}
+              {% if product.photo %}
                 <img class="img-detail" src="{{ pr.photo.url }}" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
               {% else %}
                 <img class="photo-phone-error" height="150" width="150" src="{% static "img/default_sm.png" %}">
@@ -78,6 +78,6 @@
 {% endblock %}
 
 {% block extra_js %}
-  <script src="{% static "js/gallery.js" %}"></script>
+  <!-- <script src="{% static "js/gallery.js" %}"></script> -->
   <script src="{% static "js/product-details.js" %}"></script>
 {% endblock %}

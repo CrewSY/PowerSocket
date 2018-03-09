@@ -56,7 +56,7 @@
           </div>
         </div>
         <div class="col-sm-3">
-          <a><p id="skipbutton" class="skip">Skip</p></a>
+          <a><p id="skip-button"class="skip">Skip (disabled)</p></a>
         </div>
       </div>
 
@@ -65,8 +65,9 @@
             <div class="wrapper">
               <h1 class="header-tabs">Brands<i id="brands-icon" class="fa fa-plus plus-brands"></i></h1>
               <div class="tab">
+                <button class="brand-button">All Brands</button>
               {% for brand in brands %}
-                <button value="{{ brand.id }}">{{ brand.brand_name }}</button>
+                <button class="brand-button" data-brand_id ="{{ brand.id }}">{{ brand.brand_name }}</button>
               {% endfor %}
               </div>
             </div>
@@ -100,18 +101,17 @@
         </div>
 
         <div class="col-sm-9">
-          <div class="product_content">
+          <div id="product-content">
           {% include 'product_content.html' %}
           </div>
         </div>
         </div>
       </div>
-      <!-- content -->
+
+
+
   </section>
 
-{% with object_list=products %}
-  {% include "main/pagination.html" %}
-{% endwith %}
 
 {% endblock %}
 

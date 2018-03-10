@@ -8,4 +8,4 @@ from django.contrib.auth.decorators import login_required
 def profile(request):
     """Render profile page."""
     user = request.user
-    return render(request, 'main/profile.html', {'user': user})
+    return render(request, 'profile.html', {'user': user})

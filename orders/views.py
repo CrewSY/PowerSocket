@@ -20,9 +20,9 @@ def basket(request):
 
     if order:
         products = ProductInOrder.objects.filter(order=order)
-        return render(request, 'main/basket.html', {'order': order, 'products': products})
+        return render(request, 'basket.html', {'order': order, 'products': products})
     else:
-        return render(request, 'main/basket.html', {})
+        return render(request, 'basket.html', {})
 
 
 @login_required

@@ -5,5 +5,5 @@ from django.views.generic import TemplateView
 
 
 urlpatterns = [
-    url(r'^about_us/$', TemplateView.as_view(template_name='main/about_us.html')),
+    url(r'^about_us/$', TemplateView.as_view(template_name='about_us.html')),
 ]

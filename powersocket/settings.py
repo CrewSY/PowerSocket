@@ -50,7 +50,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['webui/templates/main',
-                 'webui/templates/registration'],
+                 'webui/templates/registration',
+                 'webui/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

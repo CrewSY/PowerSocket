@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'', include('main.urls')),
     url(r'', include('products.urls')),
     url(r'', include('orders.urls')),
+    url(r'', include('userauth.urls')),
     url(r'^accounts/login/$', views.login, name='login'),
     url(r'^accounts/logout/$', views.logout, name='logout', kwargs={'next_page': '/'}),
     url(r'^accounts/', include('registration.backends.simple.urls', namespace='users')),

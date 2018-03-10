@@ -1,5 +1,6 @@
 #basket {
-	min-height: 600px;
+	min-height: 650px;
+	background-color: #fff;
 }
 
 .header-cart {
@@ -104,4 +105,10 @@ button.button-buy {
 button.button-buy:hover {
   cursor: pointer;
   background-color: gray;
+}
+
+@media(min-width:1200px) {
+	#wrap {
+		background-color: #fff;
+	}
 }

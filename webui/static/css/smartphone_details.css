@@ -32,6 +32,10 @@
   color: orange;
 }
 
+ span.fa-star {
+  font-size: 18px;
+}
+
 .price {
 	float: right;
 	font-size: 25px;
@@ -107,7 +111,6 @@
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
 
 .prev:hover, .next:hover {
   background-color: rgba(0, 0, 0, 0.8);

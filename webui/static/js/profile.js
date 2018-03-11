@@ -1,7 +1,9 @@
 function updateUserData(){
+
     $('#update-profile').click(function(event){
         event.preventDefault();
         var data = {};
+
         data["csrfmiddlewaretoken"] = $('#profile-form [name="csrfmiddlewaretoken"]').val();
         data["first_name"] = $('#first-name').val();
         if(data.first_name == ''){
@@ -19,18 +21,15 @@ function updateUserData(){
         if(data.address == ''){
             data["address"] = $('#address').attr('placeholder');
         }
-        console.log(data.address, data.phone_number, data.last_name, data.first_name)
+        var url = $('#update-profile').attr('action');
+
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: data,
+            success: location.reload(),
+        });
     });
-
-
-    // $.ajax({
-    //     url: url,
-    //     type: 'POST',
-    //     data: data,
-    //     cache: true,
-    //     success: location.reload(),
-    // });
-
 }
 
 $(document).ready(function(){

@@ -112,3 +112,34 @@ button.button-buy:hover {
 		background-color: #fff;
 	}
 }
+
+@media(min-width:0px) and (max-width: 352px) {
+	.header-ph, .price {
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 0;
+	}
+
+	.btn-remove {
+		margin-top: 0;
+	}
+
+	.input-quantity {
+		margin-top: 5px;
+		width: 25px;
+		height: 25px;
+	}
+
+	.subtotal {
+		margin-top: 10px;
+	}
+
+	.photo-ph-error {
+		margin-left: 22%;
+	}
+
+	button.button-buy {
+		float: left !important;
+		margin-left: 15%;
+	}
+}

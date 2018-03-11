@@ -64,30 +64,31 @@
         <div class="col-sm-3">
             <div class="wrapper">
               <h1 class="header-tabs">Brands<i id="brands-icon" class="fa fa-plus plus-brands"></i></h1>
-              <div class="tab">
-                <button class="brand-button">All Brands</button>
+              <div class="tab tab-brand">
+                <button class="brand-button" data-brand_id="0">All Brands</button>
               {% for brand in brands %}
-                <button class="brand-button" data-brand_id ="{{ brand.id }}">{{ brand.brand_name }}</button>
+                <button class="brand-button" data-brand_id="{{ brand.id }}">{{ brand.brand_name }}</button>
               {% endfor %}
               </div>
             </div>
             <div class="wrapper">
               <h1 class="header-tabs category">Category<i id="category-icon" class="fa fa-plus plus-brands"></i></h1>
-              <div class="tab">
-                <button disabled class="brand-button">All Categories</button>
+              <div class="tab tab-category">
+                <button class="category-button" data-category_id="0">All Categories</button>
               {% for category in categories %}
-                <button disabled  value="{{ category.id }}">{{ category.category_name }}</button>
+                <button class="category-button" data-category_id="{{ category.id }}">{{ category.category_name }}</button>
               {% endfor %}
               </div>
             </div>
             <div class="wrapper">
               <h1 class="header-tabs category">Discount %<i id="category-icon" class="fa fa-plus plus-brands"></i></h1>
-              <div class="tab">
-                <button disabled> 0-10 %</button>
-                <button disabled> 10-20 %</button>
-                <button disabled> 20-30 %</button>
-                <button disabled> 30-40 %</button>
-                <button disabled> 40-50 %</button>
+              <div class="tab tab-discount">
+                <button class="discount-button" data-discount_id="0"> All %</button>
+                <button class="discount-button" data-discount_id="1"> 0-10 %</button>
+                <button class="discount-button" data-discount_id="2"> 10-20 %</button>
+                <button class="discount-button" data-discount_id="3"> 20-30 %</button>
+                <button class="discount-button" data-discount_id="4"> 30-40 %</button>
+                <button class="discount-button" data-discount_id="5"> 40-50 %</button>
               </div>
             </div>
             <div class="wrapper wrapper-radio">

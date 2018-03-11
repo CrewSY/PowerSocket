@@ -20,10 +20,10 @@
 			          <input id="first-name" type="text" {% if user.first_name %} placeholder="{{ user.first_name }}" {% else %} placeholder="first name" class="placeh" {% endif %} />
 			          <input id="last-name" type="text" {% if user.last_name %} placeholder="{{ user.last_name }}" {% else %} placeholder="last name" class="placeh" {% endif %} />
 								<input id="address" type="text" {% if user.userprofile.address %} placeholder="{{ user.userprofile.address }}" {% else %} placeholder="address" class="placeh" {% endif %}  />
-								<input id="phone-number" type="text" {% if user.userprofile.phone_number %} placeholder="{{ user.userprofile.phone_number }}"  {% else %} placeholder="phone" class="placeh" {% endif %}  /><br>
+								<input id="phone-number" type="text" {% if user.userprofile.phone_number %} placeholder="{{ user.userprofile.phone_number }}"  {% else %} placeholder="phone number" class="placeh" {% endif %}  /><br>
 								<div class="buttons-profie">
 									<button class="btn-remove" type="submit"><a href="{% url 'home' %}">&times; Cancel</a></button>
-			          	<button id="update-profile" type="submit" class="update-btn" value="update">update</button>
+			          	<button id="update-profile" action="{% url 'profile_update' %}" class="update-btn">update</button>
     				</div>
     				<div class="col-sm-4"></div>
     			</div>

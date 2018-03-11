@@ -1,7 +1,7 @@
 """Models for PowerSocket project."""
 
 from django.db import models
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, post_delete
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 
@@ -105,7 +105,24 @@ def product_in_order_post_save(sender, instance, created, **kwargs):
         order_total_price += item.total_price
 
     instance.order.total_price = order_total_price
-    instance.order.save(force_update=True)
+    instance.order.save()
 
 
 post_save.connect(product_in_order_post_save, sender=ProductInOrder)
+
+
+def product_in_order_post_delete(sender, instance, **kwargs):
+    """Post save of product in order."""
+    order = instance.order
+    all_product_in_order = ProductInOrder.objects.filter(order=order,
+                                                         product__in_stock=True)
+
+    order_total_price = 0
+    for item in all_product_in_order:
+        order_total_price += item.total_price
+
+    instance.order.total_price = order_total_price
+    instance.order.save()
+
+
+post_delete.connect(product_in_order_post_delete, sender=ProductInOrder)

@@ -4,10 +4,13 @@ from django.db.models import Q
 from django.shortcuts import render
 from django.views.generic import ListView
 from django.core.exceptions import ObjectDoesNotExist
+from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 
 from .models import Product
 from orders.models import Order, ProductInOrder
+from userauth.models import UserProfile
 from .utils import get_data
 
 
@@ -105,3 +108,24 @@ def product_details(request, pk):
         context = {'product': product, 'vote': vote}
 
     return render(request, 'product_details.html', context)
+
+
+@login_required
+def update_rating(request):
+    """Update rating of product."""
+    user = request.user
+    data = request.POST
+    product_id = data.get('product_id')
+    vote = data.get('vote')
+
+    userprofile = UserProfile.objects.get(user=user)
+    product = Product.objects.get(id=product_id)
+
+    if product not in userprofile.voted_posts.all():
+        userprofile.voted_posts.add(product)
+        product.count_votes = product.count_votes + 1
+        product.rating = product.rating + int(vote)
+        product.save()
+        userprofile.save()
+
+    return HttpResponse()

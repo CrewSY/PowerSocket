@@ -1,3 +1,9 @@
+var brand = 0;
+var category = 0;
+var discount = 0;
+var delivery_options = 0;
+
+
 function initAccordion(){
   $('.wrapper>.tab').not(':first-of-type').hide();
   var findArticle = $('.wrapper>.header-tabs').next();
@@ -22,19 +28,45 @@ function initBrandSelector(){
     $('.brand-button').click(function(event){
     event.preventDefault();
     var brand_id = $(this).data('brand_id');
+    brand = brand_id;
 
-    updateContent(brand_id);
+    updateContent();
   });
 }
 
 
-function updateContent(brand_id) {
+function initCategorySelector(){
+    $('.category-button').click(function(event){
+    event.preventDefault();
+    var category_id = $(this).data('category_id');
+    category = category_id;
+
+    updateContent();
+  });
+}
+
+
+function initDiscountSelector(){
+    $('.discount-button').click(function(event){
+    event.preventDefault();
+    var discount_id = $(this).data('discount_id');
+    discount = discount_id;
+
+    updateContent();
+  });
+}
+
+
+function updateContent() {
   var url = "/update_content?";
   $("#product-content").load(
-      url + $.param({brand_id: brand_id}), function() {
+      url + $.param({brand_id: brand,
+                     category_id: category,
+                     discount_id: discount}), function() {
         initBuyButton();
         changeIcons();
     });
+    console.log(category, brand, discount);
 }
 
 
@@ -56,5 +88,7 @@ function updateContentBySearch(){
 $(document).ready(function(){
   initAccordion();
   initBrandSelector();
+  initCategorySelector();
+  initDiscountSelector();
   updateContentBySearch();
 });

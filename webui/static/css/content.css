@@ -370,3 +370,9 @@ button.button-buy:active {
 .pagination ul li.active a {
   color: white !important;
 }
+
+@media(min-width:0px) and (max-width: 767px) {
+  #block-for-slider {
+    display: none;
+  }
+}

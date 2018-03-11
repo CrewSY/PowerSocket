@@ -14,7 +14,7 @@
       <div class="row">
         <div class="col-sm-5">
           {% if product.photo %}
-            <img class="img-detail" src="{{ pr.photo.url }}" class="hover-shadow cursor">
+            <img class="img-detail" src="{{ product.photo.url }}" class="hover-shadow cursor">
           {% else %}
             <img class="photo-phone-error" height="350" width="350" src="{% static "img/default_sm.png" %}">
           {% endif %}

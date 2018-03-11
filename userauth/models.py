@@ -4,6 +4,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext as _
 
+from products.models import Product
+
 
 class UserProfile(models.Model):
     """Extra user data."""
@@ -20,6 +22,8 @@ class UserProfile(models.Model):
     address = models.CharField(verbose_name=_(u'Address'),
                                max_length=128,
                                blank=True)
+    voted_posts = models.ManyToManyField(Product,
+                                         verbose_name=_(u'Liked posts'))
 
     def __str__(self):
         """Render the user instance as a string."""

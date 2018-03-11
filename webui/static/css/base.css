@@ -79,10 +79,10 @@ nav li a:hover {
 }
 
 .basket-quantity {
-  top: 23%;
+  top: -6%;
   position: absolute;
   color: white;
-  left: 38%;
+  left: 54%;
   background-color: red;
   height: 15px;
   width: 15px;
@@ -93,6 +93,7 @@ nav li a:hover {
 
 .shopping-cart {
   margin-left: 80px;
+  position: relative;
 }
 
 .btn-log {

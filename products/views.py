@@ -54,12 +54,27 @@ class UpdateContent(ListView):
 
     def get_queryset(self):
         """Create queryset according request."""
+        products = Product.objects.all()
         data = self.request.GET
         brand_id = data.get('brand_id')
-        if brand_id:
-            products = Product.objects.filter(brand=brand_id)
-        else:
-            products = super(UpdateContent, self).get_queryset()
+        category_id = data.get('category_id')
+        discount_id = data.get('discount_id')
+
+        if brand_id != '0':
+            products = products.filter(brand=brand_id)
+        if category_id != '0':
+            products = products.filter(category=category_id)
+        if discount_id != '0':
+            if discount_id == '1':
+                products = products.filter(Q(discount__gt=0) & Q(discount__lte=10))
+            elif discount_id == '2':
+                products = products.filter(Q(discount__gte=10) & Q(discount__lte=20))
+            elif discount_id == '3':
+                products = products.filter(Q(discount__gte=20) & Q(discount__lte=30))
+            elif discount_id == '4':
+                products = products.filter(Q(discount__gte=30) & Q(discount__lte=40))
+            elif discount_id == '5':
+                products = products.filter(Q(discount__gte=40) & Q(discount__lte=50))
 
         return products
 

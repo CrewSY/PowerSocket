@@ -5,7 +5,6 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 
 from orders.models import ProductInOrder, Order
-from products.models import Product
 
 
 @login_required
@@ -58,20 +57,5 @@ def remove_product(request):
 
     product = ProductInOrder.objects.filter(id=product_id)
     product.delete()
-
-    return HttpResponse()
-
-
-def update_rating(request):
-    """Update quantity of product in order."""
-    data = request.POST
-    product_id = data.get('product_id')
-    vote = data.get('vote')
-
-    product = Product.objects.get(id=product_id)
-    product.count_votes = product.count_votes + 1
-    product.rating = product.rating + int(vote)
-
-    product.save()
 
     return HttpResponse()

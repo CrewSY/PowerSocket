@@ -60,6 +60,7 @@ class UpdateContent(ListView):
         category_id = data.get('category_id')
         discount_id = data.get('discount_id')
         delivery_options_id = data.get('delivery_options_id')
+        sort_id = data.get('sort_id')
 
         if brand_id != '0':
             products = products.filter(brand=brand_id)
@@ -78,6 +79,15 @@ class UpdateContent(ListView):
                 products = products.filter(Q(discount__gte=40) & Q(discount__lte=50))
         if delivery_options_id != '0':
             products = products.filter(is_free_delivery=False)
+        if sort_id != '0':
+            if sort_id == '1':
+                products = products.order_by('-price')
+            elif sort_id == '2':
+                products = products.order_by('-publish_date')
+            elif sort_id == '3':
+                products = products.order_by('-discount')
+            elif sort_id == '4':
+                products = products.order_by('-rating')
 
         return products
 

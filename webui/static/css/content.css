@@ -403,3 +403,112 @@ button.button-buy:active {
   margin-bottom: 50px;
  }
 }
+
+
+#block-for-slider {
+    width: 100%;
+}
+
+#viewport {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    text-align: center;
+}
+
+#slidewrapper {
+    position: relative;
+    width: calc(100% * 4);
+    -webkit-transition: 2s;
+    -o-transition: 2s;
+    transition: 2s;
+}
+
+.slide {
+    width: calc(100%/4);
+    display: inline;
+    float: left;
+}
+
+#block-for-slider {
+  background-color: black;
+}
+
+.slide-img {
+  width: 55%;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  float: right;
+}
+
+.header-slider {
+  position: absolute;
+  font-size: 32px;
+  font-weight: bold;
+  float: left;
+  width: 550px;
+  color: white;
+  margin-top: 50px;
+}
+
+.text-slider {
+  position: absolute;
+  font-size: 18px;
+  text-align: left;
+  width: 300px;
+  margin: 110px 0 0 100px;
+  color: white;
+}
+
+#prev-btn, #next-btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: calc(50% - 25px);
+}
+
+#prev-btn:hover, #next-btn:hover {
+    cursor: pointer;
+}
+
+#prev-btn {
+    left: 20px;
+}
+
+#next-btn {
+    right: 20px;
+}
+
+#nav-btns {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.slide-nav-btn {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 3px;
+}
+
+.slide-nav-btn:hover {
+    cursor: pointer;
+}

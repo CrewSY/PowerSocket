@@ -33,12 +33,14 @@
     <div class="container">
       <div class="row white-line">
         <div class="col-sm-3">
-          <div class="dropdown">
+          <div id="dropdown" class="dropdown">
             <p class="sort-by">sort by:</p>
             <select class="dropdown-content">
-              <option class="dropdown-items">Price1</option>
-              <option class="dropdown-items">Price2</option>
-              <option class="dropdown-items">Price3</option>
+              <option class="dropdown-items" value="0">Default</option>
+              <option class="dropdown-items" value="1">Price</option>
+              <option class="dropdown-items" value="2">Date</option>
+              <option class="dropdown-items" value="3">Discount</option>
+              <option class="dropdown-items" value="4">Rating</option>
             </select>
           </div>
         </div>
@@ -94,11 +96,11 @@
             <div class="wrapper wrapper-radio">
               <h1 class="delivery">Delivery options</h1>
               <label class="container-radio">FREE
-                <input type="radio" checked="checked" name="radio">
+                <input type="radio" checked="checked" name="radio" value="0">
                 <span class="checkmark"></span>
               </label>
               <label class="container-radio">4.99$
-                <input type="radio" checked="checked" name="radio">
+                <input type="radio" name="radio" value="1">
                 <span class="checkmark"></span>
               </label>
             </div>

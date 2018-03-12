@@ -28,15 +28,12 @@
   outline: none;
 }
 
-.tab button:active {
-  background-color: #ccc;
-  outline: none;
-  border: none;
-}
 
-.tab button:focus {
-  outline:0;
-  background-color: #ccc;
+.button-active {
+  outline:0 !important;
+  background-color: #ccc !important;
+  color: red;
+
 }
 
 .wrapper {

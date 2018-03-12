@@ -75,7 +75,6 @@ function initDiscountSelector(){
 
 function initDeliverySelector(){
     $('input[type=radio][name=radio]').change(function() {
-        console.log($(this));
         var delivery_options_id = $(this).value;
         delivery_options = delivery_options_id;
         updateContent();
@@ -90,6 +89,21 @@ function initSortSelector() {
 
     updateContent();
   });
+}
+
+
+function initSkipButton() {
+  $('#skip-button').click(function(event){
+    event.preventDefault();
+    brand = 0;
+    category = 0;
+    discount = 0;
+    delivery_options = 0;
+    sort = 0;
+    updateContent();
+  $('.brand-button, .category-button, .discount-button').removeClass('button-active');
+  $('#delivery-free').prop('checked', 'checked');  
+    });
 }
 
 
@@ -129,5 +143,6 @@ $(document).ready(function(){
   initDiscountSelector();
   initDeliverySelector();
   initSortSelector();
+  initSkipButton();
   updateContentBySearch();
 });

@@ -19,19 +19,33 @@
 }
 
 .dropdown-content {
-  display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 180px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: #fff;
+  width: 200px;
   padding: 12px 16px;
-  z-index: 1;
+  text-transform: uppercase;
+  color: gray;
+  font-size: 13px;
+  font-weight: 550;
+  letter-spacing: 1px;
   margin-left: 80px;
   cursor: pointer;
+  border: 0;
+  margin-top: -40px;
+  padding-left: 50px;
+  text-align: right;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.dropdown-content:focus {
+  outline: 0;
+}
+
+option.dropdown-items {
+  padding: 50px !important;
+  font-size: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 13px;
 }
 
 .sort-by {
@@ -47,6 +61,10 @@
   padding-top: 23px;
   font-weight: 550;
   letter-spacing: 1px;
+}
+
+.skip {
+  cursor: pointer;
 }
 
 .topnav .search-container {
@@ -196,7 +214,6 @@ button.button-buy:active {
   50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
 }
 
-
 .result-search {
   width: 100%;
   font-weight: bold;
@@ -218,77 +235,77 @@ button.button-buy:active {
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.9);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
 }
 
 .modal-content {
-    margin: auto;
-    display: block;
-    width: 60%;
-    max-width: 200px;
+  margin: auto;
+  display: block;
+  width: 60%;
+  max-width: 200px;
 }
 
 #caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-    font-size: 25px;
-    margin-top: 10px;
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+  font-size: 25px;
+  margin-top: 10px;
 }
 
 .modal-content, #caption {
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
 }
 
 @-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)}
-    to {-webkit-transform:scale(1)}
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
 }
 
 @keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
+  from {transform:scale(0)}
+  to {transform:scale(1)}
 }
 
 .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: white  !important;
-    font-size: 80px !important;
-    font-weight: bold;
-    transition: 0.3s;
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: white  !important;
+  font-size: 80px !important;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .close:hover,
 .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-    }
+  .modal-content {
+    width: 100%;
+  }
 }
 
 .header-href, .header-phone {
@@ -369,4 +386,20 @@ button.button-buy:active {
 
 .pagination ul li.active a {
   color: white !important;
+}
+
+@media(min-width:0px) and (max-width: 767px) {
+  #block-for-slider {
+    display: none;
+  }
+}
+
+@media(min-width:0px) and (max-width: 320px) {
+ #search-input {
+  margin-top: 30px;
+ }
+
+ .white-line{
+  margin-bottom: 50px;
+ }
 }

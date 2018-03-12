@@ -56,7 +56,7 @@
           </div>
         </div>
         <div class="col-sm-3">
-          <a><p id="skip-button"class="skip">Skip (disabled)</p></a>
+          <a><p id="skip-button" class="skip">Skip</p></a>
         </div>
       </div>
 
@@ -102,6 +102,11 @@
                 <span class="checkmark"></span>
               </label>
             </div>
+            <div class="wrapper-price">
+              <p><label for="amount" class="price-range">Price range:</label></p>
+              <div id="slider-range"></div>
+              <input type="text" id="amount" readonly>
+            </div>
         </div>
 
         <div class="col-sm-9">
@@ -122,5 +127,22 @@
 {% block extra_js %}
   <script src="{% static "js/slider.js" %}"></script>
   <script src="{% static "js/product-content.js" %}"></script>
+
+<script>
+  $( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 2700,
+      values: [ 0, 2700 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+  } );
+  </script>
+
   <script src="{% static "js/filter.js" %}"></script>
 {% endblock %}

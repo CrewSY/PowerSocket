@@ -59,6 +59,7 @@ class UpdateContent(ListView):
         brand_id = data.get('brand_id')
         category_id = data.get('category_id')
         discount_id = data.get('discount_id')
+        delivery_options_id = data.get('delivery_options_id')
 
         if brand_id != '0':
             products = products.filter(brand=brand_id)
@@ -75,6 +76,8 @@ class UpdateContent(ListView):
                 products = products.filter(Q(discount__gte=30) & Q(discount__lte=40))
             elif discount_id == '5':
                 products = products.filter(Q(discount__gte=40) & Q(discount__lte=50))
+        if delivery_options_id != '0':
+            products = products.filter(is_free_delivery=False)
 
         return products
 

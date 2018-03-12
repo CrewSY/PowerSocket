@@ -48,6 +48,8 @@ class Product(models.Model):
                                  default=0)
     count_votes = models.IntegerField(verbose_name=_(u'Count of votes'),
                                       default=0)
+    is_free_delivery = models.BooleanField(verbose_name=_(u'Is free delivery'),
+                                           default=True)
 
     def __str__(self):
         """Render the product instance as a string."""

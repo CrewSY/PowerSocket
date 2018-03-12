@@ -25,21 +25,31 @@ function initAccordion(){
 
 
 function initBrandSelector(){
-    $('.brand-button').click(function(event){
-    event.preventDefault();
-    var brand_id = $(this).data('brand_id');
-    brand = brand_id;
+    brand_buttons = $('.brand-button');
+    brand_buttons.click(function(event){
+      event.preventDefault();
+      brand_button = $(this);
+      var brand_id = brand_button.data('brand_id');
+      brand = brand_id;
 
-    updateContent();
+      brand_buttons.removeClass('button-active');
+      brand_button.addClass('button-active');
+
+      updateContent();
   });
 }
 
 
 function initCategorySelector(){
-    $('.category-button').click(function(event){
-    event.preventDefault();
-    var category_id = $(this).data('category_id');
-    category = category_id;
+    category_buttons = $('.category-button');
+    category_buttons.click(function(event){
+      event.preventDefault();
+      category_button = $(this);
+      var category_id = category_button.data('category_id');
+      category = category_id;
+
+      category_buttons.removeClass('button-active');
+      category_button.addClass('button-active');
 
     updateContent();
   });
@@ -47,13 +57,28 @@ function initCategorySelector(){
 
 
 function initDiscountSelector(){
-    $('.discount-button').click(function(event){
-    event.preventDefault();
-    var discount_id = $(this).data('discount_id');
-    discount = discount_id;
+    discount_buttons = $('.discount-button');
+    discount_buttons.click(function(event){
+      event.preventDefault();
+      discount_button = $(this);
+      var discount_id = discount_button.data('discount_id');
+      discount = discount_id;
+
+      discount_buttons.removeClass('button-active');
+      discount_button.addClass('button-active');
 
     updateContent();
   });
+}
+
+
+function initDeliverySelector(){
+    $('input[type=radio][name=radio]').change(function() {
+        console.log($(this));
+        var delivery_options_id = $(this).value;
+        delivery_options = delivery_options_id;
+        updateContent();
+    });
 }
 
 
@@ -62,11 +87,11 @@ function updateContent() {
   $("#product-content").load(
       url + $.param({brand_id: brand,
                      category_id: category,
-                     discount_id: discount}), function() {
+                     discount_id: discount,
+                     delivery_options_id: delivery_options}), function() {
         initBuyButton();
         changeIcons();
     });
-    console.log(category, brand, discount);
 }
 
 
@@ -90,5 +115,6 @@ $(document).ready(function(){
   initBrandSelector();
   initCategorySelector();
   initDiscountSelector();
+  initDeliverySelector();
   updateContentBySearch();
 });

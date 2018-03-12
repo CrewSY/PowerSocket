@@ -2,6 +2,7 @@ var brand = 0;
 var category = 0;
 var discount = 0;
 var delivery_options = 0;
+var sort = 0;
 
 
 function initAccordion(){
@@ -82,13 +83,24 @@ function initDeliverySelector(){
 }
 
 
+function initSortSelector() {
+  $('#dropdown select').change(function(event){
+    var sort_id = $(this).val();
+    sort = sort_id;
+
+    updateContent();
+  });
+}
+
+
 function updateContent() {
   var url = "/update_content?";
   $("#product-content").load(
       url + $.param({brand_id: brand,
                      category_id: category,
                      discount_id: discount,
-                     delivery_options_id: delivery_options}), function() {
+                     delivery_options_id: delivery_options,
+                     sort_id: sort}), function() {
         initBuyButton();
         changeIcons();
     });
@@ -116,5 +128,6 @@ $(document).ready(function(){
   initCategorySelector();
   initDiscountSelector();
   initDeliverySelector();
+  initSortSelector();
   updateContentBySearch();
 });

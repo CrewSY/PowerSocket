@@ -16,8 +16,8 @@
 			<div class="row gray-line">
 				<div class="col-sm-2"><p class="center-text">Item Details</p></div>
 				<div class="col-sm-1 offset-sm-3"><p class="center-text">Price</p></div>
-				<div class="col-sm-2"><p class="center-text">Quantity</p></div>
-				<div class="col-sm-2 offset-sm-2"><p class="center-text">Subtotal</p></div>
+				<div class="col-sm-3"><p class="center-text">Quantity</p></div>
+				<div class="col-sm-2 offset-sm-1"><p class="center-text">Subtotal</p></div>
 			</div>
 			{% for pr in products %}
 			<div class="row">
@@ -31,14 +31,14 @@
 					<button action="{% url 'remove_product' %}" class="btn-remove" type="button" data-product_id = "{{ pr.id }}">&times; Remove</button>
 				</div>
 				<div class="col-sm-1"><p class="price">{{ pr.product.price }}$</p></div>
-				<div class="col-sm-2">
+				<div class="col-sm-3">
 					<div class="input-group quantity_goods" id="quantity_goods"> {% csrf_token %}
 						<p class="buttonsquant button_minus">-</p>
   						<input action="{% url 'update_quantity' %}" class="input-quantity num_count" value="{{ pr.count }}" data-product_id = "{{ pr.id }}" disabled>
   						<p class="buttonsquant button_plus">+</p>
 					</div>
 				</div>
-				<div class="col-sm-2 offset-sm-2">
+				<div class="col-sm-2 offset-sm-1">
 					<p class="subtotal">{{ pr.total_price }}$</p>
 				</div>
 			</div>

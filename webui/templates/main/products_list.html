@@ -15,10 +15,15 @@
     <div id="block-for-slider">
         <div id="viewport">
             <ul id="slidewrapper">
-                <li class="slide img-slider"><h1 class="header-slider">Iphone 7+ 32 GB Black</h1><p class="text-slider">Phone 7 and iPhone 7 Plus are smartphones designed, developed, and marketed by Apple Inc. They were announced on September 7, 2016, at the Bill Graham Civic Auditorium in San Francisco</p> <img src="{% static "img/iphone7.png" %}" class="slide-img"></li>
-                <li class="slide img-slider"><h1 class="header-slider">Samsung Galaxy S8+ 256 GB</h1><p class="text-slider">The Samsung Galaxy S8, Samsung Galaxy S8+ (shortened to S8 and S8+, respectively) and Samsung Galaxy S8 Active are Android smartphones produced by Samsung Electronics as part of the Samsung Galaxy S series. </p><img src="{% static "img/samsungs8.png" %}" class="slide-img"></li>
-                <li class="slide img-slider"><h1 class="header-slider">Samsung Galaxy S8 128 GB</h1><p class="text-slider">The Samsung Galaxy S8, Samsung Galaxy S8+ (shortened to S8 and S8+, respectively) and Samsung Galaxy S8 Active are Android smartphones produced by Samsung Electronics as part of the Samsung Galaxy S series. </p><img src="{% static "img/sgs8.png" %}" class="slide-img"></li>
+                <li class="slide img-slider"><h1 class="header-slider">Samsung Galaxy S8+ 256 GB</h1><p class="text-slider">The Samsung Galaxy S8, Samsung Galaxy S8+ (shortened to S8 and S8+, respectively) and Samsung Galaxy S8 Active are Android smartphones produced by Samsung Electronics as part of the Samsung Galaxy S series. </p><img src="{% static "img/samsungs8.png" %}" class="slide-img img-responsive"></li>
+                <li class="slide img-slider"><h1 class="header-slider">Iphone 7 plus 256 GB Black</h1><p class="text-slider">Phone 7 and iPhone 7 Plus are smartphones designed, developed, and marketed by Apple Inc. They were announced on September 7, 2016, at the Bill Graham Civic Auditorium in San Francisco</p> <img src="{% static "img/iphone7.png" %}" class="slide-img img-responsive"></li>
+                <li class="slide img-slider"><h1 class="header-slider">Samsung Galaxy Note 8 Black</h1><p class="text-slider">The Samsung Galaxy Note 8 Black, Samsung Note 8 Black and Samsung Galaxy Note 8 BlackActive are Android smartphones produced by Samsung Electronics as part of the Samsung Galaxy Note 8 Black series. </p><img src="{% static "img/snot8.png" %}" class="slide-img img-responsive" style="margin-right: 170px"></li>
             </ul>
+
+            <div id="prev-next-btns">
+                <div id="prev-btn"><i class="fa fa-chevron-left"></i></div>
+                <div id="next-btn"><i class="fa fa-chevron-right"></i></div>
+            </div>
 
             <ul id="nav-btns">
                 <li class="slide-nav-btn"></li>
@@ -58,7 +63,7 @@
           </div>
         </div>
         <div class="col-sm-3">
-          <a><p id="skip-button"class="skip">Skip (disabled)</p></a>
+          <a><p id="skip-button" class="skip">Skip</p></a>
         </div>
       </div>
 
@@ -99,13 +104,18 @@
             <div class="wrapper wrapper-radio">
               <h1 class="delivery">Delivery options</h1>
               <label class="container-radio">FREE
-                <input type="radio" checked="checked" name="radio" value="0">
+                <input id="delivery-free" type="radio" checked="checked" name="radio" value="0">
                 <span class="checkmark"></span>
               </label>
               <label class="container-radio">4.99$
                 <input type="radio" name="radio" value="1">
                 <span class="checkmark"></span>
               </label>
+            </div>
+            <div class="wrapper-price">
+              <p><label for="amount" class="price-range">Price range:</label></p>
+              <div id="slider-range"></div>
+              <input type="text" id="amount" readonly>
             </div>
         </div>
 
@@ -127,5 +137,22 @@
 {% block extra_js %}
   <script src="{% static "js/slider.js" %}"></script>
   <script src="{% static "js/product-content.js" %}"></script>
+
+<script>
+  $( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 2700,
+      values: [ 0, 2700 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+  } );
+  </script>
+
   <script src="{% static "js/filter.js" %}"></script>
 {% endblock %}

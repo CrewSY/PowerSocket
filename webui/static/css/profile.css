@@ -75,10 +75,18 @@ input.placeh[type="text"]:-ms-input-placeholder     {color:red;}
 .btn-remove {
 	background-color: white;
 	border: none !important;
-	color: gray;
 	margin-top: 20px;
 	float: left;
 	margin-left: 50px;
+}
+
+a.remove-href {
+  text-decoration: none !important;
+  color: black;
+}
+
+a.remove-href:hover {
+  color: gray !important;
 }
 
 .btn-remove:focus {

@@ -92,6 +92,21 @@ function initSortSelector() {
 }
 
 
+function initSkipButton() {
+  $('#skip-button').click(function(event){
+    event.preventDefault();
+    brand = 0;
+    category = 0;
+    discount = 0;
+    delivery_options = 0;
+    sort = 0;
+    updateContent();
+  $('.brand-button, .category-button, .discount-button').removeClass('button-active');
+  $('#delivery-free').prop('checked', 'checked');
+    });
+}
+
+
 function updateContent() {
   var url = "/update_content?";
   $("#product-content").load(
@@ -130,6 +145,7 @@ $(document).ready(function(){
   initDiscountSelector();
   initDeliverySelector();
   initSortSelector();
+  initSkipButton();
   updateContentBySearch();
 });
 

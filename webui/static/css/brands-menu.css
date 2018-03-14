@@ -44,15 +44,17 @@
   background: #fff;
   margin: 0;
   border-radius: 5px 5px 0 0;
-  color: black;
-  font-weight: 700;
   letter-spacing: 1px;
-  font-size: 17px;
+  font-size: 13px;
   padding: 13px;
   text-align: center;
   width: 100%;
   text-align: left;
   display:  inline-block;
+  color: gray;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 550;
  }
 
 .header-tabs:hover, .category:hover {
@@ -71,6 +73,9 @@
 
 .wrapper-radio {
   height: 80px !important;
+}
+
+.wrapper-radio, .wrapper-price {
   background-color: #fff;
   margin-top: 20px;
   border-radius: 5px;
@@ -130,4 +135,37 @@
   height: 5px;
   border-radius: 50%;
   background: white;
+}
+
+#amount {
+  border:0;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  width: 100%;
+  font-weight: 600;
+  color: black;
+}
+
+.price-range {
+  text-align: center !important;
+  font-size: 13px;
+  margin: 10px 0 0 10px;
+  color: gray;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 550;
+}
+
+.wrapper-price  {
+  height: 90px;
+}
+
+#slider-range {
+  width: 80% !important;
+  margin: 0 auto;
+}
+
+.fa-plus, .fa-minus {
+  color: #ccc;
 }

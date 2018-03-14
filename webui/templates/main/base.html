@@ -16,6 +16,9 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<div id="before-load">
+  <i class="fa fas fa-camera-retro"></i>
+</div>
   <div id="wrap">
 	<header id="header" class="header">
 		<nav>
@@ -83,6 +86,7 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="{% static "js/preloader.js" %}"></script>
   {% block extra_js %}{% endblock %}
 </body>
 </html>

@@ -27,7 +27,10 @@ function updateUserData(){
             url: url,
             type: 'POST',
             data: data,
-            success: location.reload(),
+            success: function(){location.reload()},
+            error: function(e){
+                alert('Something went wrong. Please, try again');
+            },
         });
     });
 }

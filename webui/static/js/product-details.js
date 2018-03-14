@@ -15,7 +15,10 @@ function initVotes(){
             type: 'POST',
             data: data,
             cache: true,
-            success: location.reload(),
+            success: function(){location.reload()},
+            error: function(e){
+                alert('Something went wrong. Please, try again');
+            },
         });
 
     });
@@ -25,7 +28,7 @@ function initVotes(){
 function initRating(){
     rating = $('#rating').data("rating");
     $(".fa-star").each(function( index ) {
-        if (index <= rating){
+        if (index < rating){
             $(this).addClass('checked');
         }
         else{

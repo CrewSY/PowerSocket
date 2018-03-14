@@ -121,6 +121,8 @@ function updateContent() {
 }
 
 
+
+
 function updateContentBySearch(){
     $('#search-submit').click(function(e){
     e.preventDefault();
@@ -146,3 +148,12 @@ $(document).ready(function(){
   initSkipButton();
   updateContentBySearch();
 });
+
+
+ $(document).ajaxStart(function(){
+    $("#loading").show();
+ });
+
+ $( document ).ajaxComplete(function() {
+    $("#loading").fadeOut(400);
+ });

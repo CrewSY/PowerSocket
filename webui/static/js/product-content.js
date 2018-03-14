@@ -20,6 +20,9 @@ function basketUpdating(product_id, url){
         type: 'POST',
         data: data,
         cache: true,
+        error: function(e){
+                alert('Something went wrong. Please, try again');
+        },
     });
 }
 

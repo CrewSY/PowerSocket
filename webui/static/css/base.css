@@ -22,6 +22,26 @@ footer {
   height: 100px;
 }
 
+
+#before-load {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 1001;
+}
+#before-load i {
+  font-size: 70px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -35px 0 0 -35px;
+}
+
+
+
 /* Header */
 nav {
   width: 100%;

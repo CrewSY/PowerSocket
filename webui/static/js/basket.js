@@ -44,7 +44,10 @@ function updateQuantity(qty, product_id, url){
         type: 'POST',
         data: data,
         cache: true,
-        success: location.reload(),
+        success: function(){location.reload()},
+        error: function(e){
+                alert('Something went wrong. Please, try again');
+        },
     });
 
 }
@@ -64,7 +67,10 @@ function removeProduct(){
             type: 'POST',
             data: data,
             cache: true,
-            success: location.reload(),
+            success: function(){location.reload()},
+            error: function(e){
+                alert('Something went wrong. Please, try again');
+            },
         });
 
     });

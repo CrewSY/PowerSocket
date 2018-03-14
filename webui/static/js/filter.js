@@ -75,7 +75,6 @@ function initDiscountSelector(){
 
 function initDeliverySelector(){
     $('input[type=radio][name=radio]').change(function() {
-        console.log($(this));
         var delivery_options_id = $(this).value;
         delivery_options = delivery_options_id;
         updateContent();
@@ -105,6 +104,8 @@ function updateContent() {
         changeIcons();
     });
 }
+
+
 
 
 function updateContentBySearch(){

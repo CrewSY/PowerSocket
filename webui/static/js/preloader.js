@@ -1,5 +1,5 @@
 function initPreloader() {
-	$('#before-load').find('i').fadeOut().end().delay(200).fadeOut('slow');
+	$('#before-load').find('i').fadeOut().end().delay(0).fadeOut(400);
 }
 
 $(window).on('load', function() {

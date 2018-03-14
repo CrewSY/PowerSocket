@@ -13,6 +13,24 @@
   border-radius: 5px;
 }
 
+
+#loading{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin: -35px 0 0 -35px;
+  height: 10px !important;
+  z-index:1001;
+  display: none;
+}
+
+#loading i {
+  font-size: 70px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;

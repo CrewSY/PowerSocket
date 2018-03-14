@@ -15,7 +15,7 @@ SECRET_KEY = 's%%)!9y=vt3rti8s$2p^+x2v+0l3!rsa+z#6wl%+lbzx*k1g=&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'powersocket.pythonanywhere.com']
 
 
 # Application definition
@@ -120,6 +120,7 @@ STATIC_URL = os.path.join(BASE_DIR) + '/webui/static/'
 # Add these new lines
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'webui/static'),
+    '/var/www/webui/static',
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

@@ -132,3 +132,12 @@ $(document).ready(function(){
   initSortSelector();
   updateContentBySearch();
 });
+
+
+ $(document).ajaxStart(function(){
+    $("#loading").show();
+ });
+
+ $( document ).ajaxComplete(function() {
+    $("#loading").fadeOut(400);
+ });

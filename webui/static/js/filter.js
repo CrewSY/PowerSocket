@@ -102,7 +102,7 @@ function initSkipButton() {
     sort = 0;
     updateContent();
   $('.brand-button, .category-button, .discount-button').removeClass('button-active');
-  $('#delivery-free').prop('checked', 'checked');  
+  $('#delivery-free').prop('checked', 'checked');
     });
 }
 

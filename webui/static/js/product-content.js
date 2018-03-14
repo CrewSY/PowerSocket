@@ -29,6 +29,9 @@ function changeIcons() {
     var button = $(this);
     button.prop("disabled", "disabled");
     button.find('i').removeClass('fa-cart-plus').addClass('fa-check-circle');
+    var counting = $('.basket-quantity');
+    var countElements = parseInt(counting.text())+1;
+    counting.text(countElements);
   });
 }
 

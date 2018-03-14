@@ -22,7 +22,7 @@
 								<input id="address" type="text" {% if user.userprofile.address %} placeholder="{{ user.userprofile.address }}" {% else %} placeholder="address" class="placeh" {% endif %}  />
 								<input id="phone-number" type="text" {% if user.userprofile.phone_number %} placeholder="{{ user.userprofile.phone_number }}"  {% else %} placeholder="phone number" class="placeh" {% endif %}  /><br>
 								<div class="buttons-profie">
-									<button class="btn-remove" type="submit"><a href="{% url 'home' %}">&times; Cancel</a></button>
+									<button class="btn-remove" type="submit"><a class="remove-href" href="{% url 'home' %}">&times; Cancel</a></button>
 			          	<button id="update-profile" action="{% url 'profile_update' %}" class="update-btn">update</button>
     				</div>
     				<div class="col-sm-4"></div>

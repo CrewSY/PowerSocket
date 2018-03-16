@@ -61,6 +61,8 @@ class UpdateContent(ListView):
         discount_id = data.get('discount_id')
         delivery_options_id = data.get('delivery_options_id')
         sort_id = data.get('sort_id')
+        max_price_val = data.get('max_price_val')
+        min_price_val = data.get('min_price_val')
 
         if brand_id != '0':
             products = products.filter(brand=brand_id)
@@ -88,6 +90,9 @@ class UpdateContent(ListView):
                 products = products.order_by('-discount')
             elif sort_id == '4':
                 products = products.order_by('-rating')
+        if max_price_val != -1 and min_price_val != -1:
+            products = products.filter(Q(price__gte=min_price_val) &
+                                       Q(price__lte=max_price_val))
 
         return products
 

@@ -147,10 +147,14 @@ nav li a:hover {
   margin: 0;
   padding: 0;
 }
+.menu-trigger {
+  height: 40px;
+  width: 50px;
+}
 
 @media screen and (max-width:500px) {
   .menu-trigger {
-    display:block;
+    display :block;
   }
 
   nav ul li {
@@ -160,8 +164,27 @@ nav li a:hover {
   nav ul {
     display:none;
   }
-}
 
+  .mt-head {
+    margin-top: 0;
+  }
+
+  .logo-head-photo, #login {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #login, .logout {
+    width: 30%;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .logo-head {
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+}
 
 /* Footer */
 footer {
@@ -171,27 +194,6 @@ footer {
 
 .social {
   list-style: none;
-}
-
-.footer-menu {
-  list-style: none;
-  text-transform: uppercase;
-  color: gray;
-  display: inline-block;
-  text-align: center;
-  padding-top: 50px;
-  float: center;
-}
-
-.footer-item {
-  padding-right: 20px;
-  color: white;
-  font-weight: bold;
-  letter-spacing: 3px;
-  font-size: 10px;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
 }
 
 .copy {
@@ -229,12 +231,6 @@ footer {
     letter-spacing: 3px;
   }
 
-  .footer-menu {
-    padding-top: 25px;
-    padding-right: 11px;
-    letter-spacing: 1px;
-  }
-
   .social {
     display: inline;
     margin-top: -120px;
@@ -252,18 +248,6 @@ footer {
     padding-top: 30px;
     font-size: 12px;
     letter-spacing: 3px;
-  }
-
-  .footer-menu {
-    padding-right: 11px;
-    letter-spacing: 1px;
-    text-align: center;
-    margin-left: 30%;
-    margin-top: -40px;
-  }
-
-  .footer-item {
-    padding-top: -100px;
   }
 
   .social {

@@ -18,7 +18,7 @@ class ProductList(ListView):
     """Render list of products according path."""
 
     model = Product
-    template_name = 'products_list.html'
+    template_name = 'main/products_list.html'
 
     def get_queryset(self):
         """Create queryset acording request.path."""
@@ -43,7 +43,7 @@ class UpdateContent(ListView):
     """Update content according filter products."""
 
     model = Product
-    template_name = 'product_content.html'
+    template_name = 'main/product_content.html'
 
     def get(self, request):
         """Render product content with filtered queryset."""
@@ -113,7 +113,7 @@ def search_products(request):
     context = get_data(request)
     context['products'] = products
 
-    return render(request, 'product_content.html', context)
+    return render(request, 'main/product_content.html', context)
 
 
 def product_details(request, pk):
@@ -135,7 +135,7 @@ def product_details(request, pk):
     else:
         context = {'product': product, 'vote': vote}
 
-    return render(request, 'product_details.html', context)
+    return render(request, 'main/product_details.html', context)
 
 
 @login_required

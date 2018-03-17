@@ -5,16 +5,17 @@
     "fields": {
         "photo": "",
         "brand": 1,
-        "category": 1,
-        "model": "X",
-        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
-        "price": "999.99",
-        "publish_date": "2018-03-02T07:20:19Z",
+        "category": 2,
+        "model": "X 64GB space grey",
+        "description": "Apple iPhone X 64GB space grey / 5.8-inch Super Retina HD display with HDR and True Tone / All-glass and stainless steel design, water and dust resistant / 12MP dual cameras with dual OIS, Portrait mode, Portrait Lighting, and 4K video up to 60 fps / 7MP TrueDepth front camera with Portrait mode, Portrait Lighting /Face ID for secure authentication and Apple Pay / A11 Bionic, the most powerful and smartest chip in a smartphone",
+        "price": "999.00",
+        "publish_date": "2018-03-17T11:05:25Z",
         "in_stock": true,
-        "is_new": false,
-        "discount": 0,
+        "is_new": true,
+        "discount": 10,
         "rating": 0,
-        "count_votes": 0
+        "count_votes": 0,
+        "is_free_delivery": false
     }
 },
 {
@@ -23,16 +24,17 @@
     "fields": {
         "photo": "",
         "brand": 1,
-        "category": 1,
-        "model": "8+",
-        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
-        "price": "800.00",
-        "publish_date": "2018-03-02T07:21:45Z",
+        "category": 2,
+        "model": "X 256GB silver",
+        "description": "Apple iPhone X 64GB space grey / 5.8-inch Super Retina HD display with HDR and True Tone / All-glass and stainless steel design, water and dust resistant / 12MP dual cameras with dual OIS, Portrait mode, Portrait Lighting, and 4K video up to 60 fps / 7MP TrueDepth front camera with Portrait mode, Portrait Lighting /Face ID for secure authentication and Apple Pay / A11 Bionic, the most powerful and smartest chip in a smartphone",
+        "price": "1299.00",
+        "publish_date": "2018-03-17T11:10:09Z",
         "in_stock": true,
-        "is_new": false,
-        "discount": 0,
+        "is_new": true,
+        "discount": 17,
         "rating": 0,
-        "count_votes": 0
+        "count_votes": 0,
+        "is_free_delivery": true
     }
 },
 {
@@ -41,16 +43,17 @@
     "fields": {
         "photo": "",
         "brand": 1,
-        "category": 1,
-        "model": "5S",
-        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
-        "price": "200.00",
-        "publish_date": "2018-03-02T07:22:03Z",
+        "category": 2,
+        "model": "8 plus 256GB gold",
+        "description": "",
+        "price": "949.00",
+        "publish_date": "2018-03-17T11:10:47Z",
         "in_stock": true,
-        "is_new": false,
-        "discount": 0,
+        "is_new": true,
+        "discount": 24,
         "rating": 0,
-        "count_votes": 0
+        "count_votes": 0,
+        "is_free_delivery": false
     }
 },
 {
@@ -59,16 +62,17 @@
     "fields": {
         "photo": "",
         "brand": 1,
-        "category": 1,
-        "model": "SE",
-        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
-        "price": "300.00",
-        "publish_date": "2018-03-02T07:22:14Z",
+        "category": 2,
+        "model": "8 256GB silver",
+        "description": "",
+        "price": "0.00",
+        "publish_date": "2018-03-17T11:11:37Z",
         "in_stock": true,
         "is_new": false,
         "discount": 0,
         "rating": 0,
-        "count_votes": 0
+        "count_votes": 0,
+        "is_free_delivery": true
     }
 },
 {
@@ -77,16 +81,17 @@
     "fields": {
         "photo": "",
         "brand": 1,
-        "category": 1,
-        "model": "6 (32GB)",
-        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
-        "price": "355.99",
-        "publish_date": "2018-03-02T07:22:26Z",
+        "category": 2,
+        "model": "7 Plus 64GB jet black",
+        "description": "",
+        "price": "825.00",
+        "publish_date": "2018-03-17T11:11:55Z",
         "in_stock": true,
         "is_new": false,
         "discount": 0,
         "rating": 0,
-        "count_votes": 0
+        "count_votes": 0,
+        "is_free_delivery": false
     }
 },
 {
@@ -95,16 +100,17 @@
     "fields": {
         "photo": "",
         "brand": 1,
-        "category": 1,
-        "model": "7 (32GB)",
-        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
-        "price": "400.00",
-        "publish_date": "2018-03-02T07:22:40Z",
+        "category": 2,
+        "model": "6s Plus 32GB rose",
+        "description": "",
+        "price": "0.00",
+        "publish_date": "2018-03-17T11:12:12Z",
         "in_stock": true,
         "is_new": false,
         "discount": 0,
         "rating": 0,
-        "count_votes": 0
+        "count_votes": 0,
+        "is_free_delivery": true
     }
 },
 {
@@ -113,16 +119,17 @@
     "fields": {
         "photo": "",
         "brand": 1,
-        "category": 1,
-        "model": "X Black",
-        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
-        "price": "1999.99",
-        "publish_date": "2018-03-02T07:22:53Z",
+        "category": 2,
+        "model": "7 128GB gold",
+        "description": "",
+        "price": "649.00",
+        "publish_date": "2018-03-17T11:12:25Z",
         "in_stock": true,
         "is_new": false,
         "discount": 0,
         "rating": 0,
-        "count_votes": 0
+        "count_votes": 0,
+        "is_free_delivery": true
     }
 },
 {
@@ -130,17 +137,18 @@
     "pk": 8,
     "fields": {
         "photo": "",
-        "brand": 5,
-        "category": 1,
-        "model": "Desire 650",
-        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
-        "price": "99.50",
-        "publish_date": "2018-03-02T07:23:24Z",
+        "brand": 1,
+        "category": 2,
+        "model": "6s Plus 32GB gold",
+        "description": "",
+        "price": "549.00",
+        "publish_date": "2018-03-17T11:12:45Z",
         "in_stock": true,
         "is_new": false,
         "discount": 0,
         "rating": 0,
-        "count_votes": 0
+        "count_votes": 0,
+        "is_free_delivery": false
     }
 },
 {
@@ -148,17 +156,18 @@
     "pk": 9,
     "fields": {
         "photo": "",
-        "brand": 5,
-        "category": 1,
-        "model": "Desire 420",
-        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
-        "price": "340.00",
-        "publish_date": "2018-03-02T07:23:52Z",
+        "brand": 2,
+        "category": 2,
+        "model": "Galaxy S9",
+        "description": "",
+        "price": "739.00",
+        "publish_date": "2018-03-17T11:17:14Z",
         "in_stock": true,
-        "is_new": false,
+        "is_new": true,
         "discount": 0,
         "rating": 0,
-        "count_votes": 0
+        "count_votes": 0,
+        "is_free_delivery": true
     }
 },
 {
@@ -166,17 +175,18 @@
     "pk": 10,
     "fields": {
         "photo": "",
-        "brand": 5,
-        "category": 1,
-        "model": "Desire 1000",
+        "brand": 2,
+        "category": 2,
+        "model": "Galaxy S9 Dual Sim",
         "description": "",
-        "price": "200.00",
-        "publish_date": "2018-03-02T07:24:12Z",
+        "price": "740.00",
+        "publish_date": "2018-03-17T11:17:42Z",
         "in_stock": true,
-        "is_new": false,
+        "is_new": true,
         "discount": 0,
         "rating": 0,
-        "count_votes": 0
+        "count_votes": 0,
+        "is_free_delivery": true
     }
 },
 {
@@ -185,16 +195,17 @@
     "fields": {
         "photo": "",
         "brand": 2,
-        "category": 1,
-        "model": "J2 Black",
-        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
-        "price": "200.00",
-        "publish_date": "2018-03-02T07:24:26Z",
+        "category": 2,
+        "model": "Note 8",
+        "description": "",
+        "price": "869.00",
+        "publish_date": "2018-03-17T11:18:08Z",
         "in_stock": true,
-        "is_new": false,
+        "is_new": true,
         "discount": 0,
         "rating": 0,
-        "count_votes": 0
+        "count_votes": 0,
+        "is_free_delivery": true
     }
 },
 {
@@ -203,16 +214,17 @@
     "fields": {
         "photo": "",
         "brand": 2,
-        "category": 1,
-        "model": "J3 Blue 64 GB",
-        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking. From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
-        "price": "300.00",
-        "publish_date": "2018-03-02T07:24:47Z",
+        "category": 2,
+        "model": "S8 mobile phone",
+        "description": "",
+        "price": "609.00",
+        "publish_date": "2018-03-17T11:18:30Z",
         "in_stock": true,
         "is_new": false,
         "discount": 0,
         "rating": 0,
-        "count_votes": 0
+        "count_votes": 0,
+        "is_free_delivery": false
     }
 },
 {
@@ -221,16 +233,17 @@
     "fields": {
         "photo": "",
         "brand": 2,
-        "category": 1,
-        "model": "J5 Pink",
-        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
-        "price": "500.00",
-        "publish_date": "2018-03-02T07:25:26Z",
+        "category": 2,
+        "model": "S7 smartphone",
+        "description": "",
+        "price": "499.00",
+        "publish_date": "2018-03-17T11:20:31Z",
         "in_stock": true,
         "is_new": false,
         "discount": 0,
         "rating": 0,
-        "count_votes": 0
+        "count_votes": 0,
+        "is_free_delivery": true
     }
 },
 {
@@ -238,17 +251,18 @@
     "pk": 14,
     "fields": {
         "photo": "",
-        "brand": 2,
-        "category": 1,
-        "model": "S8",
-        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
-        "price": "800.00",
-        "publish_date": "2018-03-02T07:25:39Z",
+        "brand": 3,
+        "category": 2,
+        "model": "Mi 6 64GB Black",
+        "description": "",
+        "price": "470.00",
+        "publish_date": "2018-03-17T11:20:51Z",
         "in_stock": true,
-        "is_new": false,
+        "is_new": true,
         "discount": 0,
         "rating": 0,
-        "count_votes": 0
+        "count_votes": 0,
+        "is_free_delivery": true
     }
 },
 {
@@ -256,17 +270,18 @@
     "pk": 15,
     "fields": {
         "photo": "",
-        "brand": 2,
-        "category": 1,
-        "model": "A8",
-        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking. From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
-        "price": "900.00",
-        "publish_date": "2018-03-02T07:25:58Z",
+        "brand": 3,
+        "category": 2,
+        "model": "Redmi 4X 32GB Gold",
+        "description": "",
+        "price": "400.00",
+        "publish_date": "2018-03-17T11:23:04Z",
         "in_stock": true,
         "is_new": false,
         "discount": 0,
         "rating": 0,
-        "count_votes": 0
+        "count_votes": 0,
+        "is_free_delivery": true
     }
 },
 {
@@ -275,16 +290,17 @@
     "fields": {
         "photo": "",
         "brand": 3,
-        "category": 1,
-        "model": "Gold XT190",
-        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
-        "price": "20.00",
-        "publish_date": "2018-03-02T07:26:15Z",
+        "category": 2,
+        "model": "Redmi 4a 32GB Gold",
+        "description": "",
+        "price": "988.00",
+        "publish_date": "2018-03-17T11:23:36Z",
         "in_stock": true,
         "is_new": false,
         "discount": 0,
         "rating": 0,
-        "count_votes": 0
+        "count_votes": 0,
+        "is_free_delivery": true
     }
 },
 {
@@ -292,17 +308,18 @@
     "pk": 17,
     "fields": {
         "photo": "",
-        "brand": 4,
-        "category": 1,
-        "model": "Gold K8 NOTE",
-        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking. From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
-        "price": "0.00",
-        "publish_date": "2018-03-02T07:26:41Z",
+        "brand": 3,
+        "category": 2,
+        "model": "Redmi 5A 16GB Gold",
+        "description": "",
+        "price": "600.00",
+        "publish_date": "2018-03-17T11:24:21Z",
         "in_stock": true,
-        "is_new": false,
+        "is_new": true,
         "discount": 0,
         "rating": 0,
-        "count_votes": 0
+        "count_votes": 0,
+        "is_free_delivery": true
     }
 },
 {
@@ -311,16 +328,720 @@
     "fields": {
         "photo": "",
         "brand": 4,
-        "category": 1,
-        "model": "Gold K4 NOTE",
-        "description": "From clicking stunning landscape photos to fast multitasking, the Panasonic P100 is a smartphone for the impulsive and flamboyant millennials. Powered by a 1.25 GHz quad-core processor with 1 GB of RAM, this smartphone runs on the Android Nougat 7.0 for an efficient, smooth multitasking.",
-        "price": "100.00",
-        "publish_date": "2018-03-02T07:26:55Z",
+        "category": 2,
+        "model": "Phab 2 Pro",
+        "description": "The Lenovo Phab 2 Pro is the first smartphone to include Tango, a new technology from Google that enables augmented reality (AR) gaming and utilities. All you have to do is look through the Phab 2 Pro, and you'll see objects and information overlaid onto the real world.  You can use these features for both practical purposes and fun: measure items with just your phone, see how new furniture or decor will look in your home, and even raise virtual pets, to name a few.",
+        "price": "249.00",
+        "publish_date": "2018-03-17T11:24:49Z",
+        "in_stock": true,
+        "is_new": true,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 19,
+    "fields": {
+        "photo": "",
+        "brand": 4,
+        "category": 2,
+        "model": "K8 Plus",
+        "description": "With the K8 Plus, performance has a new name. The device sets the bar high when it comes to all parameters. And we are not just talking about specs here (even though those are pretty remarkable), the device offers a premium experience to anyone who wants sheer multimedia magic without stretching either their hands or their pockets.\r\n\r\nThe K8 Plus continues Lenovo\u2019s stock Android journey (which had started with the K8 Note) and runs Android in its purest form \u2013 bye, bye, bloatware.  And that is not all. Also on the K8 Plus are: A dual camera \u2013 say hi to great detail, bokeh and depth of field.",
+        "price": "666.00",
+        "publish_date": "2018-03-17T11:28:48Z",
+        "in_stock": true,
+        "is_new": true,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": false
+    }
+},
+{
+    "model": "products.product",
+    "pk": 20,
+    "fields": {
+        "photo": "",
+        "brand": 4,
+        "category": 2,
+        "model": "K6 Power",
+        "description": "",
+        "price": "500.00",
+        "publish_date": "2018-03-17T11:31:12Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 30,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 21,
+    "fields": {
+        "photo": "",
+        "brand": 4,
+        "category": 2,
+        "model": "A6600",
+        "description": "",
+        "price": "200.00",
+        "publish_date": "2018-03-17T11:31:37Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 10,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 22,
+    "fields": {
+        "photo": "",
+        "brand": 4,
+        "category": 2,
+        "model": "Vibe K5",
+        "description": "For a true mobile cinematic experience, grab the Lenovo Vibe K5 Note. Encased in light metal, this eye-catching smartphone has a vibrant 13.97cm (5.5) FHD display, enhanced Dolby Atmos\u00ae audio, and advanced digital sound technology. As well as impressive memory and storage, the Vibe K5 Note has smooth octa-core processing and a large battery \u2013 giving you more time for your movies.",
+        "price": "359.00",
+        "publish_date": "2018-03-17T11:32:00Z",
         "in_stock": true,
         "is_new": false,
         "discount": 0,
         "rating": 0,
-        "count_votes": 0
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 23,
+    "fields": {
+        "photo": "",
+        "brand": 5,
+        "category": 2,
+        "model": "U11",
+        "description": "The liquid glass surface is crafted to impress using Optical Spectrum Hybrid Deposition. By layering highly-refractive precious minerals across the phone's back cover, we've created stunningly vivid new colors that transform light with every movement you make.",
+        "price": "249.00",
+        "publish_date": "2018-03-17T11:32:27Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 24,
+    "fields": {
+        "photo": "",
+        "brand": 5,
+        "category": 2,
+        "model": "U11 LIFE",
+        "description": "HTC U11 life gives you the best innovations from HTC U11 without putting the squeeze on your wallet. It all starts with our latest innovation, Edge Sense. A simple squeeze lets you do things faster! HTC USonic for audio that\u2019s adapted to you, with Active Noise Cancellation so you can truly lose yourself in the moment. A camera that captures stunningly clear photos and videos. A phone with a weather resistant IP67 rating that can handle and maintain high-level performance in rough weather.\r\n\r\nAll it takes is one squeeze to fall in love with HTC U11 life.",
+        "price": "300.00",
+        "publish_date": "2018-03-17T11:33:26Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 25,
+    "fields": {
+        "photo": "",
+        "brand": 6,
+        "category": 2,
+        "model": "P20 Lite",
+        "description": "",
+        "price": "300.00",
+        "publish_date": "2018-03-17T11:33:45Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 26,
+    "fields": {
+        "photo": "",
+        "brand": 6,
+        "category": 2,
+        "model": "Y9 (2018)",
+        "description": "",
+        "price": "400.00",
+        "publish_date": "2018-03-17T11:34:42Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 27,
+    "fields": {
+        "photo": "",
+        "brand": 6,
+        "category": 2,
+        "model": "Honor 7C",
+        "description": "",
+        "price": "380.00",
+        "publish_date": "2018-03-17T11:35:01Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": false
+    }
+},
+{
+    "model": "products.product",
+    "pk": 28,
+    "fields": {
+        "photo": "",
+        "brand": 6,
+        "category": 2,
+        "model": "nova 2s",
+        "description": "",
+        "price": "444.00",
+        "publish_date": "2018-03-17T11:35:21Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 25,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 29,
+    "fields": {
+        "photo": "",
+        "brand": 6,
+        "category": 2,
+        "model": "Honor 7X",
+        "description": "",
+        "price": "500.00",
+        "publish_date": "2018-03-17T11:35:39Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 30,
+    "fields": {
+        "photo": "",
+        "brand": 7,
+        "category": 2,
+        "model": "V30",
+        "description": "Find your inspiration with the all-new LG V30. Shoot like a pro and tell your story the way you want with camera capabilities and cinematic features never before seen on a smartphone.",
+        "price": "0.00",
+        "publish_date": "2018-03-17T11:35:55Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 780,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 31,
+    "fields": {
+        "photo": "",
+        "brand": 7,
+        "category": 2,
+        "model": "G6",
+        "description": "Designed to fit you\r\nUnlike other phones with a similar screen size, the large 5.7\u201d display fits in your hand, giving you a big screen experience without the inconvenience of a big phone. \r\n\r\nThe LG G6 is sculpted from aluminum and glass and is available in platinum and black. The 18:9 FullVision display with rounded corners and narrow bezels conclude the harmonious design.",
+        "price": "666.00",
+        "publish_date": "2018-03-17T11:38:01Z",
+        "in_stock": true,
+        "is_new": true,
+        "discount": 40,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": false
+    }
+},
+{
+    "model": "products.product",
+    "pk": 32,
+    "fields": {
+        "photo": "",
+        "brand": 8,
+        "category": 3,
+        "model": "15-BS013DX",
+        "description": "",
+        "price": "389.00",
+        "publish_date": "2018-03-17T11:47:06Z",
+        "in_stock": true,
+        "is_new": true,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 33,
+    "fields": {
+        "photo": "",
+        "brand": 8,
+        "category": 3,
+        "model": "17-BS049DX",
+        "description": "",
+        "price": "600.00",
+        "publish_date": "2018-03-17T11:49:07Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 15,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 34,
+    "fields": {
+        "photo": "",
+        "brand": 8,
+        "category": 3,
+        "model": "15-BS115DX",
+        "description": "",
+        "price": "499.00",
+        "publish_date": "2018-03-17T11:49:40Z",
+        "in_stock": true,
+        "is_new": true,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 35,
+    "fields": {
+        "photo": "",
+        "brand": 8,
+        "category": 3,
+        "model": "ENVY x360",
+        "description": "",
+        "price": "350.00",
+        "publish_date": "2018-03-17T11:50:06Z",
+        "in_stock": true,
+        "is_new": true,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": false
+    }
+},
+{
+    "model": "products.product",
+    "pk": 36,
+    "fields": {
+        "photo": "",
+        "brand": 8,
+        "category": 3,
+        "model": "Pavilion x360",
+        "description": "",
+        "price": "200.00",
+        "publish_date": "2018-03-17T11:51:00Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 40,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 37,
+    "fields": {
+        "photo": "",
+        "brand": 9,
+        "category": 3,
+        "model": "MacBook MJY32LL/A",
+        "description": "",
+        "price": "999.00",
+        "publish_date": "2018-03-17T11:51:19Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 38,
+    "fields": {
+        "photo": "",
+        "brand": 9,
+        "category": 3,
+        "model": "MacBook Flash Storage",
+        "description": "",
+        "price": "690.00",
+        "publish_date": "2018-03-17T11:52:26Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 35,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": false
+    }
+},
+{
+    "model": "products.product",
+    "pk": 39,
+    "fields": {
+        "photo": "",
+        "brand": 9,
+        "category": 3,
+        "model": "MacBook Refurbished Laptop",
+        "description": "",
+        "price": "300.00",
+        "publish_date": "2018-03-17T11:52:58Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 40,
+    "fields": {
+        "photo": "",
+        "brand": 2,
+        "category": 3,
+        "model": "XE500C13-K03US",
+        "description": "",
+        "price": "400.00",
+        "publish_date": "2018-03-17T11:53:31Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 20,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": false
+    }
+},
+{
+    "model": "products.product",
+    "pk": 41,
+    "fields": {
+        "photo": "",
+        "brand": 2,
+        "category": 3,
+        "model": "XE500C13-K05US",
+        "description": "",
+        "price": "400.00",
+        "publish_date": "2018-03-17T11:54:11Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 10,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 42,
+    "fields": {
+        "photo": "",
+        "brand": 2,
+        "category": 2,
+        "model": "Notebook 9 spin",
+        "description": "",
+        "price": "600.00",
+        "publish_date": "2018-03-17T11:54:33Z",
+        "in_stock": true,
+        "is_new": true,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 43,
+    "fields": {
+        "photo": "",
+        "brand": 4,
+        "category": 3,
+        "model": "320-15ABR",
+        "description": "",
+        "price": "340.00",
+        "publish_date": "2018-03-17T11:54:55Z",
+        "in_stock": true,
+        "is_new": true,
+        "discount": 15,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": false
+    }
+},
+{
+    "model": "products.product",
+    "pk": 44,
+    "fields": {
+        "photo": "",
+        "brand": 4,
+        "category": 3,
+        "model": "Yoga 710",
+        "description": "",
+        "price": "400.00",
+        "publish_date": "2018-03-17T11:55:40Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 10,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 45,
+    "fields": {
+        "photo": "",
+        "brand": 2,
+        "category": 3,
+        "model": "81CW0000US",
+        "description": "",
+        "price": "399.00",
+        "publish_date": "2018-03-17T11:55:59Z",
+        "in_stock": true,
+        "is_new": true,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 46,
+    "fields": {
+        "photo": "",
+        "brand": 2,
+        "category": 3,
+        "model": "Yoga 720",
+        "description": "",
+        "price": "200.00",
+        "publish_date": "2018-03-17T11:57:27Z",
+        "in_stock": true,
+        "is_new": true,
+        "discount": 30,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": false
+    }
+},
+{
+    "model": "products.product",
+    "pk": 47,
+    "fields": {
+        "photo": "",
+        "brand": 2,
+        "category": 3,
+        "model": "Yoga 920",
+        "description": "",
+        "price": "423.00",
+        "publish_date": "2018-03-17T11:57:46Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 15,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 48,
+    "fields": {
+        "photo": "",
+        "brand": 10,
+        "category": 5,
+        "model": "EOS Rebel T7",
+        "description": "",
+        "price": "400.00",
+        "publish_date": "2018-03-17T12:02:01Z",
+        "in_stock": true,
+        "is_new": true,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 49,
+    "fields": {
+        "photo": "",
+        "brand": 10,
+        "category": 5,
+        "model": "EOS M100",
+        "description": "",
+        "price": "100.00",
+        "publish_date": "2018-03-17T12:02:33Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 50,
+    "fields": {
+        "photo": "",
+        "brand": 10,
+        "category": 5,
+        "model": "Powershot SX730",
+        "description": "",
+        "price": "0.00",
+        "publish_date": "2018-03-17T12:02:47Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 449,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": false
+    }
+},
+{
+    "model": "products.product",
+    "pk": 51,
+    "fields": {
+        "photo": "",
+        "brand": 10,
+        "category": 5,
+        "model": "EOS Rebel T7i",
+        "description": "",
+        "price": "230.00",
+        "publish_date": "2018-03-17T12:03:03Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 10,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 52,
+    "fields": {
+        "photo": "",
+        "brand": 9,
+        "category": 1,
+        "model": "EarPods",
+        "description": "",
+        "price": "30.00",
+        "publish_date": "2018-03-17T12:03:28Z",
+        "in_stock": true,
+        "is_new": true,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 53,
+    "fields": {
+        "photo": "",
+        "brand": 11,
+        "category": 1,
+        "model": "G430 BLACK",
+        "description": "",
+        "price": "50.00",
+        "publish_date": "2018-03-17T12:10:38Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": false
+    }
+},
+{
+    "model": "products.product",
+    "pk": 54,
+    "fields": {
+        "photo": "",
+        "brand": 12,
+        "category": 1,
+        "model": "Arctis 7 Wireless",
+        "description": "",
+        "price": "100.00",
+        "publish_date": "2018-03-17T12:11:02Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 0,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 55,
+    "fields": {
+        "photo": "",
+        "brand": 11,
+        "category": 1,
+        "model": "G933 Artemis Spectrum",
+        "description": "",
+        "price": "60.00",
+        "publish_date": "2018-03-17T12:11:23Z",
+        "in_stock": true,
+        "is_new": false,
+        "discount": 15,
+        "rating": 0,
+        "count_votes": 0,
+        "is_free_delivery": false
     }
 },
 {
@@ -359,17 +1080,80 @@
     }
 },
 {
+    "model": "products.productbrand",
+    "pk": 6,
+    "fields": {
+        "brand_name": "Huawei"
+    }
+},
+{
+    "model": "products.productbrand",
+    "pk": 7,
+    "fields": {
+        "brand_name": "LG"
+    }
+},
+{
+    "model": "products.productbrand",
+    "pk": 8,
+    "fields": {
+        "brand_name": "HP"
+    }
+},
+{
+    "model": "products.productbrand",
+    "pk": 9,
+    "fields": {
+        "brand_name": "Apple"
+    }
+},
+{
+    "model": "products.productbrand",
+    "pk": 10,
+    "fields": {
+        "brand_name": "Canon"
+    }
+},
+{
+    "model": "products.productbrand",
+    "pk": 11,
+    "fields": {
+        "brand_name": "Logitech"
+    }
+},
+{
+    "model": "products.productbrand",
+    "pk": 12,
+    "fields": {
+        "brand_name": "SteelSeries"
+    }
+},
+{
     "model": "products.productcategory",
     "pk": 1,
     "fields": {
-        "category_name": "Phones"
+        "category_name": "Headsets"
     }
 },
 {
     "model": "products.productcategory",
     "pk": 2,
     "fields": {
+        "category_name": "Smartphones"
+    }
+},
+{
+    "model": "products.productcategory",
+    "pk": 3,
+    "fields": {
         "category_name": "Laptops"
+    }
+},
+{
+    "model": "products.productcategory",
+    "pk": 5,
+    "fields": {
+        "category_name": "Cameras"
     }
 }
 ]

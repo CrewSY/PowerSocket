@@ -3,6 +3,8 @@ var category = 0;
 var discount = 0;
 var delivery_options = 0;
 var sort = 0;
+var min_price = -1;
+var max_price = 100000;
 
 
 function initAccordion(){
@@ -24,6 +26,22 @@ function initAccordion(){
   });
 }
 
+function initPriceRange() {
+  $( "#slider-range" ).slider({
+    range: true,
+    min: 0,
+    max: 3000,
+    values: [ 0, 3000 ],
+    slide: function( event, ui ) {
+      $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      min_price = ui.values[0];
+      max_price = ui.values[1];
+      updateContent();
+    }
+  });
+  $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+    " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+}
 
 function initBrandSelector(){
     brand_buttons = $('.brand-button');
@@ -114,7 +132,9 @@ function updateContent() {
                      category_id: category,
                      discount_id: discount,
                      delivery_options_id: delivery_options,
-                     sort_id: sort}), function() {
+                     sort_id: sort,
+                     min_price_val: min_price,
+                     max_price_val: max_price}), function() {
         initBuyButton();
         changeIcons();
     });
@@ -146,6 +166,7 @@ $(document).ready(function(){
   initDeliverySelector();
   initSortSelector();
   initSkipButton();
+  initPriceRange();
   updateContentBySearch();
 });
 

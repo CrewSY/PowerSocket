@@ -1,22 +1,17 @@
 """Django settings for powersocket project."""
 
-import os
+import environ
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+env = environ.Env(DEBUG=(bool, False),)
 
+BASE_DIR = environ.Path(__file__) - 2
+environ.Env.read_env()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
+SECRET_KEY = env('SECRET_KEY')
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 's%%)!9y=vt3rti8s$2p^+x2v+0l3!rsa+z#6wl%+lbzx*k1g=&'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['127.0.0.1', 'powersocket.pythonanywhere.com']
-
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', '.herokuapp.com']
 
 # Application definition
 
@@ -32,6 +27,7 @@ INSTALLED_APPS = [
     'products',
     'userauth',
     'registration',
+    'webui'
 ]
 
 MIDDLEWARE = [
@@ -68,16 +64,16 @@ TEMPLATES = [
 WSGI_APPLICATION = 'powersocket.wsgi.application'
 
 
-# Database
+# Database, secret key, debug
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DEBUG = env('DEBUG')
+DEBUG = True
 
+
+DATABASES = {
+    'default': env.db(default='sqlite:///db.sqlite3'),
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -115,23 +111,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = os.path.join(BASE_DIR) + '/webui/static/'
-
-# Add these new lines
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'webui/static'),
-    '/var/www/webui/static',
-)
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-
-LOGIN_REDIRECT_URL = '/'
+STATIC_URL = '/static/'
+STATIC_ROOT_DIR = env.path('STATIC_ROOT', BASE_DIR('static'))
+STATIC_ROOT = STATIC_ROOT_DIR()
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT_DIR = env.path('MEDIA_ROOT', BASE_DIR('media'))
+MEDIA_ROOT = MEDIA_ROOT_DIR()
 
-
-ACCOUNT_ACTIVATION_DAYS = 7
+# Registration settings
 REGISTRATION_AUTO_LOGIN = True
 LOGIN_REDIRECT_URL = '/'

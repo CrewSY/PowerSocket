@@ -38,8 +38,8 @@ footer {
 
 header {
   position: fixed;
-  top: -3%;
-  z-index: 1;
+  top: -4%;
+  z-index: 100;
   width: 99%;
 }
 

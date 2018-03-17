@@ -3,6 +3,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext as _
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 from products.models import Product
 
@@ -31,3 +33,16 @@ class UserProfile(models.Model):
             return '%s %s' % (self.user.first_name, self.user.last_name)
         else:
             return self.user.username
+
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    """Create user profile after register."""
+    if created:
+        UserProfile.objects.create(user=instance)
+
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    """Save user profile."""
+    instance.userprofile.save()

@@ -1,10 +1,11 @@
 """Django settings for powersocket project."""
 
+import os
 from decouple import config
 from unipath import Path
-import dj_database_url
 
 PROJECT_DIR = Path(__file__).parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -66,13 +67,17 @@ WSGI_APPLICATION = 'powersocket.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 SECRET_KEY = config('SECRET_KEY')
-
-DEBUG = config('DEBUG', default=False, cast=bool)
-
+DEBUG = config('DEBUG', default=True, cast=bool)
 DATABASES = {
-    'default': dj_database_url.config(default=config('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': '',
+    }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

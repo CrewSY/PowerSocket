@@ -22,10 +22,11 @@
 </div>
 
   <div id="wrap">
-	<header id="header" class="header">
+	<header id="headerid" class="header">
 		<nav>
       <div class="container mt-head">
         <div class="row">
+            <img src="{% static '/img/CLXbY05.jpg'%}" class="menu-trigger">
           <div class="col-md-2">
             <a class="logo-head" href="{% url 'home' %}"><img class="logo-head-photo" src="{% static "img/logo.png" %}"></a>
           </div>
@@ -34,7 +35,7 @@
               <li><a href="{% url 'home' %}">Home</a></li>
               <li><a href="{% url 'new_products' %}">New products</a></li>
               <li><a href="{% url 'rated_products' %}">Top rating</a></li>
-              <li><a>Top sales</a></li>
+              <li><a href="/about_us">About us</a></li>
             </ul>
           </div>
            <div class="col-md-3">
@@ -63,10 +64,6 @@
           <p class="copy">&copy; 2018 CrewSY</p>
         </div>
         <div class="col-sm-4 offset-sm-1 col-md-4 offset-md-2 offset-lg-3">
-          <ul class="footer-menu">
-            <li class="footer-item">About us</li>
-            <li class="footer-item">Contact</li>
-          </ul>
         </div>
         <div class="col-sm-5 col-md-4 col-lg-3">
           <ul class="social">
@@ -90,6 +87,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="{% static "js/homepage.js" %}"></script>
   <script src="{% static "js/preloader.js" %}"></script>
   {% block extra_js %}{% endblock %}
 </body>

@@ -22,6 +22,16 @@ footer {
   height: 100px;
 }
 
+header {
+  position: fixed;
+  top: -3%;
+  z-index: 100;
+  width: 100%;
+}
+
+main {
+  margin-top: 50px;
+}
 
 #before-load {
   position: fixed;
@@ -39,8 +49,6 @@ footer {
   top: 50%;
   margin: -35px 0 0 -35px;
 }
-
-
 
 /* Header */
 nav {
@@ -139,10 +147,19 @@ nav li a:hover {
   margin: 0;
   padding: 0;
 }
+.menu-trigger {
+  height: 40px;
+  width: 50px;
+  padding-top: 15px;
+}
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:767px) {
   .menu-trigger {
-    display:block;
+    display :block;
+  }
+
+  main {
+    padding-top: 60px;
   }
 
   nav ul li {
@@ -152,8 +169,38 @@ nav li a:hover {
   nav ul {
     display:none;
   }
+  
+  .mt-head {
+    margin-top: 0;
+  }
+
+  .logo-head-photo, #login {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #login, .logout {
+    width: 30%;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .logo-head {
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
 }
 
+@media(min-width:768px) and (max-width:1200px) {
+  nav a {
+    padding:22px 8px;
+    float: left;
+  }
+
+  main {
+    padding-top: 90px;
+  }
+}
 
 /* Footer */
 footer {
@@ -163,27 +210,6 @@ footer {
 
 .social {
   list-style: none;
-}
-
-.footer-menu {
-  list-style: none;
-  text-transform: uppercase;
-  color: gray;
-  display: inline-block;
-  text-align: center;
-  padding-top: 50px;
-  float: center;
-}
-
-.footer-item {
-  padding-right: 20px;
-  color: white;
-  font-weight: bold;
-  letter-spacing: 3px;
-  font-size: 10px;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
 }
 
 .copy {
@@ -211,20 +237,13 @@ footer {
 .social-items:hover {
   opacity: 0.5;
 }
-
-      /* Footer adaptive*/
+  /* Footer adaptive*/
 
 @media(min-width:0px) and (max-width: 320px) {
   .copy {
     padding-top: 30px;
     font-size: 12px;
     letter-spacing: 3px;
-  }
-
-  .footer-menu {
-    padding-top: 25px;
-    padding-right: 11px;
-    letter-spacing: 1px;
   }
 
   .social {
@@ -244,18 +263,6 @@ footer {
     padding-top: 30px;
     font-size: 12px;
     letter-spacing: 3px;
-  }
-
-  .footer-menu {
-    padding-right: 11px;
-    letter-spacing: 1px;
-    text-align: center;
-    margin-left: 30%;
-    margin-top: -40px;
-  }
-
-  .footer-item {
-    padding-top: -100px;
   }
 
   .social {

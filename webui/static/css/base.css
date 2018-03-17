@@ -159,7 +159,7 @@ nav li a:hover {
 
 @media screen and (max-width:767px) {
   header {
-    width: 97%;
+    width: 100%;
   }
 
   .menu-trigger {

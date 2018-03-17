@@ -24,9 +24,9 @@ footer {
 
 header {
   position: fixed;
-  top: -3%;
+  top: -4%;
   z-index: 100;
-  width: 100%;
+  width: 99%;
 }
 
 main {

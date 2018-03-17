@@ -4,7 +4,7 @@ var discount = 0;
 var delivery_options = 0;
 var sort = 0;
 var min_price = -1;
-var max_price = -1;
+var max_price = 100000;
 
 
 function initAccordion(){

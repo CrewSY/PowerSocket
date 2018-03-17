@@ -11,7 +11,7 @@ environ.Env.read_env()
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 SECRET_KEY = env('SECRET_KEY')
 
-ALLOWED_HOSTS = ['127.0.0.1', 'powersocket.pythonanywhere.com', '.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', '.herokuapp.com']
 
 # Application definition
 
@@ -67,7 +67,8 @@ WSGI_APPLICATION = 'powersocket.wsgi.application'
 # Database, secret key, debug
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DEBUG = env('DEBUG')
+# DEBUG = env('DEBUG')
+DEBUG = True
 
 
 DATABASES = {
@@ -121,5 +122,3 @@ MEDIA_ROOT = MEDIA_ROOT_DIR()
 # Registration settings
 REGISTRATION_AUTO_LOGIN = True
 LOGIN_REDIRECT_URL = '/'
-
-print(BASE_DIR)

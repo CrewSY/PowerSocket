@@ -28,7 +28,7 @@ class ProductList(ListView):
             products = products.order_by('-is_new')
         elif '/rated_products/' in self.request.path:
             products = products.order_by('-rating')
-
+        products = products[:15]
         return products
 
     def get_context_data(self):

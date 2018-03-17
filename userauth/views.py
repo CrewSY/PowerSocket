@@ -11,7 +11,7 @@ from .models import UserProfile
 def profile(request):
     """Render profile page."""
     user = request.user
-    return render(request, 'main/profile.html', {'user': user})
+    return render(request, 'registration/profile.html', {'user': user})
 
 
 def profile_update(request):

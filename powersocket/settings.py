@@ -1,16 +1,17 @@
 """Django settings for powersocket project."""
 
-import os
-from decouple import config
-from unipath import Path
+import environ
 
-PROJECT_DIR = Path(__file__).parent
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+env = environ.Env(DEBUG=(bool, False),)
+
+BASE_DIR = environ.Path(__file__) - 2
+environ.Env.read_env()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
+SECRET_KEY = env('SECRET_KEY')
 
-ALLOWED_HOSTS = ['127.0.0.1', 'powersocket.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'powersocket.pythonanywhere.com', '.herokuapp.com']
 
 # Application definition
 
@@ -66,17 +67,11 @@ WSGI_APPLICATION = 'powersocket.wsgi.application'
 # Database, secret key, debug
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = env('DEBUG')
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': '',
-    }
+    'default': env.db(default='sqlite:///db.sqlite3'),
 }
 
 # Password validation
@@ -115,15 +110,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_ROOT = PROJECT_DIR.parent.parent.child('static')
 STATIC_URL = '/static/'
+STATIC_ROOT_DIR = env.path('STATIC_ROOT', BASE_DIR('static'))
+STATIC_ROOT = STATIC_ROOT_DIR()
 
-STATICFILES_DIRS = (
-    PROJECT_DIR.child('static'),
-)
-
-MEDIA_ROOT = PROJECT_DIR.parent.parent.child('media')
 MEDIA_URL = '/media/'
+MEDIA_ROOT_DIR = env.path('MEDIA_ROOT', BASE_DIR('media'))
+MEDIA_ROOT = MEDIA_ROOT_DIR()
 
 # Registration settings
 REGISTRATION_AUTO_LOGIN = True

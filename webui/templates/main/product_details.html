@@ -15,8 +15,14 @@
         <div class="col-sm-5">
           {% if product.photo %}
             <img class="img-detail" src="{{ product.photo.url }}" class="hover-shadow cursor">
-          {% else %}
-            <img class="photo-phone-error" height="350" width="350" src="{% static "img/default_sm.png" %}">
+          {% elif product.category.category_name == 'Smartphones' %}
+          <img class="photo-phone-error" height="350" width="350" src="{% static "img/default_sm.png" %}">
+          {% elif product.category.category_name == 'Laptops' %}
+          <img class="photo-phone-error" height="350" width="350" src="{% static "img/default_lt.png" %}">
+          {% elif product.category.category_name == 'Cameras' %}
+          <img class="photo-phone-error" height="350" width="350" src="{% static "img/dafault_camera.png" %}">
+          {% elif product.category.category_name == 'Headsets' %}
+          <img class="photo-phone-error" height="200" width="250" src="{% static "img/earpods.jpg" %}">
           {% endif %}
         </div>
 

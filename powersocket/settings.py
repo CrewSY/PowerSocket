@@ -1,6 +1,5 @@
 """Django settings for powersocket project."""
 
-import os
 import environ
 
 env = environ.Env(DEBUG=(bool, False),)
@@ -116,8 +115,11 @@ STATIC_ROOT_DIR = env.path('STATIC_ROOT', BASE_DIR('static'))
 STATIC_ROOT = STATIC_ROOT_DIR()
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT_DIR = env.path('MEDIA_ROOT', BASE_DIR('media'))
+MEDIA_ROOT = MEDIA_ROOT_DIR()
 
 # Registration settings
 REGISTRATION_AUTO_LOGIN = True
 LOGIN_REDIRECT_URL = '/'
+
+print(BASE_DIR)

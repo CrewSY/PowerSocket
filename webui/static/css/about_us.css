@@ -1,0 +1,41 @@
+.header-about {
+	text-align: center;
+	font-size: 28px;
+	font-weight: 700;
+	margin-top: 100px;
+}
+
+.text-about {
+	font-size: 20px;
+}
+
+.social {
+	list-style: none;
+	float: left;
+	text-align: center;
+}
+
+.social-item {
+	color: black;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.social-item:hover {
+	color: gray;
+	text-decoration: none;
+}
+
+.adreess {
+	padding-top: 30px;
+}
+
+.city {
+	font-size: 22px;
+}
+
+@media(min-width:0px) and (max-width: 576px) {
+	.social {
+		margin-top: 10px;
+	}
+}

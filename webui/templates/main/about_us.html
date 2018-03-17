@@ -4,12 +4,29 @@
 {% load staticfiles %}
 
 {% block extra_css %}
-  <link rel="stylesheet" href="{% static "css/profile.css" %}">
+
+  <link rel="stylesheet" href="{% static "css/about_us.css" %}">
 {% endblock %}
 
 {% block content %}
-
-
+	<div class="container">
+		<h1 class="header-about">About Us</h1>
+		<h3 class="text-about">Internet supermarket PowerSocket ™ - the most popular online store in Ukraine
+		Our task is not only to just sell the right product, but also to inform and educate the buyer. To do this, we shoot video reviews of new products, prepare articles and news. Armed with comprehensive information about an interesting device and its main competitors, you can independently make a measured decision to buy exactly the product that you need.</h3>
+		<div class="row">
+			<div class="col-sm-6">
+				<ul class="social"><h2>Our social media:</h2>
+					<li><a class="social-item" href="https://www.facebook.com/">Facebook</a></li>
+					<li><a class="social-item" href="https://twitter.com/">Twitter</a></li>
+					<li><a class="social-item" href="https://plus.google.com">Google Plus</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<h2 class="adreess">Our address:</h2>
+				<p class="city">Ukraine, Lviv</p>
+			</div>
+		</div>
+	</div>
 
 {% endblock %}
 

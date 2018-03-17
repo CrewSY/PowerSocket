@@ -38,7 +38,6 @@ footer {
 
 header {
   position: fixed;
-  top: -4%;
   z-index: 100;
   width: 99%;
 }
@@ -92,10 +91,6 @@ nav a {
 nav li a:hover {
   color: gray;
   text-decoration: none;
-}
-
-.mt-head {
-  margin-top: 20px;
 }
 
 .head-mb {
@@ -200,6 +195,10 @@ nav li a:hover {
 
   .logo {
     text-align: center;
+    margin-top: -35px;
+    width: 240px;
+    float: left;
+    margin-left: 30px; 
   }
 }
 

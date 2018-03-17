@@ -37,6 +37,7 @@ footer {
 }
 
 header {
+  padding-top: 10px;
   position: fixed;
   top: -4%;
   z-index: 100;
@@ -44,7 +45,7 @@ header {
 }
 
 main {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 #before-load {
@@ -98,12 +99,9 @@ nav li a:hover {
   margin-top: 20px;
 }
 
-.head-mb {
-  margin: 0;
-}
-
 .menu-trigger {
-  display:none;
+  display: none;
+  margin: 0;
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
@@ -167,7 +165,12 @@ nav li a:hover {
     width: 97%;
   }
 
+  .header-for-phone {
+    display: block;
+  }
+
   .menu-trigger {
+    margin-top: 20px;
     display :block;
   }
 
@@ -200,6 +203,7 @@ nav li a:hover {
 
   .logo {
     text-align: center;
+    margin-top: -40px;
   }
 }
 

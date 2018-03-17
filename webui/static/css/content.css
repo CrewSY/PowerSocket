@@ -372,7 +372,7 @@ button.button-buy:active {
   }
 
   .white-line, .dropdown-items{
-    margin-top: -30px;
+    margin-top: -10px;
   }
 
   .white-line {
@@ -388,7 +388,8 @@ button.button-buy:active {
     margin: 0;
     width: 85%;
     border: 0;
-    padding: 15px;
+    /*padding: 15px;*/
+    padding-top: 22px;
     padding-bottom: 22px;
     border-radius: 4px;
     margin-top: 15px;
@@ -402,7 +403,9 @@ button.button-buy:active {
     padding: 0;
     border-radius: 4px;
     margin-top: 15px;
-    font-size: 16px;
+    font-size: 22px;
+    padding-top: 5px;
+
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
   }

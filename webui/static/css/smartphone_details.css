@@ -28,6 +28,12 @@ body {
 	margin-bottom: 50px;
 }
 
+.photo-headsets-error {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
 .rating {
 	text-align: center;
 }

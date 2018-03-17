@@ -22,12 +22,13 @@
 </div>
 
   <div id="wrap">
-	<header id="headerid" class="header">
-		<nav>
+  <div class="header-for-phone">
+    <header id="headerid" class="header">
+    <nav>
       <div class="container mt-head">
         <div class="row">
-            <img src="{% static '/img/CLXbY05.jpg'%}" class="menu-trigger">
           <div class="col-md-2">
+            <img src="{% static '/img/CLXbY05.jpg'%}" class="menu-trigger">
             <a class="logo" href="{% url 'home' %}">Power Socket</a>
           </div>
           <div class="col-md-7">
@@ -49,8 +50,9 @@
           </div>
         </div>
       </div>
-		</nav>
-	</header><hr class="head-mb">
+    </nav>
+  </header>
+  </div>
   <main>
   {% block content %}
   {% endblock %}
